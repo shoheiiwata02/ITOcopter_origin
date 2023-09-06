@@ -394,12 +394,12 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 0.5, 10000, 0.01, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 0.7, 100, 0.01, 0.125, 0.0025);//3.8
+  p_pid.set_parameter( 0.5, 1000, 0.01, 0.125, 0.0025);//3.4
+  q_pid.set_parameter( 0.8, 100, 0.01, 0.125, 0.0025);//3.8
   r_pid.set_parameter(1.5, 100, 0.01, 0.125, 0.0025);//9.4
   //Angle control
-  phi_pid.set_parameter  ( 5, 10000, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 5, 100, 0.01, 0.125, 0.01);//6.0
+  phi_pid.set_parameter  ( 5, 100, 0.01, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 5, 500, 0.01, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 10000, 0.01, 0.125, 0.01);
 
  //velocity control
@@ -816,81 +816,83 @@ float rocking_wings(float stick)
   return stick;
 }
 
-// --------------------------------------
+// --------------------------------ライントレース--------------------------------------
+void linetrace(void)
+{
+  //目標値との誤差
+  float trace_phi_err;
+  float trace_psi_err;
+  float trace_v_err;
+  float trace_y_err;
 
+  //目標値
+  float phi_ref;
+  float psi_ref;
+  float v_ref = 0;
+  float y_ref = 0;
 
-// void linetrace(void)
-// {
-//   //目標値との誤差
-//   float trace_phi_err;
-//   float trace_psi_err;
-//   float trace_v_err;
-//   float trace_y_err;
-
-//   //目標値
-//   float phi_ref;
-//   float psi_ref;
-//   float v_ref = 0;
-//   float y_ref = 0;
-
-//   //Yaw loop
-//   //Y_con
-//   trace_y_err = ( y_ref - Line_range);
-//   psi_ref = y_pid.update(trace_y_err);
+  //Yaw loop
+  //Y_con
+  trace_y_err = ( y_ref - Line_range);
+  psi_ref = y_pid.update(trace_y_err);
   
-//   //saturation Psi_ref
-//   if ( psi_ref >= 40*pi/180 )
-//    {
-//      Psi_ref = 40*pi/180;
-//    }
-//   else if ( psi_ref <= -40*pi/180 )
-//    {
-//      Psi_ref = -40*pi/180;
-//    }
+  //saturation Psi_ref
+  if ( psi_ref >= 40*pi/180 )
+   {
+     Psi_ref = 40*pi/180;
+   }
+  else if ( psi_ref <= -40*pi/180 )
+   {
+     Psi_ref = -40*pi/180;
+   }
 
-//   //Roll loop
-//   //V_con
-//   trace_v_err = ( v_ref - Line_velocity);
-//   phi_ref = v_pid.update(trace_v_err);
+  //Roll loop
+  //V_con
+  trace_v_err = ( v_ref - Line_velocity);
+  phi_ref = v_pid.update(trace_v_err);
 
-//   //saturation Phi_ref
-//   if ( phi_ref >= 60*pi/180 )
-//    {
-//      Phi_ref = 60*pi/180;
-//    }
-//   else if ( phi_ref <= -60*pi/180 )
-//    {
-//      Phi_ref = -60*pi/180;
-//    }  
-// }
-
-void FailSafe(void){
-  // モータを1つストップ
-  // 対角を弱く
-  // ヨー
-  // y方向のズレを見るset_duty_fr(0.0);
-  set_duty_fl(0.0);
-  set_duty_fr(0.0);
-  set_duty_rr(0.0);
-  set_duty_rl(0.0);
-
-  if(Flight_mode == FAILSAFE_FL){
-    set_duty_fl(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_FR)
-  {
-    set_duty_fr(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RL)
-  {
-    set_duty_rl(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RR)
-  {
-    set_duty_rr(0.0);
-  }
-
+  //saturation Phi_ref
+  if ( phi_ref >= 60*pi/180 )
+   {
+     Phi_ref = 60*pi/180;
+   }
+  else if ( phi_ref <= -60*pi/180 )
+   {
+     Phi_ref = -60*pi/180;
+   }  
 }
+
+// void FailSafe(void){
+//   // モータを1つストップ
+//   // 対角を弱く
+//   // ヨー
+//   // y方向のズレを見るset_duty_fr(0.0);
+//   set_duty_fl(0.0);
+//   set_duty_fr(0.0);
+//   set_duty_rr(0.0);
+//   set_duty_rl(0.0);
+
+//   if(Flight_mode == FAILSAFE_FL){
+//     set_duty_fl(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_FR)
+//   {
+//     set_duty_fr(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_RL)
+//   {
+//     set_duty_rl(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_RR)
+//   {
+//     set_duty_rr(0.0);
+//   }
+
+//   if()
+//   {
+
+//   }
+// }
 
 
 void logging(void)
