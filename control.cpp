@@ -306,6 +306,14 @@ void loop_400Hz(void)
    
     //Rate Control (400Hz)
     rate_control();
+
+    //Red Circle Detecte check(23Hz)--kawasaki----------
+    if (RedCounter == 0)
+    {
+      if (Flight_mode == REDCIRCLE) read_red_sign();
+    }
+    RedCounter++;
+    if(RedCounter==17) RedCounter = 0;   //--------------
    
     if(AngleControlCounter==4)
     {
