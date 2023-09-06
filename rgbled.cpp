@@ -306,17 +306,17 @@ void rgbled_switch(uint8_t flag)
 
 void rgbled_wait(void)
 {
-  static uint8_t index=9;
+  static uint8_t index=19;
   static uint16_t counter = 0;
   if(counter==0)
   {
     ledStrip.setPixelColor(index, WS2812::RGB(0,0,0));
-    if(index<10)index++;
+    if(index<20)index++;
     else index=0;
     ledStrip.setPixelColor(index, WS2812::RGB(0,0,50));
     ledStrip.show();
   }
   counter ++;
-  if(counter==20)counter =0;
+  if(counter==30)counter =0;
 }
 
