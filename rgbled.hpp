@@ -4,7 +4,7 @@
 #include "WS2812.hpp"
 
 #define RGBLED_PIN 16
-#define RGBLED_LENGTH 10
+#define RGBLED_LENGTH 20
 
 void rgbled_off(void);
 void rgbled_normal(void);
