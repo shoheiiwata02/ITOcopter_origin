@@ -1,7 +1,6 @@
 #include "control.hpp"
 
 
-
 //Sensor data
 float Ax,Ay,Az,Wp,Wq,Wr,Mx,My,Mz,Mx0,My0,Mz0,Mx_ave,My_ave,Mz_ave;
 float Acc_norm=0.0;
@@ -100,6 +99,7 @@ void printPQR(void);
 void servo_control(void);
 void led_control(void);
 // void linetrace(void);
+void FailSafe(void);
 
 
 #define AVERAGE 2000
@@ -395,11 +395,11 @@ void control_init(void)
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
   p_pid.set_parameter( 0.5, 10000, 0.01, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 0.5, 10000, 0.01, 0.125, 0.0025);//3.8
-  r_pid.set_parameter(1.5, 10000, 0.01, 0.125, 0.0025);//9.4
+  q_pid.set_parameter( 0.7, 100, 0.01, 0.125, 0.0025);//3.8
+  r_pid.set_parameter(1.5, 100, 0.01, 0.125, 0.0025);//9.4
   //Angle control
   phi_pid.set_parameter  ( 5, 10000, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 5, 10000, 0.01, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 5, 100, 0.01, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 10000, 0.01, 0.125, 0.01);
 
  //velocity control
@@ -609,8 +609,8 @@ void rate_control(void)
     }
 
   //Motor Control
-  // 1250/11.1=112.6
-  // 1/11.1=0.0901
+  // 1250/7.4=112.6
+  // 1/7.4=0.01351
   
   FR_duty = (T_ref +(-P_com +Q_com -R_com)*0.25)*0.1351;
   FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.1351;
@@ -864,31 +864,33 @@ float rocking_wings(float stick)
 //    }  
 // }
 
-// void failsafe(void){
-//   // モータを1つストップ
-//   // 対角を弱く
-//   // ヨー
-//   // y方向のズレを見るset_duty_fr(0.0);
-//   set_duty_fl(0.0);
-//   set_duty_rr(0.0);
-//   set_duty_rl(0.0);
-//   if(Flight_mode == FAILSAFE_FL){
-//     set_duty_fl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_FR)
-//   {
-//     set_duty_fr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RL)
-//   {
-//     set_duty_rl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RR)
-//   {
-//     set_duty_rr(0.0);
-//   }
+void FailSafe(void){
+  // モータを1つストップ
+  // 対角を弱く
+  // ヨー
+  // y方向のズレを見るset_duty_fr(0.0);
+  set_duty_fl(0.0);
+  set_duty_fr(0.0);
+  set_duty_rr(0.0);
+  set_duty_rl(0.0);
 
-// }
+  if(Flight_mode == FAILSAFE_FL){
+    set_duty_fl(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_FR)
+  {
+    set_duty_fr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RL)
+  {
+    set_duty_rl(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RR)
+  {
+    set_duty_rr(0.0);
+  }
+
+}
 
 
 void logging(void)
