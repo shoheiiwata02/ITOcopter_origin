@@ -1,3 +1,0 @@
-/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/pioasm/CMakeFiles/pioasm.dir
-/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/pioasm/CMakeFiles/edit_cache.dir
-/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/pioasm/CMakeFiles/rebuild_cache.dir
