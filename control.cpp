@@ -394,7 +394,7 @@ void control_init(void)
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
   p_pid.set_parameter( 0.5, 10000, 0.01, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 0.5, 1000, 0.01, 0.125, 0.0025);//3.8
+  q_pid.set_parameter( 0.7, 100, 0.01, 0.125, 0.0025);//3.8
   r_pid.set_parameter(1.5, 100, 0.01, 0.125, 0.0025);//9.4
   //Angle control
   phi_pid.set_parameter  ( 5, 10000, 0.01, 0.125, 0.01);//6.0
@@ -608,8 +608,8 @@ void rate_control(void)
     }
 
   //Motor Control
-  // 1250/11.1=112.6
-  // 1/11.1=0.0901
+  // 1250/7.4=112.6
+  // 1/7.4=0.01351
   
   FR_duty = (T_ref +(-P_com +Q_com -R_com)*0.25)*0.1351;
   FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.1351;

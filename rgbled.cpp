@@ -23,6 +23,16 @@ void rgbled_normal(void)
   ledStrip.setPixelColor(7, WS2812::RGB(255,255,0));
   ledStrip.setPixelColor(8, WS2812::RGB(255,0,0));
   ledStrip.setPixelColor(9, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(10, WS2812::RGB(225,225,225));
+  ledStrip.setPixelColor(11, WS2812::RGB(225,225,225));
+  ledStrip.setPixelColor(12, WS2812::RGB(225,225,225));
+  ledStrip.setPixelColor(13, WS2812::RGB(255,255,255));
+  ledStrip.setPixelColor(14, WS2812::RGB(0,255,0));
+  ledStrip.setPixelColor(15, WS2812::RGB(0,255,0));
+  ledStrip.setPixelColor(16, WS2812::RGB(255,255,0));
+  ledStrip.setPixelColor(17, WS2812::RGB(255,255,0));
+  ledStrip.setPixelColor(18, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(19, WS2812::RGB(255,0,0));
   ledStrip.show();
 }
 
@@ -38,6 +48,16 @@ void rgbled_green(void)
   ledStrip.setPixelColor(7, WS2812::RGB(0,128,0));
   ledStrip.setPixelColor(8, WS2812::RGB(0,128,0));
   ledStrip.setPixelColor(9, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(10, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(11, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(12, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(13, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(14, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(15, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(16, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(17, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(18, WS2812::RGB(0,128,0));
+  ledStrip.setPixelColor(19, WS2812::RGB(0,128,0));
   ledStrip.show();
 }
 
@@ -53,6 +73,16 @@ void rgbled_red(void)
   ledStrip.setPixelColor(7, WS2812::RGB(255,0,0));
   ledStrip.setPixelColor(8, WS2812::RGB(255,0,0));
   ledStrip.setPixelColor(9, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(10, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(11, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(12, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(13, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(14, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(15, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(16, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(17, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(18, WS2812::RGB(255,0,0));
+  ledStrip.setPixelColor(19, WS2812::RGB(255,0,0));
   ledStrip.show();
 }
 void rgbled_blue(void)
@@ -67,6 +97,16 @@ void rgbled_blue(void)
   ledStrip.setPixelColor(7, WS2812::RGB(0,0,255));
   ledStrip.setPixelColor(8, WS2812::RGB(0,0,255));
   ledStrip.setPixelColor(9, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(10, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(11, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(12, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(13, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(14, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(15, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(16, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(17, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(18, WS2812::RGB(0,0,255));
+  ledStrip.setPixelColor(19, WS2812::RGB(0,0,255));
   ledStrip.show();
 }
 
@@ -82,6 +122,16 @@ void rgbled_orange(void)
   ledStrip.setPixelColor(7, WS2812::RGB(253,126,0));
   ledStrip.setPixelColor(8, WS2812::RGB(253,126,0));
   ledStrip.setPixelColor(9, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(10, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(11, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(12, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(13, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(14, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(15, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(16, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(17, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(18, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(19, WS2812::RGB(253,126,0));
   ledStrip.show();
 }
 
@@ -97,6 +147,16 @@ void rgbled_pink(void)
   ledStrip.setPixelColor(7, WS2812::RGB(255,63,164));
   ledStrip.setPixelColor(8, WS2812::RGB(255,63,164));
   ledStrip.setPixelColor(9, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(10, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(11, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(12, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(13, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(14, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(15, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(16, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(17, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(18, WS2812::RGB(255,63,164));
+  ledStrip.setPixelColor(19, WS2812::RGB(255,63,164));
   ledStrip.show();
 }
 
@@ -112,6 +172,16 @@ void rgbled_lightblue(void)
   ledStrip.setPixelColor(7, WS2812::RGB(0,255,255));
   ledStrip.setPixelColor(8, WS2812::RGB(0,255,255));
   ledStrip.setPixelColor(9, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(10, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(11, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(12, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(13, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(14, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(15, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(16, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(17, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(18, WS2812::RGB(0,255,255));
+  ledStrip.setPixelColor(19, WS2812::RGB(0,255,255)); 
   ledStrip.show();
 }
 
@@ -134,6 +204,16 @@ void rgbled_rocking(void)
       ledStrip.setPixelColor(7, WS2812::RGB(255,0,255));
       ledStrip.setPixelColor(8, WS2812::RGB(255,0,255));
       ledStrip.setPixelColor(9, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(10, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(11, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(12, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(13, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(14, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(15, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(16, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(17, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(18, WS2812::RGB(255,0,255));
+      ledStrip.setPixelColor(19, WS2812::RGB(255,0,255));
       ledStrip.show();
     }
     else
@@ -149,6 +229,16 @@ void rgbled_rocking(void)
       ledStrip.setPixelColor(7, WS2812::RGB(255,255,255));
       ledStrip.setPixelColor(8, WS2812::RGB(255,255,255));
       ledStrip.setPixelColor(9, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(10, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(11, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(12, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(13, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(14, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(15, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(16, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(17, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(18, WS2812::RGB(255,255,255));
+      ledStrip.setPixelColor(19, WS2812::RGB(255,255,255));
       ledStrip.show();
     }  
   }
@@ -192,6 +282,16 @@ void rgbled_off(void)
   ledStrip.setPixelColor(7, WS2812::RGB(0,0,0));
   ledStrip.setPixelColor(8, WS2812::RGB(0,0,0));
   ledStrip.setPixelColor(9, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(10, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(11, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(12, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(13, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(14, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(15, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(16, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(17, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(18, WS2812::RGB(0,0,0));
+  ledStrip.setPixelColor(19, WS2812::RGB(0,0,0));
   ledStrip.show();
 }
 
