@@ -398,7 +398,7 @@ void control_init(void)
   r_pid.set_parameter(1.5, 100, 0.01, 0.125, 0.0025);//9.4
   //Angle control
   phi_pid.set_parameter  ( 5, 10000, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 5, 10000, 0.01, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 5, 100, 0.01, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 10000, 0.01, 0.125, 0.01);
 
  //velocity control
