@@ -21,6 +21,8 @@ using namespace Eigen;
 
 #define BATTERY_VOLTAGE (11.1)
 #define NORMAL 0
+#define BUFFER_SIZE 16
+
 // #define ROCKING 1
 // #define AUTO 2
 // #define REDCIRCLE 3

@@ -28,6 +28,7 @@ uint16_t RateControlCounter=0;
 uint16_t BiasCounter=0;
 uint16_t LedBlinkCounter=0;
 uint16_t LineTraceCounter = 0;
+uint8_t RedCounter = 0;
 
 //Control 
 float FR_duty, FL_duty, RR_duty, RL_duty;
@@ -101,6 +102,37 @@ void servo_control(void);
 void led_control(void);
 // void linetrace(void);
 
+//OpenMV通信用 ------------------------
+char buffer[BUFFER_SIZE];
+int buffer_index = 0;
+uint8_t print_flag = 0;
+float x_diff = 0;
+float angle_diff = 0;
+
+void loop_400Hz(void);
+void rate_control(void);
+void sensor_read(void);
+void angle_control(void);
+void output_data(void);
+void output_sensor_raw_data(void);
+void kalman_filter(void);
+void logging(void);
+void motor_stop(void);
+uint8_t lock_com(void);
+uint8_t logdata_out_com(void);
+void printPQR(void);
+void Auto_fly(void);
+void Auto_fly_initialize(void);
+void altitude_rate_control(void);
+void Auto_takeoff(void);
+void Auto_landing(void);
+void Hovering(void);
+float lotate_altitude(float l_distance);
+void lotate_altitude_init(float Theta,float Psi,float Phi);
+void test_Hovering(void);
+void processReceiveData();
+void receiveData(char c);
+//---------------------------------
 
 #define AVERAGE 2000
 #define KALMANWAIT 6000
@@ -1024,6 +1056,45 @@ void gyroCalibration(void)
   Rbias=sumr/N;
 }
 
+
+
+//OpenMV通信用 ----------------------------------------------------------------------------
+void processReceiveData(){
+  // printf("%s \n",buffer);
+  char* clear_data = buffer;
+  clear_data++;//(をスキップ
+  clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
+  char* token;
+  token = strtok(clear_data,",");
+  if (token != NULL){
+    x_diff = atof(token);
+  }
+  token = strtok(NULL,",");
+  if (token != NULL){
+    angle_diff = atof(token);
+  }
+  // printf("x : %9.6f\n",x_diff);
+  // printf("angle : %9.6f\n",angle_diff);
+  Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+  //Kalman_holizontal(0,0,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+  printf("est velocity: %9.6f\n",Xn_est_1);
+  printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
+  printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
+}
+void receiveData(char c){
+  if (buffer_index < BUFFER_SIZE - 1){
+    buffer[buffer_index++] = c;
+  }
+  //終了条件のチェック
+  // if (c == '\n'){
+  if (c == ')'){
+    //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
+    processReceiveData();
+    buffer_index = 0; //バッファをリセット
+  }
+}
+//-----------------------------------------------------------------
+
 void sensor_read(void)
 {
   float mx1, my1, mz1, mag_norm, acc_norm, rate_norm;
@@ -1089,7 +1160,22 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   Mx/=mag_norm;
   My/=mag_norm;
   Mz/=mag_norm;
+
+
+  //OpenMV通信用 -------------------------------------------
+  //start_time = time_us_64();
+
+  while (uart_is_readable(UART_ID2)){
+    char c = uart_getc(UART_ID2);
+    receiveData(c);
+  }
+  // current_time = time_us_64();
+  // func_time = (current_time - start_time)/1000000.0;
+  // printf("%9.6f \n", func_time);
+  //--------------------------------------------------------
 }
+
+
 
 void variable_init(void)
 {

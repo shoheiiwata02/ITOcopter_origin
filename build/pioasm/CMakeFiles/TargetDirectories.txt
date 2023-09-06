@@ -1,0 +1,3 @@
+/mnt/c/Users/bnth8/ゼミ/専門ゼミ/進捗報告/ITOcopter_origin/build/pioasm/CMakeFiles/pioasm.dir
+/mnt/c/Users/bnth8/ゼミ/専門ゼミ/進捗報告/ITOcopter_origin/build/pioasm/CMakeFiles/edit_cache.dir
+/mnt/c/Users/bnth8/ゼミ/専門ゼミ/進捗報告/ITOcopter_origin/build/pioasm/CMakeFiles/rebuild_cache.dir
