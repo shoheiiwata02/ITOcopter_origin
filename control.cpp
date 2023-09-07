@@ -107,7 +107,8 @@ char buffer[BUFFER_SIZE];
 int buffer_index = 0;
 uint8_t print_flag = 0;
 float x_diff = 0;
-float angle_diff = 0;
+float angle_diff = 0; 
+float red_circle = 0;
 
 void loop_400Hz(void);
 void rate_control(void);
@@ -1066,13 +1067,19 @@ void processReceiveData(){
   clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
   char* token;
   token = strtok(clear_data,",");
+  // if (token != NULL){
+  //   x_diff = atof(token);
+  // }
+  // token = strtok(NULL,",");
+  // if (token != NULL){
+  //   angle_diff = atof(token);
+  // }
+
+  token = strtok(clear_data,",");
   if (token != NULL){
-    x_diff = atof(token);
+    red_circle = atof(token);
   }
-  token = strtok(NULL,",");
-  if (token != NULL){
-    angle_diff = atof(token);
-  }
+
   // printf("x : %9.6f\n",x_diff);
   // printf("angle : %9.6f\n",angle_diff);
   // Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
