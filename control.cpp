@@ -346,7 +346,25 @@ void loop_400Hz(void)
       if (Flight_mode == REDCIRCLE) read_red_sign();
     }
     RedCounter++;
-    if(RedCounter==17) RedCounter = 0;   //--------------
+    if(RedCounter==17) RedCounter = 0;  
+    //--------------------------------------------------
+    //kawasaki_uart---------s
+    if (RedCounter == 0)
+    {
+      if (Flight_mode == REDCIRCLE)
+      {
+        if (red_circle == 0){
+          Red_flag = 0;
+        }
+        else
+        {
+          Red_flag = 1;
+        }
+      }
+    }
+    RedCounter++;
+    if(RedCounter==17) RedCounter = 0;
+    //--------------------------------------------------
    
     if(AngleControlCounter==4)
     {
