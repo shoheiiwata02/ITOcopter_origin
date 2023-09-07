@@ -340,13 +340,13 @@ void loop_400Hz(void)
     //Rate Control (400Hz)
     rate_control();
 
-    //Red Circle Detecte check(23Hz)--kawasaki----------
-    if (RedCounter == 0)
-    {
-      if (Flight_mode == REDCIRCLE) read_red_sign();
-    }
-    RedCounter++;
-    if(RedCounter==17) RedCounter = 0;  
+    // //Red Circle Detecte check(23Hz)--kawasaki----------
+    // if (RedCounter == 0)
+    // {
+    //   if (Flight_mode == REDCIRCLE) read_red_sign();
+    // }
+    // RedCounter++;
+    // if(RedCounter==17) RedCounter = 0;  
     //--------------------------------------------------
     //kawasaki_uart---------
     if (RedCounter == 0)
@@ -355,10 +355,12 @@ void loop_400Hz(void)
       {
         if (red_circle == 0){
           Red_flag = 0;
+          printf("%s",Red_flag);
         }
         else
         {
           Red_flag = 1;
+          printf("%s",Red_flag);
         }
       }
     }
