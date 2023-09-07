@@ -348,7 +348,7 @@ void loop_400Hz(void)
     RedCounter++;
     if(RedCounter==17) RedCounter = 0;  
     //--------------------------------------------------
-    //kawasaki_uart---------s
+    //kawasaki_uart---------
     if (RedCounter == 0)
     {
       if (Flight_mode == REDCIRCLE)
