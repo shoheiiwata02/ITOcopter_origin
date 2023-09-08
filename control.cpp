@@ -1094,10 +1094,10 @@ void processReceiveData(){
   if (token != NULL){
     angle_diff = atof(token);
   }
-  // token = strtok(clear_data,",");
-  // if (token != NULL){
-  //   red_circle = atof(token);
-  // }
+  token = strtok(clear_data,",");
+  if (token != NULL){
+    red_circle = atof(token);
+  }
 
   // printf("x : %9.6f\n",x_diff);
   // printf("angle : %9.6f\n",angle_diff);
