@@ -1024,27 +1024,27 @@ void log_output(void)
   if(LogdataCounter==0)
   {
     printPQR();
-    printf("#Roll rate PID gain\n");
+    // printf("#Roll rate PID gain\n");
     p_pid.printGain();
-    printf("#Pitch rate PID gain\n");
+    // printf("#Pitch rate PID gain\n");
     q_pid.printGain();
-    printf("#Yaw rate PID gain\n");
+    // printf("#Yaw rate PID gain\n");
     r_pid.printGain();
-    printf("#Roll angle PID gain\n");
+    // printf("#Roll angle PID gain\n");
     phi_pid.printGain();
-    printf("#Pitch angle PID gain\n");
+    // printf("#Pitch angle PID gain\n");
     theta_pid.printGain();
   }
   if(LogdataCounter+DATANUM<LOGDATANUM)
   {
     //LockMode=0;
-    printf("%10.2f ", Log_time);
+    // printf("%10.2f ", Log_time);
     Log_time=Log_time + 0.01;
     for (uint8_t i=0;i<DATANUM;i++)
     {
-      printf("%12.5f",Logdata[LogdataCounter+i]);
+      // printf("%12.5f",Logdata[LogdataCounter+i]);
     }
-    printf("\n");
+    // printf("\n");
     LogdataCounter=LogdataCounter + DATANUM;
   }
   else 
@@ -1246,38 +1246,38 @@ void printPQR(void)
   volatile int m=0;
   volatile int n=0;
   //Print P
-  printf("#P\n");
-  for (m=0;m<7;m++)
-  {
-    printf("# ");
-    for (n=0;n<7;n++)
-    {
-      printf("%12.4e ",P(m,n));
-    }
-    printf("\n");
-  }
-  //Print Q
-  printf("#Q\n");
-  for (m=0;m<6;m++)
-  {
-    printf("# ");
-    for (n=0;n<6;n++)
-    {
-      printf("%12.4e ",Q(m,n));
-    }
-    printf("\n");
-  }
-  //Print R
-  printf("#R\n");
-  for (m=0;m<6;m++)
-  {
-    printf("# ");
-    for (n=0;n<6;n++)
-    {
-      printf("%12.4e ",R(m,n));
-    }
-    printf("\n");
-  }
+  // printf("#P\n");
+  // for (m=0;m<7;m++)
+  // {
+  //   printf("# ");
+  //   for (n=0;n<7;n++)
+  //   {
+  //     printf("%12.4e ",P(m,n));
+  //   }
+  //   printf("\n");
+  // }
+  // //Print Q
+  // printf("#Q\n");
+  // for (m=0;m<6;m++)
+  // {
+  //   printf("# ");
+  //   for (n=0;n<6;n++)
+  //   {
+  //     printf("%12.4e ",Q(m,n));
+  //   }
+  //   printf("\n");
+  // }
+  // //Print R
+  // printf("#R\n");
+  // for (m=0;m<6;m++)
+  // {
+  //   printf("# ");
+  //   for (n=0;n<6;n++)
+  //   {
+  //     printf("%12.4e ",R(m,n));
+  //   }
+  //   printf("\n");
+  // }
 }
 
 void output_data(void)
