@@ -349,21 +349,16 @@ void loop_400Hz(void)
     // if(RedCounter==17) RedCounter = 0;  
     //--------------------------------------------------
     //kawasaki_uart---------
-    if (RedCounter == 0)
+    if (Flight_mode == REDCIRCLE)
     {
-      if (Flight_mode == REDCIRCLE)
+      if (red_circle == 0){
+        Red_flag = 0;
+      }
+      else
       {
-        if (red_circle == 0){
-          Red_flag = 0;
-        }
-        else
-        {
-          Red_flag = 1;
-        }
+        Red_flag = 1;
       }
     }
-    RedCounter++;
-    if(RedCounter==17) RedCounter = 0;
     //--------------------------------------------------
    
     if(AngleControlCounter==4)
@@ -1024,27 +1019,27 @@ void log_output(void)
   if(LogdataCounter==0)
   {
     printPQR();
-    // printf("#Roll rate PID gain\n");
+    printf("#Roll rate PID gain\n");
     p_pid.printGain();
-    // printf("#Pitch rate PID gain\n");
+    printf("#Pitch rate PID gain\n");
     q_pid.printGain();
-    // printf("#Yaw rate PID gain\n");
+    printf("#Yaw rate PID gain\n");
     r_pid.printGain();
-    // printf("#Roll angle PID gain\n");
+    printf("#Roll angle PID gain\n");
     phi_pid.printGain();
-    // printf("#Pitch angle PID gain\n");
+    printf("#Pitch angle PID gain\n");
     theta_pid.printGain();
   }
   if(LogdataCounter+DATANUM<LOGDATANUM)
   {
     //LockMode=0;
-    // printf("%10.2f ", Log_time);
+    printf("%10.2f ", Log_time);
     Log_time=Log_time + 0.01;
     for (uint8_t i=0;i<DATANUM;i++)
     {
-      // printf("%12.5f",Logdata[LogdataCounter+i]);
+      printf("%12.5f",Logdata[LogdataCounter+i]);
     }
-    // printf("\n");
+    printf("\n");
     LogdataCounter=LogdataCounter + DATANUM;
   }
   else 
@@ -1085,21 +1080,21 @@ void processReceiveData(){
   clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
   char* token;
   token = strtok(clear_data,",");
-  // if (token != NULL){
-  //   x_diff = atof(token);
-  // }
-  // token = strtok(NULL,",");
-  // if (token != NULL){
-  //   angle_diff = atof(token);
-  // }
+  if (token != NULL){
+    x_diff = atof(token);
+  }
+  token = strtok(NULL,",");
+  if (token != NULL){
+    angle_diff = atof(token);
+  }
   token = strtok(clear_data,",");
   if (token != NULL){
     red_circle = atof(token);
   }
 
-  // printf("x : %9.6f\n",x_diff);
-  // printf("angle : %9.6f\n",angle_diff);
-  printf("circle : %9.6f\n",red_circle);
+  printf("x : %9.6f\n",x_diff);
+  printf("angle : %9.6f\n",angle_diff);
+  printf("circle : %9.6f\n",angle_diff);
   // Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   //Kalman_holizontal(0,0,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   // printf("est velocity: %9.6f\n",Xn_est_1);
@@ -1246,38 +1241,38 @@ void printPQR(void)
   volatile int m=0;
   volatile int n=0;
   //Print P
-  // printf("#P\n");
-  // for (m=0;m<7;m++)
-  // {
-  //   printf("# ");
-  //   for (n=0;n<7;n++)
-  //   {
-  //     printf("%12.4e ",P(m,n));
-  //   }
-  //   printf("\n");
-  // }
-  // //Print Q
-  // printf("#Q\n");
-  // for (m=0;m<6;m++)
-  // {
-  //   printf("# ");
-  //   for (n=0;n<6;n++)
-  //   {
-  //     printf("%12.4e ",Q(m,n));
-  //   }
-  //   printf("\n");
-  // }
-  // //Print R
-  // printf("#R\n");
-  // for (m=0;m<6;m++)
-  // {
-  //   printf("# ");
-  //   for (n=0;n<6;n++)
-  //   {
-  //     printf("%12.4e ",R(m,n));
-  //   }
-  //   printf("\n");
-  // }
+  printf("#P\n");
+  for (m=0;m<7;m++)
+  {
+    printf("# ");
+    for (n=0;n<7;n++)
+    {
+      printf("%12.4e ",P(m,n));
+    }
+    printf("\n");
+  }
+  //Print Q
+  printf("#Q\n");
+  for (m=0;m<6;m++)
+  {
+    printf("# ");
+    for (n=0;n<6;n++)
+    {
+      printf("%12.4e ",Q(m,n));
+    }
+    printf("\n");
+  }
+  //Print R
+  printf("#R\n");
+  for (m=0;m<6;m++)
+  {
+    printf("# ");
+    for (n=0;n<6;n++)
+    {
+      printf("%12.4e ",R(m,n));
+    }
+    printf("\n");
+  }
 }
 
 void output_data(void)
