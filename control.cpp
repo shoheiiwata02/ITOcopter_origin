@@ -355,12 +355,12 @@ void loop_400Hz(void)
       {
         if (red_circle == 0){
           Red_flag = 0;
-          printf("%s",Red_flag);
+          printf("circle : %9.6f\n",red_circle);
         }
         else
         {
           Red_flag = 1;
-          printf("%s",Red_flag);
+          printf("circle : %9.6f\n",red_circle);
         }
       }
     }
