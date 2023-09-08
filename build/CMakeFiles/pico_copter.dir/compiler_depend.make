@@ -522,6 +522,9 @@ CMakeFiles/pico_copter.dir/control.cpp.obj: ../control.cpp \
   /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
   ../radio.hpp \
   ../i2c.hpp \
+  /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
   ../rgbled.hpp \
   ../WS2812.hpp \
   /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
@@ -3915,6 +3918,7 @@ CMakeFiles/pico_copter.dir/home/ruiki/pico/pico-sdk/src/rp2_common/pico_unique_i
   /home/ruiki/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h
 
 CMakeFiles/pico_copter.dir/i2c.cpp.obj: ../i2c.cpp \
+  ../i2c.hpp \
   /usr/include/newlib/stdio.h \
   /usr/include/newlib/_ansi.h \
   /usr/include/newlib/newlib.h \
@@ -3988,6 +3992,9 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: ../i2c.cpp \
   /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
   /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
   /home/ruiki/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+  /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
   /home/ruiki/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info.h \
   /home/ruiki/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h \
   /home/ruiki/pico/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/structure.h \
@@ -4386,8 +4393,7 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: ../i2c.cpp \
   /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
   ../control.hpp \
   ../pid.hpp \
-  ../radio.hpp \
-  ../i2c.hpp
+  ../radio.hpp
 
 CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.obj: ../lsm9ds1_reg.c \
   ../lsm9ds1_reg.h \
@@ -4941,7 +4947,10 @@ CMakeFiles/pico_copter.dir/pico_copter.cpp.obj: ../pico_copter.cpp \
   /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
   ../pid.hpp \
   ../radio.hpp \
-  ../i2c.hpp
+  ../i2c.hpp \
+  /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h
 
 CMakeFiles/pico_copter.dir/pid.cpp.obj: ../pid.cpp \
   ../pid.hpp \
@@ -5453,7 +5462,10 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: ../pwm.cpp \
   /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
   /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
   ../pid.hpp \
-  ../i2c.hpp
+  ../i2c.hpp \
+  /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+  /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h
 
 CMakeFiles/pico_copter.dir/radio.cpp.obj: ../radio.cpp \
   ../radio.hpp \
@@ -5794,13 +5806,11 @@ CMakeFiles/pico_copter.dir/sensor.cpp.obj: ../sensor.cpp \
 
 /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c:
 
-/home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
-
-/home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
-
 /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/ssi.h:
 
 /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/ssi.h:
+
+/home/ruiki/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h:
 
 /usr/include/newlib/c++/10.3.1/bits/refwrap.h:
 
@@ -6226,6 +6236,10 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/ruiki/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h:
 
+/home/ruiki/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h:
+
+/usr/include/newlib/c++/10.3.1/bits/stl_iterator.h:
+
 /usr/include/newlib/sys/_stdint.h:
 
 /home/ruiki/pico/pico-sdk/src/common/pico_time/time.c:
@@ -6340,6 +6354,8 @@ generated/pico_base/pico/config_autogen.h:
 
 /usr/include/newlib/c++/10.3.1/bits/stl_relops.h:
 
+/home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
+
 /home/ruiki/pico/pico-sdk/src/common/pico_sync/include/pico/sync.h:
 
 /home/ruiki/pico/eigen/Eigen/src/Core/SelfCwiseBinaryOp.h:
@@ -6391,6 +6407,10 @@ WS2812.pio.h:
 /usr/include/newlib/math.h:
 
 /usr/include/newlib/c++/10.3.1/bits/std_abs.h:
+
+/home/ruiki/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c:
+
+/usr/include/newlib/c++/10.3.1/bits/stl_algobase.h:
 
 /usr/include/newlib/sys/_types.h:
 
@@ -6504,15 +6524,7 @@ WS2812.pio.h:
 
 /home/ruiki/pico/eigen/Eigen/src/Core/arch/Default/ConjHelper.h:
 
-/usr/include/newlib/c++/10.3.1/bits/stl_algobase.h:
-
-/home/ruiki/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c:
-
 /home/ruiki/pico/eigen/Eigen/src/Core/arch/Default/BFloat16.h:
-
-/usr/include/newlib/c++/10.3.1/bits/stl_iterator.h:
-
-/home/ruiki/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h:
 
 /home/ruiki/pico/eigen/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
 
@@ -6828,6 +6840,8 @@ WS2812.pio.h:
 
 /home/ruiki/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h:
 
+/home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
+
 ../rgbled.hpp:
 
 ../pid.hpp:
@@ -6935,5 +6949,3 @@ WS2812.pio.h:
 /home/ruiki/pico/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
 
 /home/ruiki/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
-
-/home/ruiki/pico/pico-sdk/src/rp2_common/pico_bootrom/include/pico/bootrom.h:
