@@ -1094,13 +1094,13 @@ void processReceiveData(){
   if (token != NULL){
     angle_diff = atof(token);
   }
-  token = strtok(clear_data,",");
-  if (token != NULL){
-    red_circle = atof(token);
-  }
+  //token = strtok(clear_data,",");
+  // if (token != NULL){
+  //   red_circle = atof(token);
+  // }
 
-  // printf("x : %9.6f\n",x_diff);
-  // printf("angle : %9.6f\n",angle_diff);
+  printf("x : %9.6f\n",x_diff);
+  printf("angle : %9.6f\n",angle_diff);
   // Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   //Kalman_holizontal(0,0,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   // printf("est velocity: %9.6f\n",Xn_est_1);
