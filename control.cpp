@@ -306,7 +306,6 @@ void loop_400Hz(void)
    
     //Rate Control (400Hz)
     rate_control();
-   
     if(AngleControlCounter==4)
     {
       AngleControlCounter=0;
@@ -323,7 +322,6 @@ void loop_400Hz(void)
     // }
     AngleControlCounter++;
     LineTraceCounter ++;
-    
   }
   else if(Arm_flag==3)
   {
@@ -862,37 +860,38 @@ void linetrace(void)
    }  
 }
 
-// void FailSafe(void){
-//   // モータを1つストップ
-//   // 対角を弱く
-//   // ヨー
-//   // y方向のズレを見るset_duty_fr(0.0);
-//   set_duty_fl(0.0);
-//   set_duty_fr(0.0);
-//   set_duty_rr(0.0);
-//   set_duty_rl(0.0);
+void FailSafe(void){
+  // モータを1つストップ
+  // 対角を弱く
+  // ヨー
+  // y方向のズレを見るset_duty_fr(0.0);
+  set_duty_fl(0.0);
+  set_duty_fr(0.0);
+  set_duty_rr(0.0);
+  set_duty_rl(0.0);
 
-//   if(Flight_mode == FAILSAFE_FL){
-//     set_duty_fl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_FR)
-//   {
-//     set_duty_fr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RL)
-//   {
-//     set_duty_rl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RR)
-//   {
-//     set_duty_rr(0.0);
-//   }
+  if(Flight_mode == FAILSAFE_FL){
+    set_duty_fl(0.0);
+    set_duty_rr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_FR)
+  {
+    set_duty_fr(0.0);
+    set_duty_rl(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RL)
+  {
+    set_duty_rl(0.0);
+    set_duty_fr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RR)
+  {
+    set_duty_rr(0.0);
+    set_duty_fl(0.0);
+  }
 
-//   if()
-//   {
-
-//   }
-// }
+  R_com = 0;
+}
 
 
 void logging(void)
