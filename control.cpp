@@ -355,12 +355,10 @@ void loop_400Hz(void)
       {
         if (red_circle == 0){
           Red_flag = 0;
-          printf("circle : %9.6f\n",red_circle);
         }
         else
         {
           Red_flag = 1;
-          printf("circle : %9.6f\n",red_circle);
         }
       }
     }
@@ -1087,20 +1085,21 @@ void processReceiveData(){
   clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
   char* token;
   token = strtok(clear_data,",");
-  if (token != NULL){
-    x_diff = atof(token);
-  }
-  token = strtok(NULL,",");
-  if (token != NULL){
-    angle_diff = atof(token);
-  }
-  //token = strtok(clear_data,",");
   // if (token != NULL){
-  //   red_circle = atof(token);
+  //   x_diff = atof(token);
   // }
+  // token = strtok(NULL,",");
+  // if (token != NULL){
+  //   angle_diff = atof(token);
+  // }
+  token = strtok(clear_data,",");
+  if (token != NULL){
+    red_circle = atof(token);
+  }
 
-  printf("x : %9.6f\n",x_diff);
-  printf("angle : %9.6f\n",angle_diff);
+  // printf("x : %9.6f\n",x_diff);
+  // printf("angle : %9.6f\n",angle_diff);
+  printf("circle : %9.6f\n",red_circle);
   // Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   //Kalman_holizontal(0,0,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   // printf("est velocity: %9.6f\n",Xn_est_1);
