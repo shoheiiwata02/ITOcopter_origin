@@ -861,10 +861,6 @@ void linetrace(void)
 }
 
 void FailSafe(void){
-  // モータを1つストップ
-  // 対角を弱く
-  // ヨー
-  // y方向のズレを見るset_duty_fr(0.0);
   set_duty_fl(0.0);
   set_duty_fr(0.0);
   set_duty_rr(0.0);
