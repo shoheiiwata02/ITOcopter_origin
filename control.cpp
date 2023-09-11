@@ -67,7 +67,7 @@ float Logdata[LOGDATANUM]={0.0};
 
 //State Machine
 uint8_t LockMode=0;
-float Disable_duty =0.05;
+float Disable_duty =0.1;
 float Flight_duty  =0.18;//0.2/////////////////
 uint8_t OverG_flag = 0;
 
@@ -398,7 +398,7 @@ void control_init(void)
   //Angle control
   phi_pid.set_parameter  ( 8, 100, 0.01, 0.125, 0.01);//6.0
   theta_pid.set_parameter( 8, 100, 0.01, 0.125, 0.01);//6.0
-  psi_pid.set_parameter  ( 0, 10000, 0.01, 0.125, 0.01);
+  psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
  v_pid.set_parameter (0.0, 0.0001, 1, 0.125, 0.025);
@@ -614,12 +614,12 @@ void rate_control(void)
   FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.1351;
   RR_duty =(T_ref +(-P_com -Q_com +R_com)*0.25)*0.1351;
   RL_duty = (T_ref +( P_com -Q_com -R_com)*0.25)*0.1351;
-  //FR_duty = (T_ref)*0.0901;
-  //FL_duty = (T_ref)*0.0901;
-  //RR_duty = (T_ref)*0.0901;
-  //RL_duty = (T_ref)*0.0901;
+  FR_duty = (T_ref)*0.1351;
+  FL_duty = (T_ref)*0.1351;
+  RR_duty = (T_ref)*0.1351;
+  RL_duty = (T_ref)*0.1351;
   
-  float minimum_duty=0.05;
+  float minimum_duty=0.1;
   const float maximum_duty=0.95;
   minimum_duty = Disable_duty;
 
@@ -860,34 +860,33 @@ void linetrace(void)
    }  
 }
 
-void FailSafe(void){
-  set_duty_fl(0.0);
-  set_duty_fr(0.0);
-  set_duty_rr(0.0);
-  set_duty_rl(0.0);
+// void FailSafe(void){
+//   set_duty_fl(0.0);
+//   set_duty_fr(0.0);
+//   set_duty_rr(0.0);
+//   set_duty_rl(0.0);
 
-  if(Flight_mode == FAILSAFE_FL){
-    set_duty_fl(0.0);
-    set_duty_rr(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_FR)
-  {
-    set_duty_fr(0.0);
-    set_duty_rl(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RL)
-  {
-    set_duty_rl(0.0);
-    set_duty_fr(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RR)
-  {
-    set_duty_rr(0.0);
-    set_duty_fl(0.0);
-  }
-
-  R_com = 0;
-}
+//   if(Flight_mode == FAILSAFE_FL){
+//     set_duty_fl(0.0);
+//     set_duty_rr(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_FR)
+//   {
+//     set_duty_fr(0.0);
+//     set_duty_rl(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_RL)
+//   {
+//     set_duty_rl(0.0);
+//     set_duty_fr(0.0);
+//   }
+//   else if (Flight_mode == FAILSAFE_RR)
+//   {
+//     set_duty_rr(0.0);
+//     set_duty_fl(0.0);
+//   }
+//   R_com = 0;
+// }
 
 
 void logging(void)
@@ -1032,10 +1031,10 @@ void sensor_read(void)
 
   
   acc_norm = sqrt(Ax*Ax + Ay*Ay + Az*Az);
-  if (acc_norm>250.0) OverG_flag = 1;
+  if (acc_norm>300.0) OverG_flag = 1;
   Acc_norm = acc_filter.update(acc_norm);
   rate_norm = sqrt(Wp*Wp + Wq*Wq + Wr*Wr);
-  if (rate_norm > 6.0) OverG_flag =1;
+  if (rate_norm > 10.0) OverG_flag =1;
 
 /*地磁気校正データ
 回転行列
