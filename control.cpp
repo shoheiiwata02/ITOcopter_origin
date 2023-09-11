@@ -117,43 +117,43 @@ void led_control(void)
   {
     rgbled_normal();
   }
-  else if (Arm_flag ==2 && Flight_mode == ROCKING)
-  {
-    rgbled_rocking();
-  }
-  else if (Arm_flag ==2 && Flight_mode == LINETRACE)
-  {
-    rgbled_lightblue();
-  }
-  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE)
-  {
-    rgbled_pink();
-  }
-  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RL))
-  {
-    rgbled_failsafe();
-  }
-  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FL))
-  {
-    rgbled_failsafe();
-  }
-  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FR))
-  {
-    rgbled_failsafe();
-  }
-  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RR))
-  {
-    rgbled_failsafe();
-  }
-  else if ((Arm_flag ==2) && (Flight_mode == SERVO))
-  {
-    rgbled_blue();
-  }
+  // else if (Arm_flag ==2 && Flight_mode == ROCKING)
+  // {
+  //   rgbled_rocking();
+  // }
+  // else if (Arm_flag ==2 && Flight_mode == LINETRACE)
+  // {
+  //   rgbled_lightblue();
+  // }
+  // else if (Arm_flag ==2 && Flight_mode == REDCIRCLE)
+  // {
+  //   rgbled_pink();
+  // }
+  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RL))
+  // {
+  //   rgbled_failsafe();
+  // }
+  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FL))
+  // {
+  //   rgbled_failsafe();
+  // }
+  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FR))
+  // {
+  //   rgbled_failsafe();
+  // }
+  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RR))
+  // {
+  //   rgbled_failsafe();
+  // }
+  // else if ((Arm_flag ==2) && (Flight_mode == SERVO))
+  // {
+  //   rgbled_blue();
+  // }
   
-  else if (Arm_flag == 2 && Red_flag == 1)
-  {
-    rgbled_red();
-  }
+  // else if (Arm_flag == 2 && Red_flag == 1)
+  // {
+  //   rgbled_red();
+  // }
   
   else if (Arm_flag == 2 && Red_flag == 0 && Logflag == 1)
   {
@@ -183,7 +183,7 @@ void loop_400Hz(void)
   pwm_clear_irq(7);
 
   //Servo Control
-  servo_control();
+  // servo_control();
 
    //LED Control
   led_control();
@@ -473,11 +473,11 @@ void motor_stop(void)
 }
 
 // サーボ追加----------------------------------------------------
-void servo_control(void)
-{
-  if (Chdata[SERVO] > (SERVO_MAX+SERVO_MIN)/2 ) payload_relese();
-  if (Chdata[SERVO] < (SERVO_MAX+SERVO_MIN)/2 ) payload_hook();
-}
+// void servo_control(void)
+// {
+//   if (Chdata[SERVO] > (SERVO_MAX+SERVO_MIN)/2 ) payload_relese();
+//   if (Chdata[SERVO] < (SERVO_MAX+SERVO_MIN)/2 ) payload_hook();
+// }
 // --------------------------------------------------------------
 
 void rate_control(void)
@@ -497,55 +497,55 @@ void rate_control(void)
   // if (Chdata[MODE_SW]>1241)
   
   
-  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
-  {
-    Flight_mode = ROCKING;
-    Red_flag = 0;
-  }
+  // if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
+  // {
+  //   Flight_mode = ROCKING;
+  //   Red_flag = 0;
+  // }
 
-  else if ((Chdata[FAILSAFEON_OFF] > 500))
-  {
-    if ((Chdata[FAILSAFE] < 400))
-    {
-      Flight_mode = 20;
-      Flight_mode = FAILSAFE_RL;
-    }
-    else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
-    {
-      Flight_mode = 21;
-      Flight_mode = FAILSAFE_FL;
-    }
-    else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
-    {
-      Flight_mode = 22;
-      Flight_mode = FAILSAFE_FR;
-    }
-    else if((Chdata[FAILSAFE] > 1651))
-    {
-      Flight_mode = 23;
-      Flight_mode = FAILSAFE_RR;
-    }  
-  }
+  // else if ((Chdata[FAILSAFEON_OFF] > 500))
+  // {
+  //   if ((Chdata[FAILSAFE] < 400))
+  //   {
+  //     Flight_mode = 20;
+  //     Flight_mode = FAILSAFE_RL;
+  //   }
+  //   else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
+  //   {
+  //     Flight_mode = 21;
+  //     Flight_mode = FAILSAFE_FL;
+  //   }
+  //   else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
+  //   {
+  //     Flight_mode = 22;
+  //     Flight_mode = FAILSAFE_FR;
+  //   }
+  //   else if((Chdata[FAILSAFE] > 1651))
+  //   {
+  //     Flight_mode = 23;
+  //     Flight_mode = FAILSAFE_RR;
+  //   }  
+  // }
   
-  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
-  {
-    Flight_mode = LINETRACE;
-    Red_flag = 0;
-    // Rocking_timer = 0.0;
-  }
-  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] > 500) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
-  {
-    Flight_mode = REDCIRCLE;
-    // Rocking_timer = 0.0;
-  }
+  // else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
+  // {
+  //   Flight_mode = LINETRACE;
+  //   Red_flag = 0;
+  //   // Rocking_timer = 0.0;
+  // }
+  // else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] > 500) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  // {
+  //   Flight_mode = REDCIRCLE;
+  //   // Rocking_timer = 0.0;
+  // }
   
-  else if((Chdata[SERVO] > 500) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
-  {
-    Flight_mode = SERVO;
-  }
+  // else if((Chdata[SERVO] > 500) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  // {
+  //   Flight_mode = SERVO;
+  // }
   if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
-    Flight_mode = NORMAL;
+    Flight_mode = NORMAL;    //上記の数行のモードのコメント解除するときは2行上の条件文をelse ifと変更
   }
   else{}
   // ---------------------------------------------------------------
@@ -614,10 +614,10 @@ void rate_control(void)
   FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.1351;
   RR_duty =(T_ref +(-P_com -Q_com +R_com)*0.25)*0.1351;
   RL_duty = (T_ref +( P_com -Q_com -R_com)*0.25)*0.1351;
-  FR_duty = (T_ref)*0.1351;
-  FL_duty = (T_ref)*0.1351;
-  RR_duty = (T_ref)*0.1351;
-  RL_duty = (T_ref)*0.1351;
+  // FR_duty = (T_ref)*0.1351;
+  // FL_duty = (T_ref)*0.1351;
+  // RR_duty = (T_ref)*0.1351;
+  // RL_duty = (T_ref)*0.1351;
   
   float minimum_duty=0.1;
   const float maximum_duty=0.95;
