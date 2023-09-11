@@ -109,6 +109,7 @@ uint8_t print_flag = 0;
 float x_diff = 0;
 float angle_diff = 0; 
 float red_circle = 0;
+float line_number = 0;
 
 void loop_400Hz(void);
 void rate_control(void);
@@ -1087,14 +1088,19 @@ void processReceiveData(){
   if (token != NULL){
     angle_diff = atof(token);
   }
-  token = strtok(clear_data,",");
+  token = strtok(NULL,",");
   if (token != NULL){
     red_circle = atof(token);
+  }
+  token = strtok(NULL,",");
+  if (token != NULL){
+    line_number = atof(token);
   }
 
   printf("x : %9.6f\n",x_diff);
   printf("angle : %9.6f\n",angle_diff);
-  printf("circle : %9.6f\n",angle_diff);
+  printf("circle : %9.6f\n",red_circle);
+  printf("number : %9.6f\n",line_number);
   // Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   //Kalman_holizontal(0,0,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
   // printf("est velocity: %9.6f\n",Xn_est_1);
