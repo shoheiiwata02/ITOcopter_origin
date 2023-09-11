@@ -1,5 +1,5 @@
-/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/pico_copter_com.dir
-/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/pico_copter_com_WS2812_pio_h.dir
+/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/pico_copter.dir
+/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/pico_copter_WS2812_pio_h.dir
 /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/ELF2UF2Build.dir
 /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/edit_cache.dir
 /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles/rebuild_cache.dir

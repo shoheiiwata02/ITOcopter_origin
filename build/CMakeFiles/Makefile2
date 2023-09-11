@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/pico_copter_com.dir/all
+all: CMakeFiles/pico_copter.dir/all
 all: CMakeFiles/ELF2UF2Build.dir/all
 all: pico-sdk/all
 .PHONY : all
@@ -73,8 +73,8 @@ preinstall: pico-sdk/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/pico_copter_com.dir/clean
-clean: CMakeFiles/pico_copter_com_WS2812_pio_h.dir/clean
+clean: CMakeFiles/pico_copter.dir/clean
+clean: CMakeFiles/pico_copter_WS2812_pio_h.dir/clean
 clean: CMakeFiles/ELF2UF2Build.dir/clean
 clean: pico-sdk/clean
 .PHONY : clean
@@ -1377,58 +1377,58 @@ pico-sdk/tools/clean:
 .PHONY : pico-sdk/tools/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pico_copter_com.dir
+# Target rules for target CMakeFiles/pico_copter.dir
 
 # All Build rule for target.
-CMakeFiles/pico_copter_com.dir/all: CMakeFiles/pico_copter_com_WS2812_pio_h.dir/all
-CMakeFiles/pico_copter_com.dir/all: CMakeFiles/ELF2UF2Build.dir/all
-CMakeFiles/pico_copter_com.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target pico_copter_com"
-.PHONY : CMakeFiles/pico_copter_com.dir/all
+CMakeFiles/pico_copter.dir/all: CMakeFiles/pico_copter_WS2812_pio_h.dir/all
+CMakeFiles/pico_copter.dir/all: CMakeFiles/ELF2UF2Build.dir/all
+CMakeFiles/pico_copter.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99 "Built target pico_copter"
+.PHONY : CMakeFiles/pico_copter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pico_copter_com.dir/rule: cmake_check_build_system
+CMakeFiles/pico_copter.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles 97
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pico_copter_com.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pico_copter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles 0
-.PHONY : CMakeFiles/pico_copter_com.dir/rule
+.PHONY : CMakeFiles/pico_copter.dir/rule
 
 # Convenience name for target.
-pico_copter_com: CMakeFiles/pico_copter_com.dir/rule
-.PHONY : pico_copter_com
+pico_copter: CMakeFiles/pico_copter.dir/rule
+.PHONY : pico_copter
 
 # clean rule for target.
-CMakeFiles/pico_copter_com.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/clean
-.PHONY : CMakeFiles/pico_copter_com.dir/clean
+CMakeFiles/pico_copter.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/clean
+.PHONY : CMakeFiles/pico_copter.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pico_copter_com_WS2812_pio_h.dir
+# Target rules for target CMakeFiles/pico_copter_WS2812_pio_h.dir
 
 # All Build rule for target.
-CMakeFiles/pico_copter_com_WS2812_pio_h.dir/all: pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_com_WS2812_pio_h.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles --progress-num=100 "Built target pico_copter_com_WS2812_pio_h"
-.PHONY : CMakeFiles/pico_copter_com_WS2812_pio_h.dir/all
+CMakeFiles/pico_copter_WS2812_pio_h.dir/all: pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_WS2812_pio_h.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_WS2812_pio_h.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles --progress-num=100 "Built target pico_copter_WS2812_pio_h"
+.PHONY : CMakeFiles/pico_copter_WS2812_pio_h.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pico_copter_com_WS2812_pio_h.dir/rule: cmake_check_build_system
+CMakeFiles/pico_copter_WS2812_pio_h.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles 8
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pico_copter_com_WS2812_pio_h.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pico_copter_WS2812_pio_h.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/CMakeFiles 0
-.PHONY : CMakeFiles/pico_copter_com_WS2812_pio_h.dir/rule
+.PHONY : CMakeFiles/pico_copter_WS2812_pio_h.dir/rule
 
 # Convenience name for target.
-pico_copter_com_WS2812_pio_h: CMakeFiles/pico_copter_com_WS2812_pio_h.dir/rule
-.PHONY : pico_copter_com_WS2812_pio_h
+pico_copter_WS2812_pio_h: CMakeFiles/pico_copter_WS2812_pio_h.dir/rule
+.PHONY : pico_copter_WS2812_pio_h
 
 # clean rule for target.
-CMakeFiles/pico_copter_com_WS2812_pio_h.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_com_WS2812_pio_h.dir/clean
-.PHONY : CMakeFiles/pico_copter_com_WS2812_pio_h.dir/clean
+CMakeFiles/pico_copter_WS2812_pio_h.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_WS2812_pio_h.dir/clean
+.PHONY : CMakeFiles/pico_copter_WS2812_pio_h.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/ELF2UF2Build.dir

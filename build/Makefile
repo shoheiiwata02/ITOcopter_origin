@@ -117,30 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named pico_copter_com
+# Target rules for targets named pico_copter
 
 # Build rule for target.
-pico_copter_com: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_copter_com
-.PHONY : pico_copter_com
+pico_copter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_copter
+.PHONY : pico_copter
 
 # fast build rule for target.
-pico_copter_com/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/build
-.PHONY : pico_copter_com/fast
+pico_copter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/build
+.PHONY : pico_copter/fast
 
 #=============================================================================
-# Target rules for targets named pico_copter_com_WS2812_pio_h
+# Target rules for targets named pico_copter_WS2812_pio_h
 
 # Build rule for target.
-pico_copter_com_WS2812_pio_h: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_copter_com_WS2812_pio_h
-.PHONY : pico_copter_com_WS2812_pio_h
+pico_copter_WS2812_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico_copter_WS2812_pio_h
+.PHONY : pico_copter_WS2812_pio_h
 
 # fast build rule for target.
-pico_copter_com_WS2812_pio_h/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_com_WS2812_pio_h.dir/build
-.PHONY : pico_copter_com_WS2812_pio_h/fast
+pico_copter_WS2812_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_WS2812_pio_h.dir/build.make CMakeFiles/pico_copter_WS2812_pio_h.dir/build
+.PHONY : pico_copter_WS2812_pio_h/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -238,7 +238,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/a
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -246,7 +246,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/a
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -254,7 +254,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/a
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -262,7 +262,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -270,7 +270,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -278,7 +278,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -286,7 +286,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -294,7 +294,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -302,7 +302,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -310,7 +310,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -318,7 +318,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -326,7 +326,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -334,7 +334,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -342,7 +342,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -350,7 +350,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -358,7 +358,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/mi
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -366,7 +366,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/mi
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -374,7 +374,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/mi
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -382,7 +382,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -390,7 +390,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -398,7 +398,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -406,7 +406,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -414,7 +414,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -422,7 +422,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -430,7 +430,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -438,7 +438,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -446,7 +446,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -454,7 +454,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -462,7 +462,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -470,7 +470,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -478,7 +478,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -486,7 +486,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -494,7 +494,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
@@ -502,7 +502,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/v
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
@@ -510,7 +510,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/v
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
@@ -518,7 +518,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/v
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -526,7 +526,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_f
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -534,7 +534,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_f
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -542,7 +542,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_f
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
@@ -550,7 +550,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.o
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
@@ -558,7 +558,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.i
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
@@ -566,7 +566,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.s
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
@@ -574,7 +574,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_c
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
@@ -582,7 +582,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_c
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
@@ -590,7 +590,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_c
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -598,7 +598,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -606,7 +606,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -614,7 +614,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -622,7 +622,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -630,7 +630,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -638,7 +638,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/rasp
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
@@ -646,7 +646,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.obj: Use
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
@@ -654,7 +654,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.i: Users
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
@@ -662,7 +662,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.s: Users
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/tusb.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
@@ -670,7 +670,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
@@ -678,7 +678,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
@@ -686,7 +686,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/critical_section.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
@@ -694,7 +694,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
@@ -702,7 +702,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
@@ -710,7 +710,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_cor
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/lock_core.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
@@ -718,7 +718,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.ob
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.i
@@ -726,7 +726,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.i:
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.s
@@ -734,7 +734,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.s:
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.obj
@@ -742,7 +742,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.obj:
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.i
@@ -750,7 +750,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.i: U
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.s
@@ -758,7 +758,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.s: U
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_sync/sem.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.obj
@@ -766,7 +766,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.obj
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.i
@@ -774,7 +774,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.i: 
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.s
@@ -782,7 +782,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.s: 
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/time.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
@@ -790,7 +790,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
@@ -798,7 +798,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
@@ -806,7 +806,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_time/timeout_helper.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.obj
@@ -814,7 +814,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.i
@@ -822,7 +822,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.s
@@ -830,7 +830,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/datetime.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.obj
@@ -838,7 +838,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.ob
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.i
@@ -846,7 +846,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.i:
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.s
@@ -854,7 +854,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.s:
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.obj
@@ -862,7 +862,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.ob
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.i
@@ -870,7 +870,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.i:
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.s
@@ -878,7 +878,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.s:
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -886,7 +886,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
@@ -894,7 +894,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
@@ -902,7 +902,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -910,7 +910,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
@@ -918,7 +918,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
@@ -926,7 +926,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clock
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
@@ -934,7 +934,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divid
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
@@ -942,7 +942,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
@@ -950,7 +950,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
@@ -958,7 +958,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -966,7 +966,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
@@ -974,7 +974,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
@@ -982,7 +982,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
@@ -990,7 +990,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
@@ -998,7 +998,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
@@ -1006,7 +1006,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
@@ -1014,7 +1014,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
@@ -1022,7 +1022,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
@@ -1030,7 +1030,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1038,7 +1038,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/i
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
@@ -1046,7 +1046,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/p
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
@@ -1054,7 +1054,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/p
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
@@ -1062,7 +1062,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/p
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
@@ -1070,7 +1070,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
@@ -1078,7 +1078,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
@@ -1086,7 +1086,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/p
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
@@ -1094,7 +1094,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/s
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
@@ -1102,7 +1102,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/s
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
@@ -1110,7 +1110,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/s
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
@@ -1118,7 +1118,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
@@ -1126,7 +1126,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
@@ -1134,7 +1134,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
@@ -1142,7 +1142,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
@@ -1150,7 +1150,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
@@ -1158,7 +1158,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
@@ -1166,7 +1166,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
@@ -1174,7 +1174,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
@@ -1182,7 +1182,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1190,7 +1190,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1198,7 +1198,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1206,7 +1206,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1214,7 +1214,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1222,7 +1222,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1230,7 +1230,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watch
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1238,7 +1238,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1246,7 +1246,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1254,7 +1254,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1262,7 +1262,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/b
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1270,7 +1270,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1278,7 +1278,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1286,7 +1286,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/b
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
@@ -1294,7 +1294,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/d
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1302,7 +1302,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1310,7 +1310,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1318,7 +1318,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1326,7 +1326,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
@@ -1334,7 +1334,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
@@ -1342,7 +1342,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
@@ -1350,7 +1350,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1358,7 +1358,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/do
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1366,7 +1366,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp204
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1374,7 +1374,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp204
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1382,7 +1382,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp204
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -1390,7 +1390,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -1398,7 +1398,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
@@ -1406,7 +1406,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
@@ -1414,7 +1414,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
@@ -1422,7 +1422,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
@@ -1430,7 +1430,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
@@ -1438,7 +1438,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1446,7 +1446,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/flo
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1454,7 +1454,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1462,7 +1462,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1470,7 +1470,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1478,7 +1478,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pi
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1486,7 +1486,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/m
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
@@ -1494,7 +1494,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
@@ -1502,7 +1502,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
@@ -1510,7 +1510,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
@@ -1518,7 +1518,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
@@ -1526,7 +1526,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
@@ -1534,7 +1534,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
@@ -1542,7 +1542,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
@@ -1550,7 +1550,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
@@ -1558,7 +1558,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/pr
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1566,7 +1566,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
@@ -1574,7 +1574,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
@@ -1582,7 +1582,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/r
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1590,7 +1590,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1598,7 +1598,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1606,7 +1606,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1614,7 +1614,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1622,7 +1622,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1630,7 +1630,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1638,7 +1638,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1646,7 +1646,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
@@ -1654,7 +1654,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
@@ -1662,7 +1662,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/std
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
@@ -1670,7 +1670,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1678,7 +1678,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1686,7 +1686,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
@@ -1694,7 +1694,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1702,7 +1702,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1710,7 +1710,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
@@ -1718,7 +1718,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1726,7 +1726,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -1734,7 +1734,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1742,7 +1742,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1750,7 +1750,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1758,7 +1758,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/st
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.s
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.obj: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -1766,7 +1766,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id
 
 # target to build an object file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.i: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1774,7 +1774,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id
 
 # target to preprocess a source file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i
 
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.s: Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1782,7 +1782,7 @@ Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id
 
 # target to generate assembly for a file
 Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : Users/kokoro/Documents/drone_project/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.s
 
 VL53L1X_api.obj: VL53L1X_api.c.obj
@@ -1790,7 +1790,7 @@ VL53L1X_api.obj: VL53L1X_api.c.obj
 
 # target to build an object file
 VL53L1X_api.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_api.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj
 .PHONY : VL53L1X_api.c.obj
 
 VL53L1X_api.i: VL53L1X_api.c.i
@@ -1798,7 +1798,7 @@ VL53L1X_api.i: VL53L1X_api.c.i
 
 # target to preprocess a source file
 VL53L1X_api.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_api.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.i
 .PHONY : VL53L1X_api.c.i
 
 VL53L1X_api.s: VL53L1X_api.c.s
@@ -1806,7 +1806,7 @@ VL53L1X_api.s: VL53L1X_api.c.s
 
 # target to generate assembly for a file
 VL53L1X_api.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_api.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.s
 .PHONY : VL53L1X_api.c.s
 
 VL53L1X_calibration.obj: VL53L1X_calibration.c.obj
@@ -1814,7 +1814,7 @@ VL53L1X_calibration.obj: VL53L1X_calibration.c.obj
 
 # target to build an object file
 VL53L1X_calibration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_calibration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj
 .PHONY : VL53L1X_calibration.c.obj
 
 VL53L1X_calibration.i: VL53L1X_calibration.c.i
@@ -1822,7 +1822,7 @@ VL53L1X_calibration.i: VL53L1X_calibration.c.i
 
 # target to preprocess a source file
 VL53L1X_calibration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_calibration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.i
 .PHONY : VL53L1X_calibration.c.i
 
 VL53L1X_calibration.s: VL53L1X_calibration.c.s
@@ -1830,7 +1830,7 @@ VL53L1X_calibration.s: VL53L1X_calibration.c.s
 
 # target to generate assembly for a file
 VL53L1X_calibration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/VL53L1X_calibration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.s
 .PHONY : VL53L1X_calibration.c.s
 
 WS2812.obj: WS2812.cpp.obj
@@ -1838,7 +1838,7 @@ WS2812.obj: WS2812.cpp.obj
 
 # target to build an object file
 WS2812.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/WS2812.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/WS2812.cpp.obj
 .PHONY : WS2812.cpp.obj
 
 WS2812.i: WS2812.cpp.i
@@ -1846,7 +1846,7 @@ WS2812.i: WS2812.cpp.i
 
 # target to preprocess a source file
 WS2812.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/WS2812.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/WS2812.cpp.i
 .PHONY : WS2812.cpp.i
 
 WS2812.s: WS2812.cpp.s
@@ -1854,7 +1854,7 @@ WS2812.s: WS2812.cpp.s
 
 # target to generate assembly for a file
 WS2812.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/WS2812.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/WS2812.cpp.s
 .PHONY : WS2812.cpp.s
 
 control.obj: control.cpp.obj
@@ -1862,7 +1862,7 @@ control.obj: control.cpp.obj
 
 # target to build an object file
 control.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/control.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/control.cpp.obj
 .PHONY : control.cpp.obj
 
 control.i: control.cpp.i
@@ -1870,7 +1870,7 @@ control.i: control.cpp.i
 
 # target to preprocess a source file
 control.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/control.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/control.cpp.i
 .PHONY : control.cpp.i
 
 control.s: control.cpp.s
@@ -1878,7 +1878,7 @@ control.s: control.cpp.s
 
 # target to generate assembly for a file
 control.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/control.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/control.cpp.s
 .PHONY : control.cpp.s
 
 ekf.obj: ekf.cpp.obj
@@ -1886,7 +1886,7 @@ ekf.obj: ekf.cpp.obj
 
 # target to build an object file
 ekf.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/ekf.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/ekf.cpp.obj
 .PHONY : ekf.cpp.obj
 
 ekf.i: ekf.cpp.i
@@ -1894,7 +1894,7 @@ ekf.i: ekf.cpp.i
 
 # target to preprocess a source file
 ekf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/ekf.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/ekf.cpp.i
 .PHONY : ekf.cpp.i
 
 ekf.s: ekf.cpp.s
@@ -1902,7 +1902,7 @@ ekf.s: ekf.cpp.s
 
 # target to generate assembly for a file
 ekf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/ekf.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/ekf.cpp.s
 .PHONY : ekf.cpp.s
 
 i2c.obj: i2c.cpp.obj
@@ -1910,7 +1910,7 @@ i2c.obj: i2c.cpp.obj
 
 # target to build an object file
 i2c.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/i2c.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/i2c.cpp.obj
 .PHONY : i2c.cpp.obj
 
 i2c.i: i2c.cpp.i
@@ -1918,7 +1918,7 @@ i2c.i: i2c.cpp.i
 
 # target to preprocess a source file
 i2c.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/i2c.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/i2c.cpp.i
 .PHONY : i2c.cpp.i
 
 i2c.s: i2c.cpp.s
@@ -1926,7 +1926,7 @@ i2c.s: i2c.cpp.s
 
 # target to generate assembly for a file
 i2c.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/i2c.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/i2c.cpp.s
 .PHONY : i2c.cpp.s
 
 lsm9ds1_reg.obj: lsm9ds1_reg.c.obj
@@ -1934,7 +1934,7 @@ lsm9ds1_reg.obj: lsm9ds1_reg.c.obj
 
 # target to build an object file
 lsm9ds1_reg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/lsm9ds1_reg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.obj
 .PHONY : lsm9ds1_reg.c.obj
 
 lsm9ds1_reg.i: lsm9ds1_reg.c.i
@@ -1942,7 +1942,7 @@ lsm9ds1_reg.i: lsm9ds1_reg.c.i
 
 # target to preprocess a source file
 lsm9ds1_reg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/lsm9ds1_reg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.i
 .PHONY : lsm9ds1_reg.c.i
 
 lsm9ds1_reg.s: lsm9ds1_reg.c.s
@@ -1950,7 +1950,7 @@ lsm9ds1_reg.s: lsm9ds1_reg.c.s
 
 # target to generate assembly for a file
 lsm9ds1_reg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/lsm9ds1_reg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.s
 .PHONY : lsm9ds1_reg.c.s
 
 pico_copter.obj: pico_copter.cpp.obj
@@ -1958,7 +1958,7 @@ pico_copter.obj: pico_copter.cpp.obj
 
 # target to build an object file
 pico_copter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pico_copter.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pico_copter.cpp.obj
 .PHONY : pico_copter.cpp.obj
 
 pico_copter.i: pico_copter.cpp.i
@@ -1966,7 +1966,7 @@ pico_copter.i: pico_copter.cpp.i
 
 # target to preprocess a source file
 pico_copter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pico_copter.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pico_copter.cpp.i
 .PHONY : pico_copter.cpp.i
 
 pico_copter.s: pico_copter.cpp.s
@@ -1974,7 +1974,7 @@ pico_copter.s: pico_copter.cpp.s
 
 # target to generate assembly for a file
 pico_copter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pico_copter.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pico_copter.cpp.s
 .PHONY : pico_copter.cpp.s
 
 pid.obj: pid.cpp.obj
@@ -1982,7 +1982,7 @@ pid.obj: pid.cpp.obj
 
 # target to build an object file
 pid.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pid.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pid.cpp.obj
 .PHONY : pid.cpp.obj
 
 pid.i: pid.cpp.i
@@ -1990,7 +1990,7 @@ pid.i: pid.cpp.i
 
 # target to preprocess a source file
 pid.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pid.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pid.cpp.i
 .PHONY : pid.cpp.i
 
 pid.s: pid.cpp.s
@@ -1998,7 +1998,7 @@ pid.s: pid.cpp.s
 
 # target to generate assembly for a file
 pid.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pid.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pid.cpp.s
 .PHONY : pid.cpp.s
 
 pwm.obj: pwm.cpp.obj
@@ -2006,7 +2006,7 @@ pwm.obj: pwm.cpp.obj
 
 # target to build an object file
 pwm.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pwm.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pwm.cpp.obj
 .PHONY : pwm.cpp.obj
 
 pwm.i: pwm.cpp.i
@@ -2014,7 +2014,7 @@ pwm.i: pwm.cpp.i
 
 # target to preprocess a source file
 pwm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pwm.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pwm.cpp.i
 .PHONY : pwm.cpp.i
 
 pwm.s: pwm.cpp.s
@@ -2022,7 +2022,7 @@ pwm.s: pwm.cpp.s
 
 # target to generate assembly for a file
 pwm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/pwm.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/pwm.cpp.s
 .PHONY : pwm.cpp.s
 
 radio.obj: radio.cpp.obj
@@ -2030,7 +2030,7 @@ radio.obj: radio.cpp.obj
 
 # target to build an object file
 radio.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/radio.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/radio.cpp.obj
 .PHONY : radio.cpp.obj
 
 radio.i: radio.cpp.i
@@ -2038,7 +2038,7 @@ radio.i: radio.cpp.i
 
 # target to preprocess a source file
 radio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/radio.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/radio.cpp.i
 .PHONY : radio.cpp.i
 
 radio.s: radio.cpp.s
@@ -2046,7 +2046,7 @@ radio.s: radio.cpp.s
 
 # target to generate assembly for a file
 radio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/radio.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/radio.cpp.s
 .PHONY : radio.cpp.s
 
 rgbled.obj: rgbled.cpp.obj
@@ -2054,7 +2054,7 @@ rgbled.obj: rgbled.cpp.obj
 
 # target to build an object file
 rgbled.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/rgbled.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/rgbled.cpp.obj
 .PHONY : rgbled.cpp.obj
 
 rgbled.i: rgbled.cpp.i
@@ -2062,7 +2062,7 @@ rgbled.i: rgbled.cpp.i
 
 # target to preprocess a source file
 rgbled.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/rgbled.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/rgbled.cpp.i
 .PHONY : rgbled.cpp.i
 
 rgbled.s: rgbled.cpp.s
@@ -2070,7 +2070,7 @@ rgbled.s: rgbled.cpp.s
 
 # target to generate assembly for a file
 rgbled.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/rgbled.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/rgbled.cpp.s
 .PHONY : rgbled.cpp.s
 
 sensor.obj: sensor.cpp.obj
@@ -2078,7 +2078,7 @@ sensor.obj: sensor.cpp.obj
 
 # target to build an object file
 sensor.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/sensor.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/sensor.cpp.obj
 .PHONY : sensor.cpp.obj
 
 sensor.i: sensor.cpp.i
@@ -2086,7 +2086,7 @@ sensor.i: sensor.cpp.i
 
 # target to preprocess a source file
 sensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/sensor.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/sensor.cpp.i
 .PHONY : sensor.cpp.i
 
 sensor.s: sensor.cpp.s
@@ -2094,7 +2094,7 @@ sensor.s: sensor.cpp.s
 
 # target to generate assembly for a file
 sensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/sensor.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/sensor.cpp.s
 .PHONY : sensor.cpp.s
 
 vl53l1_platform.obj: vl53l1_platform.c.obj
@@ -2102,7 +2102,7 @@ vl53l1_platform.obj: vl53l1_platform.c.obj
 
 # target to build an object file
 vl53l1_platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/vl53l1_platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj
 .PHONY : vl53l1_platform.c.obj
 
 vl53l1_platform.i: vl53l1_platform.c.i
@@ -2110,7 +2110,7 @@ vl53l1_platform.i: vl53l1_platform.c.i
 
 # target to preprocess a source file
 vl53l1_platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/vl53l1_platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.i
 .PHONY : vl53l1_platform.c.i
 
 vl53l1_platform.s: vl53l1_platform.c.s
@@ -2118,7 +2118,7 @@ vl53l1_platform.s: vl53l1_platform.c.s
 
 # target to generate assembly for a file
 vl53l1_platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter_com.dir/build.make CMakeFiles/pico_copter_com.dir/vl53l1_platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.s
 .PHONY : vl53l1_platform.c.s
 
 # Help Target
@@ -2135,9 +2135,9 @@ help:
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
 	@echo "... cyw43_firmware_package"
-	@echo "... pico_copter_com_WS2812_pio_h"
+	@echo "... pico_copter_WS2812_pio_h"
 	@echo "... bs2_default"
-	@echo "... pico_copter_com"
+	@echo "... pico_copter"
 	@echo "... Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... Users/kokoro/Documents/drone_project/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

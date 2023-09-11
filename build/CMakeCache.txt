@@ -172,7 +172,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=pico_copter_com
+CMAKE_PROJECT_NAME:STATIC=pico_copter
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/local/bin/arm-none-eabi-ranlib
@@ -297,13 +297,13 @@ PICO_STDIO_UART:BOOL=ON
 PICO_STDIO_USB:BOOL=OFF
 
 //Value Computed by CMake
-pico_copter_com_BINARY_DIR:STATIC=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build
+pico_copter_BINARY_DIR:STATIC=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build
 
 //Value Computed by CMake
-pico_copter_com_IS_TOP_LEVEL:STATIC=ON
+pico_copter_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-pico_copter_com_SOURCE_DIR:STATIC=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin
+pico_copter_SOURCE_DIR:STATIC=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin
 
 //Value Computed by CMake
 pico_sdk_BINARY_DIR:STATIC=/Users/kokoro/Documents/drone_project/pico/pico-sdk/ITOcopter_origin/build/pico-sdk
