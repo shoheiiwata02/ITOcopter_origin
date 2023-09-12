@@ -134,6 +134,10 @@ void lotate_altitude_init(float Theta,float Psi,float Phi);
 void test_Hovering(void);
 void processReceiveData();
 void receiveData(char c);
+// OpenMVにコマンドを送信する関数
+void send_command(const char* command) {
+    uart_write_blocking(UART_ID, (const uint8_t*)command, strlen(command));
+}
 //---------------------------------
 
 #define AVERAGE 2000
@@ -352,13 +356,14 @@ void loop_400Hz(void)
     //kawasaki_uart---------
     if (Flight_mode == REDCIRCLE)
     {
+
       if (red_circle == 0){
-        Red_flag = 0;
+      Red_flag = 0;
       }
       else
       {
         Red_flag = 1;
-      }
+        }
     }
     //--------------------------------------------------
    
@@ -444,6 +449,16 @@ void loop_400Hz(void)
   E_time=time_us_32();
   D_time=E_time-S_time;
 }
+
+//------------------------------------------------------------
+void send_data_via_uart(const char* data) {
+    while (*data != '\0') {
+        uart_putc(UART_ID, *data);
+        data++;
+    }
+}
+//---------------------------------------------------------------
+
 
 void control_init(void)
 {
@@ -1191,16 +1206,24 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   //OpenMV通信用 -------------------------------------------
   //start_time = time_us_64();
 
-  while (uart_is_readable(UART_ID2)){
+  while(1){
+    while (uart_is_readable(UART_ID2)){
     char c = uart_getc(UART_ID2);
     receiveData(c);
-  }
+    }
+
+  // 条件が満たされた場合にデータを送信
+    if (Flight_mode == REDCIRCLE)
+    {
+      send_data_via_uart("Hello from Raspberry Pi Pico!\n");
+    }
   // current_time = time_us_64();
   // func_time = (current_time - start_time)/1000000.0;
   // printf("%9.6f \n", func_time);
   //--------------------------------------------------------
+  }
+  
 }
-
 
 
 void variable_init(void)
