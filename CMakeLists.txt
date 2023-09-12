@@ -10,7 +10,6 @@ set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
 
 pico_sdk_init()
 include_directories(/home/shohei/pico/eigen)
-
 add_executable(pico_copter
   pico_copter.cpp
   sensor.cpp
@@ -23,6 +22,9 @@ add_executable(pico_copter
   rgbled.cpp
   i2c.cpp
   pid.cpp
+  vl53l1_platform.c
+  VL53L1X_api.c
+  VL53L1X_calibration.c
 )
 
 pico_generate_pio_header(pico_copter ${CMAKE_CURRENT_LIST_DIR}/WS2812.pio)

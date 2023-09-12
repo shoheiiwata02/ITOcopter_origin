@@ -13,6 +13,7 @@
 #include "rgbled.hpp"
 #include "pid.hpp"
 
+typedef unsigned char byte;
 using Eigen::MatrixXd;
 using Eigen::MatrixXf;
 using Eigen::Matrix;
@@ -24,7 +25,7 @@ using namespace Eigen;
 // #define ROCKING 1
 // #define AUTO 2
 // #define REDCIRCLE 3
-
+#define BUFFER_SIZE 16
 
 
 //グローバル関数の宣言
@@ -42,7 +43,13 @@ void rgbled_off(void);
 //グローバル変数
 extern uint8_t LockMode;
 extern volatile uint8_t Logoutputflag;
-
+extern float ideal;
+extern float input;
+extern float lotated_distance;
+extern float z_acc;
+extern float func_time;
+extern float T_ref;
+extern uint64_t count_up;
 
 // class PID
 // {
