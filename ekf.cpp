@@ -84,14 +84,14 @@ float observe_y;
 // float Kp = 0.1;
 float Kp = 0.08;
 // float Ki = 900;//400Hz
-float Ki = 128;//57 58 Hz    129  128.571
-// float Ki = 112.5;//50Hz
+//float Ki = 128;//57 58 Hz    129  128.571
+float Ki = 112.5;//50Hz
 float Kd = 0;
 // float Kp_v = 0.08;
 float Kp_v = 0.003;
 // float Ki_v = 300;//400Hz
-float Ki_v = 42;//57 58Hz    43 42.857
-// float Ki_v = 37.5;//50Hz
+//float Ki_v = 42;//57 58Hz    43 42.857
+float Ki_v = 37.5;//50Hz
 float Kd_v = 0;
 float u = 0;
 float u_v = 0;
@@ -283,9 +283,9 @@ float Kalman_holizontal(float camera_y,float camera_psi,float deltaP,float delta
   K32 = (p32_pre * s_i12) + (p33_pre * s_i22);
 
   //状態の推定
-  Xn_est_1 = Xn_pre_1 + (K11*e1 )+ (K12*e2);
-  Xn_est_2 = Xn_pre_2 + (K21*e1) + (K22*e2);
-  Xn_est_3 = Xn_pre_3 + (K31*e1) + (K32*e2);
+  Xn_est_1 = Xn_pre_1 + (K11*e1 )+ (K12*e2); //速度
+  Xn_est_2 = Xn_pre_2 + (K21*e1) + (K22*e2);  //横ズレ
+  Xn_est_3 = Xn_pre_3 + (K31*e1) + (K32*e2);  //角度ズレ
 
   //誤差の共分散の推定
   p11_est = p11_pre - (K11*p21_pre) -(K12*p31_pre);

@@ -143,7 +143,7 @@ void printPQR(void);
 // 追加
 void servo_control(void);
 void led_control(void);
-// void linetrace(void);
+void linetrace(void);
 void FailSafe(void);
 //alt control
 void Auto_fly(void);
@@ -231,6 +231,7 @@ void led_control(void)
 //This function is called from PWM Intrupt on 400Hz.
 void loop_400Hz(void)
 {
+
   static uint8_t led=1;
   S_time=time_us_32();
   
@@ -261,7 +262,7 @@ void loop_400Hz(void)
   else if (Arm_flag==1)
   {
     motor_stop();
-    //Gyro Bias Estimate
+    //Gyro Bias Estimatell0000ll00000000000000000000
     if (BiasCounter < AVERAGE)
     {
       //Sensor Read
@@ -368,14 +369,14 @@ void loop_400Hz(void)
       //Angle Control (100Hz)
       sem_release(&sem);
     }
-    // if(LineTraceCounter == 10)
-    // {
-    //   LineTraceCounter = 0;
-    //   //linetrace (40Hz)
-    //   if (Line_trace_flag == 1){
-    //     linetrace();
-    //   }
-    // }
+    if(LineTraceCounter == 10)
+    {
+      LineTraceCounter = 0;
+      //linetrace (40Hz)
+      if (Line_trace_flag == 1){
+        linetrace();
+      }
+    }
     AngleControlCounter++;
     LineTraceCounter ++;
     
@@ -680,6 +681,7 @@ void rate_control(void)
   else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = LINETRACE;
+    Line_trace_flag = 1;
     Red_flag = 0;
     Rocking_timer = 0.0;
   }
@@ -694,11 +696,12 @@ void rate_control(void)
     Flight_mode = SERVO;
     Rocking_timer = 0.0;
   }
-  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = NORMAL;
     Rocking_timer = 0.0;
   }
+
   //高度制御
   // if(Chdata[4] > (CH5MAX + CH5MIN)*0.5){
   //   auto_mode =1;
@@ -716,11 +719,7 @@ void rate_control(void)
   //       auto_mode_count = 1;
   //       flying_mode = 1;
   //       ideal = Kalman_alt;
-  //       //switch_alt = mu_Yn_est(1,0);
-  //       //Autofly時はoff
   //       T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
-  //       //T_ref = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
-  //       //base_stick = (Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
   //     }
   //     //Auto_fly();
   //     //Auto_takeoff();
@@ -908,12 +907,10 @@ void angle_control(void)
 
     //Auto flight
     //Error
-    // else if (Flight_mode == LINETRACE)
-    // {
-    // phi_err   = Phi_ref   - (Phi   - Phi_bias);
-    // theta_err = Theta_ref - (Theta - Theta_bias);
-    // psi_err   = Psi_ref   - (Psi   - Psi_bias);
-    // }
+    if (Flight_mode == LINETRACE)
+    {
+      psi_err   = Psi_ref   - (Xn_est_3   - Psi_bias);
+    }
     
     //PID Control
     if (T_ref/BATTERY_VOLTAGE < Flight_duty)
@@ -981,7 +978,6 @@ void angle_control(void)
   }
 }
 
-// しょうへい----------------------------
 // Rocking wings
 float rocking_wings(float stick)
 {
@@ -999,50 +995,56 @@ float rocking_wings(float stick)
 }
 
 
-// void linetrace(void)
-// {
-//   //目標値との誤差
-//   float trace_phi_err;
-//   float trace_psi_err;
-//   float trace_v_err;
-//   float trace_y_err;
+void linetrace(void)
+{
+  //目標値との誤差
+  // float trace_phi_err;
+  float trace_psi_err;
+  float trace_v_err;
+  float trace_y_err;
+  float takeoff_counter =0;
 
-//   //目標値
-//   float phi_ref;
-//   float psi_ref;
-//   float v_ref = 0;
-//   float y_ref = 0;
+  //目標値
+  float psi_ref;
+  float phi_ref;
+  float v_ref = 0;
+  float y_ref = 0;
 
-//   //Yaw loop
-//   //Y_con
-//   trace_y_err = ( y_ref - Line_range);
-//   psi_ref = y_pid.update(trace_y_err);
+  if(takeoff_counter == 0){
+    Auto_takeoff();
+    takeoff_counter = 1;
+  }
+  Hovering();
+  //Yaw loop
+  //Y_con
+  trace_y_err = ( y_ref - Line_range);
+  psi_ref = y_pid.update(trace_y_err);
   
-//   //saturation Psi_ref
-//   if ( psi_ref >= 40*pi/180 )
-//    {
-//      Psi_ref = 40*pi/180;
-//    }
-//   else if ( psi_ref <= -40*pi/180 )
-//    {
-//      Psi_ref = -40*pi/180;
-//    }
+  //saturation Psi_ref
+  if ( psi_ref >= 40*pi/180 )
+   {
+     Psi_ref = 40*pi/180;
+   }
+  else if ( psi_ref <= -40*pi/180 )
+   {
+     Psi_ref = -40*pi/180;
+   }
 
-//   //Roll loop
-//   //V_con
-//   trace_v_err = ( v_ref - Line_velocity);
-//   phi_ref = v_pid.update(trace_v_err);
+  //Roll loop
+  //V_con
+  trace_v_err = ( v_ref - Line_velocity);
+  phi_ref = v_pid.update(trace_v_err);
 
-//   //saturation Phi_ref
-//   if ( phi_ref >= 60*pi/180 )
-//    {
-//      Phi_ref = 60*pi/180;
-//    }
-//   else if ( phi_ref <= -60*pi/180 )
-//    {
-//      Phi_ref = -60*pi/180;
-//    }  
-// }
+  //saturation Phi_ref
+  if ( phi_ref >= 60*pi/180 )
+   {
+     Phi_ref = 60*pi/180;
+   }
+  else if ( phi_ref <= -60*pi/180 )
+   {
+     Phi_ref = -60*pi/180;
+   }  
+}
 
 // void failsafe(void){
 //   // モータを1つストップ
@@ -1199,6 +1201,47 @@ void gyroCalibration(void)
   Pbias=sump/N;
   Qbias=sumq/N; 
   Rbias=sumr/N;
+}
+
+//OpenMV通信用
+void processReceiveData(){
+  // printf("%s \n",buffer);
+  char* clear_data = buffer;
+  clear_data++;//(をスキップ
+  clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
+  char* token;
+  token = strtok(clear_data,",");
+  if (token != NULL){
+    x_diff = atof(token);
+  }
+  token = strtok(NULL,",");
+  if (token != NULL){
+    angle_diff = atof(token);
+  }
+  // printf("x : %9.6f\n",x_diff);
+  // printf("angle : %9.6f\n",angle_diff);
+  Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+
+  Line_range = Xn_est_2; //横ずれ
+  Line_velocity = Xn_est_1; //速度
+
+
+
+  // printf("est velocity: %9.6f\n",Xn_est_1);
+  // printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
+  // printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
+}
+void receiveData(char c){
+  if (buffer_index < BUFFER_SIZE - 1){
+    buffer[buffer_index++] = c;
+  }
+  //終了条件のチェック
+  // if (c == '\n'){
+  if (c == ')'){
+    //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
+    processReceiveData();
+    buffer_index = 0; //バッファをリセット
+  }
 }
 
 void sensor_read(void)
