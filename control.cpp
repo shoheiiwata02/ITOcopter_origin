@@ -8,7 +8,7 @@ float Line_range;
 float Line_velocity;
 
 //Initial data
-float rate_limit = 180.0;
+float rate_limit = 200.0;
 
 
 // // Rocking wings
@@ -392,9 +392,9 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 0.8, 1, 0.01, 0.125, 0.0025);//3.4
+  p_pid.set_parameter( 0.8, 5, 0.01, 0.125, 0.0025);//3.4
   q_pid.set_parameter( 1, 1, 0.01, 0.125, 0.0025);//3.8
-  r_pid.set_parameter(1.5, 1, 0.01, 0.125, 0.0025);//9.4
+  r_pid.set_parameter( 2, 1, 0.01, 0.125, 0.0025);//9.4
   //Angle control
   phi_pid.set_parameter  ( 8, 10, 0.01, 0.125, 0.01);//6.0
   theta_pid.set_parameter( 8, 10, 0.01, 0.125, 0.01);//6.0
