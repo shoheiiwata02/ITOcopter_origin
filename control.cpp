@@ -38,8 +38,8 @@ float Phi,Theta,Psi;
 float Phi_ref=0.0,Theta_ref=0.0,Psi_ref=0.0;
 float Elevator_center=0.0, Aileron_center=0.0, Rudder_center=0.0;
 float Pref=0.0,Qref=0.0,Rref=0.0;
-const float Phi_trim   = 0.00;
-const float Theta_trim = 0.00;
+const float Phi_trim   = -16.00;
+const float Theta_trim = -20.00;
 const float Psi_trim   = 0.0;
 const double pi = 3.14159;
 float Line_trace_flag = 0;
@@ -392,12 +392,12 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 0.8, 5, 0.01, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 1, 1, 0.01, 0.125, 0.0025);//3.8
-  r_pid.set_parameter( 2, 1, 0.01, 0.125, 0.0025);//9.4
+  p_pid.set_parameter( 2, 5, 0.1, 0.125, 0.0025);//3.4
+  q_pid.set_parameter( 1.5, 1, 0.01, 0.125, 0.0025);//3.8
+  r_pid.set_parameter( 5, 1, 0.01, 0.125, 0.0025);//9.4
   //Angle control
   phi_pid.set_parameter  ( 8, 10, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 8, 10, 0.01, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 8.5, 10, 0.01, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
@@ -908,9 +908,9 @@ void logging(void)
       Logdata[LogdataCounter++]=Xe(4,0);                  //5
       Logdata[LogdataCounter++]=Xe(5,0);                  //6
       Logdata[LogdataCounter++]=Xe(6,0);                  //7
-      Logdata[LogdataCounter++]=Wp;//-Pbias;              //8
-      Logdata[LogdataCounter++]=Wq;//-Qbias;              //9
-      Logdata[LogdataCounter++]=Wr;//-Rbias;              //10
+      Logdata[LogdataCounter++]=Wp -Pbias;                //8
+      Logdata[LogdataCounter++]=Wq- Qbias;                //9
+      Logdata[LogdataCounter++]=Wr - Rbias;               //10
 
       Logdata[LogdataCounter++]=Ax;                       //11
       Logdata[LogdataCounter++]=Ay;                       //12
