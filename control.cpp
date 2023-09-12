@@ -699,6 +699,7 @@ void rate_control(void)
     Flight_mode = NORMAL;
     Rocking_timer = 0.0;
   }
+
   //高度制御
   // if(Chdata[4] > (CH5MAX + CH5MIN)*0.5){
   //   auto_mode =1;
@@ -716,11 +717,7 @@ void rate_control(void)
   //       auto_mode_count = 1;
   //       flying_mode = 1;
   //       ideal = Kalman_alt;
-  //       //switch_alt = mu_Yn_est(1,0);
-  //       //Autofly時はoff
   //       T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
-  //       //T_ref = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
-  //       //base_stick = (Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
   //     }
   //     //Auto_fly();
   //     //Auto_takeoff();
@@ -1199,6 +1196,41 @@ void gyroCalibration(void)
   Pbias=sump/N;
   Qbias=sumq/N; 
   Rbias=sumr/N;
+}
+
+//OpenMV通信用
+void processReceiveData(){
+  // printf("%s \n",buffer);
+  char* clear_data = buffer;
+  clear_data++;//(をスキップ
+  clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
+  char* token;
+  token = strtok(clear_data,",");
+  if (token != NULL){
+    x_diff = atof(token);
+  }
+  token = strtok(NULL,",");
+  if (token != NULL){
+    angle_diff = atof(token);
+  }
+  // printf("x : %9.6f\n",x_diff);
+  // printf("angle : %9.6f\n",angle_diff);
+  Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+  printf("est velocity: %9.6f\n",Xn_est_1);
+  printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
+  printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
+}
+void receiveData(char c){
+  if (buffer_index < BUFFER_SIZE - 1){
+    buffer[buffer_index++] = c;
+  }
+  //終了条件のチェック
+  // if (c == '\n'){
+  if (c == ')'){
+    //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
+    processReceiveData();
+    buffer_index = 0; //バッファをリセット
+  }
 }
 
 void sensor_read(void)
