@@ -8,7 +8,7 @@ float Line_range;
 float Line_velocity;
 
 //Initial data
-float rate_limit = 200.0;
+float rate_limit = 180.0;
 
 
 // // Rocking wings
@@ -38,8 +38,8 @@ float Phi,Theta,Psi;
 float Phi_ref=0.0,Theta_ref=0.0,Psi_ref=0.0;
 float Elevator_center=0.0, Aileron_center=0.0, Rudder_center=0.0;
 float Pref=0.0,Qref=0.0,Rref=0.0;
-const float Phi_trim   = -16.00;
-const float Theta_trim = -20.00;
+const float Phi_trim   = -0.05;
+const float Theta_trim = 0.065;
 const float Psi_trim   = 0.0;
 const double pi = 3.14159;
 float Line_trace_flag = 0;
@@ -117,10 +117,10 @@ void led_control(void)
   {
     rgbled_normal();
   }
-  // else if (Arm_flag ==2 && Flight_mode == ROCKING)
-  // {
-  //   rgbled_rocking();
-  // }
+  else if (Arm_flag ==2 && Flight_mode == ROCKING)
+  {
+    rgbled_rocking();
+  }
   // else if (Arm_flag ==2 && Flight_mode == LINETRACE)
   // {
   //   rgbled_lightblue();
@@ -129,22 +129,22 @@ void led_control(void)
   // {
   //   rgbled_pink();
   // }
-  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RL))
-  // {
-  //   rgbled_failsafe();
-  // }
-  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FL))
-  // {
-  //   rgbled_failsafe();
-  // }
-  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FR))
-  // {
-  //   rgbled_failsafe();
-  // }
-  // else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RR))
-  // {
-  //   rgbled_failsafe();
-  // }
+  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RL))
+  {
+    rgbled_failsafe();
+  }
+  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FL))
+  {
+    rgbled_failsafe();
+  }
+  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_FR))
+  {
+    rgbled_failsafe();
+  }
+  else if ((Arm_flag ==2) && (Flight_mode == FAILSAFE_RR))
+  {
+    rgbled_failsafe();
+  }
   // else if ((Arm_flag ==2) && (Flight_mode == SERVO))
   // {
   //   rgbled_blue();
@@ -392,12 +392,12 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 2, 5, 0.1, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 1.5, 1, 0.01, 0.125, 0.0025);//3.8
-  r_pid.set_parameter( 5, 1, 0.01, 0.125, 0.0025);//9.4
+  p_pid.set_parameter( 2 , 5, 0.01, 0.125, 0.0025);//(2, 5, 0.01)
+  q_pid.set_parameter( 1.5, 1, 0.01, 0.125, 0.0025);//(1.5, 1, 0.01)
+  r_pid.set_parameter( 3.1, 1, 0.01, 0.125, 0.0025);//(3.1, 1, 0.01)
   //Angle control
   phi_pid.set_parameter  ( 8, 10, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 8.5, 10, 0.01, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 8, 10, 0.01, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
@@ -405,15 +405,6 @@ void control_init(void)
 
  //position control
  y_pid.set_parameter (1.3, 0.0001, 0.05, 0.125, 0.025);
-
-  //Rate control
-  //p_pid.set_parameter(3.3656, 0.1, 0.0112, 0.01, 0.0025);
-  //q_pid.set_parameter(3.8042, 0.1, 0.0111, 0.01, 0.0025);
-  //r_pid.set_parameter(9.4341, 0.11, 0.0056, 0.01, 0.0025);
-  //Angle control
-  //phi_pid.set_parameter  ( 9.0   , 0.07, 0.0352,  0.01, 0.01);
-  //theta_pid.set_parameter( 8.5583, 0.1 , 0.0552,  0.01, 0.01);
-  //psi_pid.set_parameter  ( 9.0256, 0.11, 0.0034,  0.01, 0.01);
 }
 
 uint8_t lock_com(void)
@@ -497,35 +488,35 @@ void rate_control(void)
   // if (Chdata[MODE_SW]>1241)
   
   
-  // if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
-  // {
-  //   Flight_mode = ROCKING;
-  //   Red_flag = 0;
-  // }
+  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
+  {
+    Flight_mode = ROCKING;
+    Red_flag = 0;
+  }
 
-  // else if ((Chdata[FAILSAFEON_OFF] > 500))
-  // {
-  //   if ((Chdata[FAILSAFE] < 400))
-  //   {
-  //     Flight_mode = 20;
-  //     Flight_mode = FAILSAFE_RL;
-  //   }
-  //   else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
-  //   {
-  //     Flight_mode = 21;
-  //     Flight_mode = FAILSAFE_FL;
-  //   }
-  //   else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
-  //   {
-  //     Flight_mode = 22;
-  //     Flight_mode = FAILSAFE_FR;
-  //   }
-  //   else if((Chdata[FAILSAFE] > 1651))
-  //   {
-  //     Flight_mode = 23;
-  //     Flight_mode = FAILSAFE_RR;
-  //   }  
-  // }
+  else if ((Chdata[FAILSAFEON_OFF] > 500))
+  {
+    if ((Chdata[FAILSAFE] < 400))
+    {
+      Flight_mode = 20;
+      Flight_mode = FAILSAFE_RL;
+    }
+    else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
+    {
+      Flight_mode = 21;
+      Flight_mode = FAILSAFE_FL;
+    }
+    else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
+    {
+      Flight_mode = 22;
+      Flight_mode = FAILSAFE_FR;
+    }
+    else if((Chdata[FAILSAFE] > 1651))
+    {
+      Flight_mode = 23;
+      Flight_mode = FAILSAFE_RR;
+    }  
+  }
   
   // else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
   // {
@@ -543,7 +534,7 @@ void rate_control(void)
   // {
   //   Flight_mode = SERVO;
   // }
-  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = NORMAL;    //上記の数行のモードのコメント解除するときは2行上の条件文をelse ifと変更
   }
@@ -609,15 +600,16 @@ void rate_control(void)
   //Motor Control
   // 1250/7.4=112.6
   // 1/7.4=0.01351
+  //1/11.1 = 0.0901
   
-  FR_duty = (T_ref +(-P_com +Q_com -R_com)*0.25)*0.1351;
-  FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.1351;
-  RR_duty =(T_ref +(-P_com -Q_com +R_com)*0.25)*0.1351;
-  RL_duty = (T_ref +( P_com -Q_com -R_com)*0.25)*0.1351;
-  // FR_duty = (T_ref)*0.1351;
-  // FL_duty = (T_ref)*0.1351;
-  // RR_duty = (T_ref)*0.1351;
-  // RL_duty = (T_ref)*0.1351;
+  FR_duty = (T_ref +(-P_com +Q_com -R_com)*0.25)*0.0901;
+  FL_duty = (T_ref +( P_com +Q_com +R_com)*0.25)*0.0901;
+  RR_duty = (T_ref +(-P_com -Q_com +R_com)*0.25)*0.0901;
+  RL_duty = (T_ref +( P_com -Q_com -R_com)*0.25)*0.0901;
+  // FR_duty = (T_ref)*0.0901;
+  // FL_duty = (T_ref)*0.0901;
+  // RR_duty = (T_ref)*0.0901;
+  // RL_duty = (T_ref)*0.0901;
   
   float minimum_duty=0.1;
   const float maximum_duty=0.95;
@@ -634,6 +626,8 @@ void rate_control(void)
 
   if (RL_duty < minimum_duty) RL_duty = minimum_duty;
   if (RL_duty > maximum_duty) RL_duty = maximum_duty;
+
+  if(Flight_mode = FAILSAFE_FL) FailSafe();
 
   //Duty set
   if(T_ref/BATTERY_VOLTAGE < Disable_duty)
@@ -704,14 +698,14 @@ void angle_control(void)
     //Get angle ref (manual flight) 
     if (1)
     {
-      Phi_ref   =  0.3 *M_PI*(float)(Chdata[3] - (CH4MAX+CH4MIN)*0.5)*2/(CH4MAX-CH4MIN);
-      Theta_ref =  0.3 *M_PI*(float)(Chdata[1] - (CH2MAX+CH2MIN)*0.5)*2/(CH2MAX-CH2MIN);
+      Phi_ref   =  Phi_trim + 0.3 *M_PI*(float)(Chdata[3] - (CH4MAX+CH4MIN)*0.5)*2/(CH4MAX-CH4MIN);
+      Theta_ref =  Theta_trim + 0.3 *M_PI*(float)(Chdata[1] - (CH2MAX+CH2MIN)*0.5)*2/(CH2MAX-CH2MIN);
       Psi_ref   =  0.8 *M_PI*(float)(Chdata[0] - (CH1MAX+CH1MIN)*0.5)*2/(CH1MAX-CH1MIN);
 
       phi_err   = Phi_ref   - (Phi   - Phi_bias);
       theta_err = Theta_ref - (Theta - Theta_bias);
       psi_err   = Psi_ref   - (Psi   - Psi_bias);
-    }
+    
 
     // しょうへい--------------------------------------------------------------
     //Rocking Wings
@@ -721,7 +715,7 @@ void angle_control(void)
       Phi_ref = rocking_wings(Phi_ref);
     }
     // ------------------------------------------------------------------------
-
+    }
     //Auto flight
     //Error
     // else if (Flight_mode == LINETRACE)
@@ -801,10 +795,10 @@ void angle_control(void)
 // Rocking wings
 float rocking_wings(float stick)
 {
-  float angle=25;//[deg]
+  float angle=40;//[deg]
   float f=5.0;//[Hz]
 
-  if(Rocking_timer<2.0)
+  if(Rocking_timer<4.0)
   {
     Rocking_timer = Rocking_timer + 0.01;
     rgbled_rocking();
@@ -860,33 +854,51 @@ void linetrace(void)
    }  
 }
 
-// void FailSafe(void){
-//   set_duty_fl(0.0);
-//   set_duty_fr(0.0);
-//   set_duty_rr(0.0);
-//   set_duty_rl(0.0);
+void FailSafe(void){
+  float p_rate;
+  float q_rate;
+  float p_ref;
+  float q_ref;
+  float p_err;
+  float q_err;
 
-//   if(Flight_mode == FAILSAFE_FL){
-//     set_duty_fl(0.0);
-//     set_duty_rr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_FR)
-//   {
-//     set_duty_fr(0.0);
-//     set_duty_rl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RL)
-//   {
-//     set_duty_rl(0.0);
-//     set_duty_fr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RR)
-//   {
-//     set_duty_rr(0.0);
-//     set_duty_fl(0.0);
-//   }
-//   R_com = 0;
-// }
+  if(Flight_mode == FAILSAFE_FL)
+  {
+    set_duty_fl(0.0);
+    set_duty_rr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_FR)
+  {
+    set_duty_fr(0.0);
+    set_duty_rl(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RL)
+  {
+    set_duty_rl(0.0);
+    set_duty_fr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RR)
+  {
+    set_duty_rr(0.0);
+    set_duty_fl(0.0);
+  }
+
+  //Control angle velocity
+  p_rate = Wp - Pbias;
+  q_rate = Wq - Qbias;
+
+  //Get reference
+  p_ref = Pref;
+  q_ref = Qref;
+
+  //Error
+  p_err = p_ref - p_rate;
+  q_err = q_ref - q_rate;
+
+  //PID
+  P_com = p_pid.update(p_err);
+  Q_com = q_pid.update(q_err);
+}
 
 
 void logging(void)
@@ -1029,12 +1041,12 @@ void sensor_read(void)
   My0 = magnetic_field_mgauss[1];
   Mz0 =-magnetic_field_mgauss[2];
 
-  
-  acc_norm = sqrt(Ax*Ax + Ay*Ay + Az*Az);
-  if (acc_norm>300.0) OverG_flag = 1;
-  Acc_norm = acc_filter.update(acc_norm);
-  rate_norm = sqrt(Wp*Wp + Wq*Wq + Wr*Wr);
-  if (rate_norm > 10.0) OverG_flag =1;
+// 加速度・角速度のリミッター
+// acc_norm = sqrt(Ax*Ax + Ay*Ay + Az*Az);
+// if (acc_norm>400.0) OverG_flag = 1;
+// Acc_norm = acc_filter.update(acc_norm);
+// rate_norm = sqrt(Wp*Wp + Wq*Wq + Wr*Wr);
+// if (rate_norm > 20.0) OverG_flag =1;
 
 /*地磁気校正データ
 回転行列
