@@ -818,6 +818,10 @@ void rate_control(void)
   if (RL_duty < minimum_duty) RL_duty = minimum_duty;
   if (RL_duty > maximum_duty) RL_duty = maximum_duty;
 
+  if(Flight_mode = FAILSAFE_FL || Flight_mode = FAILSAFE_FR || Flight_mode = FAILSAFE_RR || Flight_mode = FAILSAFE_RL ){
+    failsafe();
+  }
+
   //Duty set
   if(T_ref/BATTERY_VOLTAGE < Disable_duty)
   {
@@ -1046,36 +1050,36 @@ void linetrace(void)
    }  
 }
 
-// void failsafe(void){
-//   // モータを1つストップ
-//   // 対角を弱く
-//   // ヨー
-//   // y方向のズレを見る
-//   if(Flight_mode == FAILSAFE_FL){
-//     set_duty_fl(0.0);
-//     set_duty_rr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_FR)
-//   {
-//     set_duty_fr(0.0);
-//     set_duty_rl(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RL)
-//   {
-//     set_duty_rl(0.0);
-//     set_duty_fr(0.0);
-//   }
-//   else if (Flight_mode == FAILSAFE_RR)
-//   {
-//     set_duty_rr(0.0);
-//     set_duty_fl(0.0);
-//   }
+void failsafe(void){
+  // モータを1つストップ
+  // 対角を弱く
+  // ヨー
+  // y方向のズレを見る
+  if(Flight_mode == FAILSAFE_FL){
+    set_duty_fl(0.0);
+    set_duty_rr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_FR)
+  {
+    set_duty_fr(0.0);
+    set_duty_rl(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RL)
+  {
+    set_duty_rl(0.0);
+    set_duty_fr(0.0);
+  }
+  else if (Flight_mode == FAILSAFE_RR)
+  {
+    set_duty_rr(0.0);
+    set_duty_fl(0.0);
+  }
 
-//   P_com = 0;
-//   Q_com = 0;
-//   R_com = 0;
-//   r_err = 0;
-// }
+  P_com = 0;
+  Q_com = 0;
+  R_com = 0;
+  r_err = 0;
+}
 
 
 void logging(void)
