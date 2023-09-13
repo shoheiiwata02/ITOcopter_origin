@@ -1215,7 +1215,7 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   // 条件が満たされた場合にデータを送信
     if (Flight_mode == REDCIRCLE)
     {
-      send_data_via_uart("Hello from Raspberry Pi Pico!\n");
+      send_data_via_uart("switch_mode\n");
     }
   // current_time = time_us_64();
   // func_time = (current_time - start_time)/1000000.0;
