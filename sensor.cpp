@@ -29,6 +29,8 @@ uint8_t Kalman_distance = 0;
 int sleep_time = 2000;
 int ms = 200;
 
+
+
 //ローカル関数宣言
 void printData(void);
 

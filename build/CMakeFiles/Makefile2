@@ -1380,8 +1380,8 @@ pico-sdk/tools/clean:
 # Target rules for target CMakeFiles/pico_copter.dir
 
 # All Build rule for target.
-CMakeFiles/pico_copter.dir/all: CMakeFiles/pico_copter_WS2812_pio_h.dir/all
 CMakeFiles/pico_copter.dir/all: CMakeFiles/ELF2UF2Build.dir/all
+CMakeFiles/pico_copter.dir/all: CMakeFiles/pico_copter_WS2812_pio_h.dir/all
 CMakeFiles/pico_copter.dir/all: pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/build

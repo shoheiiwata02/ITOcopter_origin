@@ -13,7 +13,6 @@
 #include "rgbled.hpp"
 #include "pid.hpp"
 
-typedef unsigned char byte;
 using Eigen::MatrixXd;
 using Eigen::MatrixXf;
 using Eigen::Matrix;
@@ -39,7 +38,6 @@ void log_output(void);
 void rgbled_nomal(void);
 void rgbled_off(void);
 
-
 //グローバル変数
 extern uint8_t LockMode;
 extern volatile uint8_t Logoutputflag;
@@ -50,6 +48,13 @@ extern float z_acc;
 extern float func_time;
 extern float T_ref;
 extern uint64_t count_up;
+
+
+
+//グローバル変数
+extern uint8_t LockMode;
+extern volatile uint8_t Logoutputflag;
+
 
 // class PID
 // {

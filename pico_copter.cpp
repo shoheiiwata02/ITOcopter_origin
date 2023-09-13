@@ -26,13 +26,15 @@ int main(void)
   
   //Initilize Control
   control_init();
+  Kalman_init();
+  initialize_Altitude();
 
   //RGB LED off
   rgbled_off();
   
   //Initialize PWM
   //Start 400Hz Interval
-  ESC_calib=0;
+  ESC_calib= 0;
   pwm_init();
 
   while(start_wait)
