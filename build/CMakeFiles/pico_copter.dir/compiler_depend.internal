@@ -534,6 +534,7 @@ CMakeFiles/pico_copter.dir/control.cpp.obj
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pid.hpp
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/failsafe.cpp
 
 CMakeFiles/pico_copter.dir/ekf.cpp.obj
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/ekf.cpp
@@ -4458,6 +4459,7 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/control.hpp
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pid.hpp
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/failsafe.cpp
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/radio.hpp
 
 CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.obj
@@ -5013,6 +5015,7 @@ CMakeFiles/pico_copter.dir/pico_copter.cpp.obj
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pid.hpp
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/failsafe.cpp
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/radio.hpp
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/i2c.hpp
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h
@@ -5531,6 +5534,7 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pid.hpp
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/failsafe.cpp
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/i2c.hpp
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h

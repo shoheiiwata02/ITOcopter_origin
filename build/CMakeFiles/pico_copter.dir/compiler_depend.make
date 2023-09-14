@@ -531,7 +531,8 @@ CMakeFiles/pico_copter.dir/control.cpp.obj: ../control.cpp \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pio.h \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
   /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
-  ../pid.hpp
+  ../pid.hpp \
+  ../failsafe.cpp
 
 CMakeFiles/pico_copter.dir/ekf.cpp.obj: ../ekf.cpp \
   ../ekf.hpp \
@@ -4393,6 +4394,7 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: ../i2c.cpp \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pwm.h \
   ../control.hpp \
   ../pid.hpp \
+  ../failsafe.cpp \
   ../radio.hpp
 
 CMakeFiles/pico_copter.dir/lsm9ds1_reg.c.obj: ../lsm9ds1_reg.c \
@@ -4946,6 +4948,7 @@ CMakeFiles/pico_copter.dir/pico_copter.cpp.obj: ../pico_copter.cpp \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
   /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
   ../pid.hpp \
+  ../failsafe.cpp \
   ../radio.hpp \
   ../i2c.hpp \
   /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
@@ -5462,6 +5465,7 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: ../pwm.cpp \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
   /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
   ../pid.hpp \
+  ../failsafe.cpp \
   ../i2c.hpp \
   /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
   /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
@@ -6192,6 +6196,10 @@ CMakeFiles/pico_copter.dir/sensor.cpp.obj: ../sensor.cpp \
 
 /usr/include/newlib/sys/cdefs.h:
 
+/home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
+
+/usr/include/newlib/c++/10.3.1/tr1/exp_integral.tcc:
+
 /home/mahiro/pico/eigen/Eigen/src/Cholesky/InternalHeaderCheck.h:
 
 /usr/include/newlib/sys/config.h:
@@ -6293,6 +6301,8 @@ generated/pico_base/pico/config_autogen.h:
 /usr/include/newlib/sys/timespec.h:
 
 /usr/include/newlib/c++/10.3.1/ext/numeric_traits.h:
+
+../failsafe.cpp:
 
 /usr/include/newlib/sys/_pthreadtypes.h:
 
@@ -6945,7 +6955,3 @@ WS2812.pio.h:
 /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
 
 /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/xosc.h:
-
-/usr/include/newlib/c++/10.3.1/tr1/exp_integral.tcc:
-
-/home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/xosc.h:
