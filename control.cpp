@@ -169,6 +169,7 @@ void processReceiveData();
 void receiveData(char c);
 void takeoff_merker(void);
 void landing_merker(void);
+void send_data_via_uart(void);
 
 
 #define AVERAGE 2000
@@ -457,6 +458,15 @@ void loop_400Hz(void)
   D_time=E_time-S_time;
 }
 
+//新しい関数: UART送信~~openmv受信------------------------------------------------------------
+void send_data_via_uart(const char* data) {
+    while (*data != '\0') {
+        uart_putc(UART_ID2, *data);
+        data++;
+    }
+}
+
+
 void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
@@ -571,7 +581,9 @@ void Hovering(void){
   //   flying_mode = 3;
   //   //Auto_landing();
   // }
-
+  if (gap_number >=50){
+    landing_counter = 1;
+  }
   input = alt_PID(ideal);
   T_ref = T_stick + (input);
 }
@@ -599,7 +611,7 @@ void Auto_landing(void){
 void Auto_takeoff(void){
 
   if (Kalman_alt <= 250){
-    if (T_ref < 3.4){//3.4
+    if (T_ref < 3.2){//3.4
       T_stick = T_stick + 0.1;
       T_ref = T_stick;
     }
@@ -609,8 +621,8 @@ void Auto_takeoff(void){
     }
   }
 
-  if (Kalman_alt >= 650){//ここ変えてみる
-    ideal = 700;
+  if (Kalman_alt >= 450){//ここ変えてみる
+    ideal = 500;
     // input = alt_PID(ideal);
     // T_ref = T_stick + (input);
     Hovering();
@@ -735,7 +747,7 @@ void rate_control(void)
   p_ref = Pref;
   q_ref = Qref;
   r_ref = Rref;
-  T_ref = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
+  //T_ref = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
 
   //高度制御テスト用のコード
   if(Chdata[SERVO] > 500){
@@ -927,6 +939,11 @@ void angle_control(void)
     {
       Phi_ref = rocking_wings(Phi_ref);
     }
+
+    // if(Flight_mode == LINETRACE){
+    //   linetrace();
+    // }
+
     // ------------------------------------------------------------------------
     }
     //Auto flight
@@ -1025,51 +1042,62 @@ float rocking_wings(float stick)
 void linetrace(void)
 {
   //離陸
-  //ホバリング
-  //前進
+  if(takeoff_counter == 0){
+    send_data_via_uart("TOL_mode\n");
+    takeoff_merker();
+  }
+  //ライントレース & ホバリング
+  else if(line_trace_flag == 1){
+    send_data_via_uart("line_trace\n");
+    Hovering();
+    //目標値との誤差
+    float trace_phi_err;
+    float trace_psi_err;
+    float trace_v_err;
+    float trace_y_err;
 
+    //目標値
+    float phi_ref;
+    float psi_ref;
+    float v_ref = 0;
+    float y_ref = 0;
 
-  //目標値との誤差
-  float trace_phi_err;
-  float trace_psi_err;
-  float trace_v_err;
-  float trace_y_err;
+    //Yaw loop
+    //Y_con
+    trace_y_err = ( y_ref - Line_range);
+    psi_ref = y_pid.update(trace_y_err);
+    
+    //saturation Psi_ref
+    if ( psi_ref >= 40*pi/180 )
+    {
+      Psi_ref = 40*pi/180;
+    }
+    else if ( psi_ref <= -40*pi/180 )
+    {
+      Psi_ref = -40*pi/180;
+    }
 
-  //目標値
-  float phi_ref;
-  float psi_ref;
-  float v_ref = 0;
-  float y_ref = 0;
+    //Roll loop
+    //V_con
+    trace_v_err = ( v_ref - Line_velocity);
+    phi_ref = v_pid.update(trace_v_err);
 
-  //Yaw loop
-  //Y_con
-  trace_y_err = ( y_ref - Line_range);
-  psi_ref = y_pid.update(trace_y_err);
-  
-  //saturation Psi_ref
-  if ( psi_ref >= 40*pi/180 )
-   {
-     Psi_ref = 40*pi/180;
-   }
-  else if ( psi_ref <= -40*pi/180 )
-   {
-     Psi_ref = -40*pi/180;
-   }
+    //saturation Phi_ref
+    if ( phi_ref >= 60*pi/180 )
+    {
+      Phi_ref = 60*pi/180;
+    }
+    else if ( phi_ref <= -60*pi/180 )
+    {
+      Phi_ref = -60*pi/180;
+    }  
+  }
+  //着陸
+  else if (landing_counter == 1){
+    send_data_via_uart("TOL_mode\n");
+    landing_merker();
+  }
 
-  //Roll loop
-  //V_con
-  trace_v_err = ( v_ref - Line_velocity);
-  phi_ref = v_pid.update(trace_v_err);
-
-  //saturation Phi_ref
-  if ( phi_ref >= 60*pi/180 )
-   {
-     Phi_ref = 60*pi/180;
-   }
-  else if ( phi_ref <= -60*pi/180 )
-   {
-     Phi_ref = -60*pi/180;
-   }  
 }
 
 void FailSafe(void){
@@ -1253,64 +1281,68 @@ void gyroCalibration(void)
 }
 
 //OpenMV通信用
-// void processReceiveData(){
-//   // printf("%s \n",buffer);
-//   char* clear_data = buffer;
-//   clear_data++;//(をスキップ
-//   clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
-//   char* token;
-//   if (Flight_mode = LINETRACE){
-//     if(TOL_flag = 1){
-//       token = strtok(clear_data,",");
-//       if (token != NULL){
-//         TOL_x_diff = atof(token);
-//       }
+void processReceiveData(){
 
-//       token = strtok(NULL,",");
-//       if (token != NULL){
-//         TOL_y_diff = atof(token);
-//       }
-//     }
-//     else{
-//       token = strtok(clear_data,",");
-//       if (token != NULL){
-//         x_diff = atof(token);
-//       }
-//       token = strtok(NULL,",");
-//       if (token != NULL){
-//         angle_diff = atof(token);
-//       }
-//     }
-//   }
-//   if (Flight_mode = REDCIRCLE){
-//     token = strtok(clear_data,",");
-//     if (token != NULL){
-//       red_circle = atof(token);
-//     }
-//   }
-//   // printf("x : %9.6f\n",x_diff);
-//   // printf("angle : %9.6f\n",angle_diff);
-//   Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+  char* clear_data = buffer;
+  clear_data++;//(をスキップ
+  clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
+  char* token;
 
-//   Line_range = Xn_est_2; //横ずれ
-//   Line_velocity = Xn_est_1; //速度
+  if (Flight_mode == LINETRACE){
+    token = strtok(clear_data,",");
+    if (token != NULL){
+      x_diff = atof(token);
+    }
+    token = strtok(NULL,",");
+    if (token != NULL){
+      angle_diff = atof(token);
+    }
+    token = strtok(NULL,",");
+    if (token != NULL){
+      gap_number = atof(token);
+    }
+      Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+      Line_range = Xn_est_2; //横ずれ
+      Line_velocity = Xn_est_1; //速度
+  }
 
-//   // printf("est velocity: %9.6f\n",Xn_est_1);
-//   // printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
-//   // printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
-// }
-// void receiveData(char c){
-//   if (buffer_index < BUFFER_SIZE - 1){
-//     buffer[buffer_index++] = c;
-//   }
-//   //終了条件のチェック
-//   // if (c == '\n'){
-//   if (c == ')'){
-//     //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
-//     processReceiveData();
-//     buffer_index = 0; //バッファをリセット
-//   }
-// }
+  if (Flight_mode == REDCIRCLE){
+    // token = strtok(clear_data,",");
+    // if (token != NULL){
+    //   red_circle = atof(token);
+    // }
+    red_circle = atof(clear_data);
+  }
+
+  if(takeoff_counter == 0 || landing_counter ==1){
+    token = strtok(clear_data,",");
+    if (token != NULL){
+      TOL_x_diff = atof(token);
+    }
+
+    token = strtok(NULL,",");
+    if (token != NULL){
+      TOL_y_diff = atof(token);
+    }
+  }
+  // printf("x : %9.6f\n",x_diff);
+  // printf("angle : %9.6f\n",angle_diff);
+  // printf("est velocity: %9.6f\n",Xn_est_1);
+  // printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
+  // printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
+}
+void receiveData(char c){
+  if (buffer_index < BUFFER_SIZE - 1){
+    buffer[buffer_index++] = c;
+  }
+  //終了条件のチェック
+  // if (c == '\n'){
+  if (c == ')'){
+    //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
+    processReceiveData();
+    buffer_index = 0; //バッファをリセット
+  }
+}
 
 
 void sensor_read(void)
@@ -1406,9 +1438,16 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   }
 
   //OpenMV通信用
-  // while (uart_is_readable(UART_ID2)){
+  // if (Flight_mode == LINETRACE){
+  //   while (uart_is_readable(UART_ID2)){
   //   char c = uart_getc(UART_ID2);
   //   receiveData(c);
+  //   }
+  // }
+  // 条件が満たされた場合にデータを送信
+  // if (Flight_mode == REDCIRCLE)
+  // {
+  // send_data_via_uart("switch_mode\n");
   // }
 
 }
