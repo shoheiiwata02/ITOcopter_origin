@@ -144,7 +144,6 @@ void printPQR(void);
 void servo_control(void);
 void led_control(void);
 void linetrace(void);
-void FailSafe(void);
 //alt control
 void Auto_fly(void);
 void Auto_takeoff(void);
@@ -450,13 +449,13 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 0.5, 40, 0.01, 0.125, 0.0025);//3.4
-  q_pid.set_parameter( 0.8, 100, 0.01, 0.125, 0.0025);//3.8
-  r_pid.set_parameter(1.5, 80, 0.01, 0.125, 0.0025);//9.4
+  p_pid.set_parameter( 2, 5, 0.01, 0.125, 0.0025);//3.4
+  q_pid.set_parameter( 1.5, 1, 0.01, 0.125, 0.0025);//3.8
+  r_pid.set_parameter(3.1, 1, 0.01, 0.125, 0.0025);//9.4
   //Angle control
-  phi_pid.set_parameter  ( 5, 100, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 5, 100, 0.01, 0.125, 0.01);//6.0
-  psi_pid.set_parameter  ( 0, 100, 0.01, 0.125, 0.01);
+  phi_pid.set_parameter  ( 8, 10, 0.015, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 8, 10, 0.015, 0.125, 0.01);//6.0
+  psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
  v_pid.set_parameter (0.0, 0.0001, 1, 0.125, 0.025);
@@ -758,6 +757,10 @@ void rate_control(void)
   Q_com = q_pid.update(q_err);
   R_com = r_pid.update(r_err);
 
+  if(Flight_mode == FAILSAFE){
+    failsafe();
+  } 
+
  //saturation P_com
     if (P_com >= 3.7)
     {
@@ -818,9 +821,7 @@ void rate_control(void)
   if (RL_duty < minimum_duty) RL_duty = minimum_duty;
   if (RL_duty > maximum_duty) RL_duty = maximum_duty;
 
-  if(Flight_mode = FAILSAFE_FL || Flight_mode = FAILSAFE_FR || Flight_mode = FAILSAFE_RR || Flight_mode = FAILSAFE_RL ){
-    failsafe();
-  }
+  
 
   //Duty set
   if(T_ref/BATTERY_VOLTAGE < Disable_duty)
@@ -1050,36 +1051,6 @@ void linetrace(void)
    }  
 }
 
-void failsafe(void){
-  // モータを1つストップ
-  // 対角を弱く
-  // ヨー
-  // y方向のズレを見る
-  if(Flight_mode == FAILSAFE_FL){
-    set_duty_fl(0.0);
-    set_duty_rr(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_FR)
-  {
-    set_duty_fr(0.0);
-    set_duty_rl(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RL)
-  {
-    set_duty_rl(0.0);
-    set_duty_fr(0.0);
-  }
-  else if (Flight_mode == FAILSAFE_RR)
-  {
-    set_duty_rr(0.0);
-    set_duty_fl(0.0);
-  }
-
-  P_com = 0;
-  Q_com = 0;
-  R_com = 0;
-  r_err = 0;
-}
 
 
 void logging(void)

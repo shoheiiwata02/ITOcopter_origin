@@ -12,6 +12,7 @@
 #include <math.h>
 #include "rgbled.hpp"
 #include "pid.hpp"
+// #include  "failsafe.cpp"
 
 typedef unsigned char byte;
 using Eigen::MatrixXd;
@@ -38,6 +39,7 @@ void variable_init(void);
 void log_output(void);
 void rgbled_nomal(void);
 void rgbled_off(void);
+void failsafe(void);
 
 
 //グローバル変数
@@ -50,6 +52,9 @@ extern float z_acc;
 extern float func_time;
 extern float T_ref;
 extern uint64_t count_up;
+extern float FR_duty, FL_duty, RR_duty, RL_duty;
+extern float Phi,Theta,Psi;
+extern float Wp,Wq;
 
 // class PID
 // {
