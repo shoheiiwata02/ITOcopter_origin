@@ -1178,47 +1178,6 @@ void gyroCalibration(void)
   Rbias=sumr/N;
 }
 
-//OpenMV通信用
-void processReceiveData(){
-  // printf("%s \n",buffer);
-  char* clear_data = buffer;
-  clear_data++;//(をスキップ
-  clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
-  char* token;
-  token = strtok(clear_data,",");
-  if (token != NULL){
-    x_diff = atof(token);
-  }
-  token = strtok(NULL,",");
-  if (token != NULL){
-    angle_diff = atof(token);
-  }
-  // printf("x : %9.6f\n",x_diff);
-  // printf("angle : %9.6f\n",angle_diff);
-  Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
-
-  Line_range = Xn_est_2; //横ずれ
-  Line_velocity = Xn_est_1; //速度
-
-
-
-  // printf("est velocity: %9.6f\n",Xn_est_1);
-  // printf("y : %9.6f, est : %9.6f\n",x_diff,Xn_est_2);
-  // printf("psi : %9.6f, est : %9.6f\n",angle_diff,Xn_est_3);
-}
-void receiveData(char c){
-  if (buffer_index < BUFFER_SIZE - 1){
-    buffer[buffer_index++] = c;
-  }
-  //終了条件のチェック
-  // if (c == '\n'){
-  if (c == ')'){
-    //buffer[buffer_index] = '\0'; //文字列の終端にヌル文字を追加
-    processReceiveData();
-    buffer_index = 0; //バッファをリセット
-  }
-}
-
 void sensor_read(void)
 {
   float mx1, my1, mz1, mag_norm, acc_norm, rate_norm;
