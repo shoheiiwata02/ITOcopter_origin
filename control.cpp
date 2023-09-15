@@ -43,6 +43,8 @@ int buffer_index = 0;
 uint8_t print_flag = 0;
 float x_diff = 0;
 float angle_diff = 0;
+float red_circle =0;
+float line_number = 0;
 
 
 //Sensor data
@@ -1265,10 +1267,18 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
     //input = Kalman_PID(lotated_distance,z_acc);
   }
   //OpenMV通信用
-  // while (uart_is_readable(UART_ID2)){
-  //   char c = uart_getc(UART_ID2);
-  //   receiveData(c);
-  // }
+  while (1)
+  {
+    while (uart_is_readable(UART_ID2)){
+      char c = uart_getc(UART_ID2);
+      receiveData(c);
+    } 
+    // 条件が満たされた後にデータを送信
+    if(Flight_mode == REDCIRCLE){
+      send_data_via_uart("switch_mode n");
+    } 
+  }
+  
 }
 
 void variable_init(void)
