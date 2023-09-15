@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/shohei/Desktop/ITOcopter2/build/pioasm/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

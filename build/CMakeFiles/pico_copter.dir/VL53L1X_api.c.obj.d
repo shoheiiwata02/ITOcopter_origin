@@ -1,7 +1,7 @@
 CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/VL53L1X_api.c \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/vl53l1_platform.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/vl53l1_types.h \
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/VL53L1X_api.c \
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/vl53l1_platform.h \
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/vl53l1_types.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stddef.h \
  /usr/include/newlib/string.h /usr/include/newlib/_ansi.h \
@@ -30,9 +30,9 @@ CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  /usr/include/newlib/assert.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/version.h \
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/version.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/config_autogen.h \
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/config_autogen.h \
  /home/shohei/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \
@@ -85,4 +85,4 @@ CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: \
  /usr/include/newlib/time.h /usr/include/newlib/machine/time.h \
  /usr/include/newlib/math.h /usr/include/newlib/unistd.h \
  /usr/include/newlib/sys/unistd.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/VL53L1X_api.h
+ /mnt/c/Users/shohei/Desktop/ITOcopter2/VL53L1X_api.h
