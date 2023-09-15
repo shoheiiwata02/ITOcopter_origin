@@ -82,20 +82,23 @@ float observe_y;
 // float Kd_v = 0;
 // float Kp = 1;
 // float Kp = 0.1;
-float Kp = 0.08;
+float Kp = 0.04; // 0.08   0.042
 // float Ki = 900;//400Hz
 //float Ki = 128;//57 58 Hz    129  128.571
-float Ki = 112.5;//50Hz
+//float Ki = 112.5;//50Hz
+float Ki = 38;//40Hz  90  45  43  42
 float Kd = 0;
 // float Kp_v = 0.08;
-float Kp_v = 0.003;
+float Kp_v = 0.0017; //0.003 0.00172
 // float Ki_v = 300;//400Hz
 //float Ki_v = 42;//57 58Hz    43 42.857
-float Ki_v = 37.5;//50Hz
+//float Ki_v = 37.5;//50Hz
+float Ki_v = 8;//40Hz  30  15  13  12
 float Kd_v = 0;
 float u = 0;
 float u_v = 0;
-float h_kalman = 0.02;
+// float h_kalman = 0.02;
+float h_kalman = 0.025;
 float m = 0.8;
 float stdv_R = 0.035;
 // float stdv_R = 7.965;
@@ -108,6 +111,7 @@ float eta = 0.125;
 
 //Kalmanfilter for Horizontal
 float h_horizontal = 0.2;
+// float h_horizontal = 0.2;
 //推定,予測する状態
 float Xn_pre_1 = 0;
 float Xn_pre_2 = 0;
