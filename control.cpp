@@ -44,6 +44,8 @@ int buffer_index = 0;
 uint8_t print_flag = 0;
 float x_diff = 0;
 float angle_diff = 0;
+float red_circle =0;
+float line_number = 0;
 
 float red_circle = 0;
 float TOL_x_diff = 0;
@@ -1404,18 +1406,33 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   }
 
   //OpenMV通信用
-  if (Flight_mode == LINETRACE){
-    while (uart_is_readable(UART_ID2)){
-    char c = uart_getc(UART_ID2);
-    receiveData(c);
-    }
-  }
-  // 条件が満たされた場合にデータを送信
-  // if (Flight_mode == REDCIRCLE)
-  // {
-  // send_data_via_uart("switch_mode\n");
-  // }
+// <<<<<<< update
+//   if (Flight_mode == LINETRACE){
+//     while (uart_is_readable(UART_ID2)){
+//     char c = uart_getc(UART_ID2);
+//     receiveData(c);
+//     }
+//   }
+//   // 条件が満たされた場合にデータを送信
+//   // if (Flight_mode == REDCIRCLE)
+//   // {
+//   // send_data_via_uart("switch_mode\n");
+//   // }
 
+// =======
+//   while (1)
+//   {
+//     while (uart_is_readable(UART_ID2)){
+//       char c = uart_getc(UART_ID2);
+//       receiveData(c);
+//     } 
+//     // 条件が満たされた後にデータを送信
+//     if(Flight_mode == REDCIRCLE){
+//       send_data_via_uart("switch_mode n");
+//     } 
+//   }
+  
+// >>>>>>> main
 }
 
 void variable_init(void)
