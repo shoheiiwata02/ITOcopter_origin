@@ -33,10 +33,8 @@ extern float magnetic_field_mgauss[3];
 //sensbus_t Ins_bus={spi0, PIN_CSAG};
 //sensbus_t Mag_bus={spi0, PIN_CSM};
 
-
 void imu_mag_init(void);
 void imu_mag_data_read(void);
-//alt sensor
 void initialize_Altitude(void);
 void get_Altitude(void);
 

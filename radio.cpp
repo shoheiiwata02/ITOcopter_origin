@@ -23,23 +23,28 @@ void radio_init(void){
 
     // UARTを基本の通信速度で設定
     uart_init(UART_ID, 2400);
+    uart_init(UART_ID2,BAUD_RATE2);
 
     // 指定のGPIOをUARTのTX、RXピンに設定する
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN2, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN2, GPIO_FUNC_UART);
 
     //指定のUARTを指定の通信速度に設定する
     int actual = uart_set_baudrate(UART_ID, BAUD_RATE);
 
     //UART flow control CTS/RTSを使用しない設定
     uart_set_hw_flow(UART_ID, false, false);
+    uart_set_hw_flow(UART_ID2, false, false);
 
     //通信フォーマットの設定
     uart_set_format(UART_ID, DATA_BITS, STOP_BITS, PARITY);
+    uart_set_format(UART_ID2, DATA_BITS2, STOP_BITS2, PARITY2);
 
     // Turn off FIFO's - we want to do this character by character
     uart_set_fifo_enabled(UART_ID, true);
-
+    uart_set_fifo_enabled(UART_ID2, true);
     // Set up a RX interrupt
     // We need to set up the handler first
     // Select correct interrupt for the UART we are using
@@ -75,11 +80,11 @@ void on_uart_rx(void) {
         switch(chars_rxed){
             case 3:
                 Chdata[0]=(sbus_data[1]|(sbus_data[2]<<8)&0x07ff);
-                printf("Ailon:%04d ",Chdata[0]);
+                //printf("Ailon:%04d ",Chdata[0]);
                 break;
             case 4:
                 Chdata[1]=(sbus_data[3]<<5|sbus_data[2]>>3)&0x07ff;
-                printf("Ele:%04d ",Chdata[1]);
+                //printf("Ele:%04d ",Chdata[1]);
                 break;
             case 6:
                 Chdata[2]=(sbus_data[3]>>6|sbus_data[4]<<2|sbus_data[5]<<10)&0x07ff;
@@ -87,7 +92,7 @@ void on_uart_rx(void) {
                 break;
             case 7:
                 Chdata[3]=(sbus_data[6]<<7|sbus_data[5]>>1)&0x07ff;
-                printf("Rud:%04d ",Chdata[3]);
+                //printf("Rud:%04d ",Chdata[3]);
                 break;
             case 8:
                 Chdata[4]=(sbus_data[7]<<4|sbus_data[6]>>4)&0x07ff;
