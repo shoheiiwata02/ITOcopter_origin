@@ -1404,6 +1404,7 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   }
 
   //OpenMV通信用
+<<<<<<< HEAD
   if (Flight_mode == LINETRACE){
     while (uart_is_readable(UART_ID2)){
     char c = uart_getc(UART_ID2);
@@ -1416,6 +1417,35 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   // send_data_via_uart("switch_mode\n");
   // }
 
+=======
+// <<<<<<< update
+//   if (Flight_mode == LINETRACE){
+//     while (uart_is_readable(UART_ID2)){
+//     char c = uart_getc(UART_ID2);
+//     receiveData(c);
+//     }
+//   }
+//   // 条件が満たされた場合にデータを送信
+//   // if (Flight_mode == REDCIRCLE)
+//   // {
+//   // send_data_via_uart("switch_mode\n");
+//   // }
+
+// =======
+//   while (1)
+//   {
+//     while (uart_is_readable(UART_ID2)){
+//       char c = uart_getc(UART_ID2);
+//       receiveData(c);
+//     } 
+//     // 条件が満たされた後にデータを送信
+//     if(Flight_mode == REDCIRCLE){
+//       send_data_via_uart("switch_mode n");
+//     } 
+//   }
+  
+// >>>>>>> main
+>>>>>>> f4e77706db40eed39b8ee093a17aed92a7278e24
 }
 
 void variable_init(void)
