@@ -482,12 +482,12 @@ void control_init(void)
 {
   acc_filter.set_parameter(0.005, 0.0025);
   //Rate control
-  p_pid.set_parameter( 2 , 5, 0.01, 0.125, 0.0025);//(2, 5, 0.01)
-  q_pid.set_parameter( 1.5, 1, 0.01, 0.125, 0.0025);//(1.5, 1, 0.01)
+  p_pid.set_parameter( 2.8 , 0.5, 0.01, 0.125, 0.0025);//(2, 5, 0.01)
+  q_pid.set_parameter( 2.8, 0.5, 0.01, 0.125, 0.0025);//(1.5, 1, 0.01)
   r_pid.set_parameter( 3.1, 1, 0.01, 0.125, 0.0025);//(3.1, 1, 0.01)
   //Angle control
-  phi_pid.set_parameter  ( 8, 10, 0.01, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 8, 10, 0.01, 0.125, 0.01);//6.0
+  phi_pid.set_parameter  ( 8.0, 1.0, 0.02, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 8.0, 1.0, 0.02, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
@@ -685,59 +685,59 @@ void rate_control(void)
   // Mode SW
   //Chdata[MODE_SW]=1000;//本番はコメントにする/////////////////////////////////////////////////////////////////////////
   // if (Chdata[MODE_SW]>1241)
-  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[LOG] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = NORMAL;  
     Rocking_timer = 0.0; 
   }
   
-  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
+  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[LOG] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] > 500))
   {
     Flight_mode = ROCKING;
     Red_flag = 0;
   }
 
-  else if ((Chdata[FAILSAFEON_OFF] > 500) && (Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
-  {
-    if ((Chdata[FAILSAFE] < 400))
-    {
-      Flight_mode = 20;
-      Flight_mode = FAILSAFE_RL;
-      Rocking_timer = 0.0;
-    }
-    else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
-    {
-      Flight_mode = 21;
-      Flight_mode = FAILSAFE_FL;
-      Rocking_timer = 0.0;
-    }
-    else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
-    {
-      Flight_mode = 22;
-      Flight_mode = FAILSAFE_FR;
-      Rocking_timer = 0.0;
-    }
-    else if((Chdata[FAILSAFE] > 1651))
-    {
-      Flight_mode = 23;
-      Flight_mode = FAILSAFE_RR;
-      Rocking_timer = 0.0;
-    }  
-  }
+  // else if ((Chdata[FAILSAFEON_OFF] > 500) && (Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  // {
+  //   if ((Chdata[FAILSAFE] < 400))
+  //   {
+  //     Flight_mode = 20;
+  //     Flight_mode = FAILSAFE_RL;
+  //     Rocking_timer = 0.0;
+  //   }
+  //   else if((Chdata[FAILSAFE] < 1050) && (Chdata[FAILSAFE] > 401))
+  //   {
+  //     Flight_mode = 21;
+  //     Flight_mode = FAILSAFE_FL;
+  //     Rocking_timer = 0.0;
+  //   }
+  //   else if((Chdata[FAILSAFE] < 1650) && (Chdata[FAILSAFE] > 1051))
+  //   {
+  //     Flight_mode = 22;
+  //     Flight_mode = FAILSAFE_FR;
+  //     Rocking_timer = 0.0;
+  //   }
+  //   else if((Chdata[FAILSAFE] > 1651))
+  //   {
+  //     Flight_mode = 23;
+  //     Flight_mode = FAILSAFE_RR;
+  //     Rocking_timer = 0.0;
+  //   }  
+  // }
   
-  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
+  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[LOG] < 200) && (Chdata[LINETRACE] > 500) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = LINETRACE;
     Red_flag = 0;
     Rocking_timer = 0.0;
   }
-  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] > 500) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  else if((Chdata[SERVO] < 200) && (Chdata[REDCIRCLE] > 500) &&  (Chdata[LOG] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = REDCIRCLE;
     Rocking_timer = 0.0;
   }
   
-  else if((Chdata[SERVO] > 500) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[FAILSAFEON_OFF] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
+  else if((Chdata[SERVO] > 500) && (Chdata[REDCIRCLE] < 200) &&  (Chdata[LOG] < 200) && (Chdata[LINETRACE] < 200) && (Chdata[ROCKING] < 200))
   {
     Flight_mode = SERVO;
     Rocking_timer = 0.0;
@@ -1032,7 +1032,7 @@ void angle_control(void)
 float rocking_wings(float stick)
 {
   float angle=20;//[deg]
-  float f=40.0;//[Hz]
+  float f=100.0;//[Hz]
 
   if(Rocking_timer < 4.0)
   {
@@ -1404,48 +1404,16 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   }
 
   //OpenMV通信用
-<<<<<<< HEAD
-  if (Flight_mode == LINETRACE){
+   if (Flight_mode == LINETRACE){
     while (uart_is_readable(UART_ID2)){
-    char c = uart_getc(UART_ID2);
-    receiveData(c);
-    }
-  }
-  // 条件が満たされた場合にデータを送信
-  // if (Flight_mode == REDCIRCLE)
-  // {
-  // send_data_via_uart("switch_mode\n");
-  // }
-
-=======
-// <<<<<<< update
-//   if (Flight_mode == LINETRACE){
-//     while (uart_is_readable(UART_ID2)){
-//     char c = uart_getc(UART_ID2);
-//     receiveData(c);
-//     }
-//   }
-//   // 条件が満たされた場合にデータを送信
-//   // if (Flight_mode == REDCIRCLE)
-//   // {
-//   // send_data_via_uart("switch_mode\n");
-//   // }
-
-// =======
-//   while (1)
-//   {
-//     while (uart_is_readable(UART_ID2)){
-//       char c = uart_getc(UART_ID2);
-//       receiveData(c);
-//     } 
-//     // 条件が満たされた後にデータを送信
-//     if(Flight_mode == REDCIRCLE){
-//       send_data_via_uart("switch_mode n");
-//     } 
-//   }
-  
-// >>>>>>> main
->>>>>>> f4e77706db40eed39b8ee093a17aed92a7278e24
+      char c = uart_getc(UART_ID2);
+      receiveData(c);
+    } 
+    // 条件が満たされた後にデータを送信
+    if(Flight_mode == REDCIRCLE){
+      send_data_via_uart("switch_mode n");
+    } 
+   }
 }
 
 void variable_init(void)
