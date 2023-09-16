@@ -12,7 +12,6 @@
 #include <math.h>
 #include "rgbled.hpp"
 #include "pid.hpp"
-// #include "failsafe.cpp"
 
 using Eigen::MatrixXd;
 using Eigen::MatrixXf;
@@ -49,9 +48,6 @@ extern float z_acc;
 extern float func_time;
 extern float T_ref;
 extern uint64_t count_up;
-extern float FR_duty, FL_duty, RR_duty, RL_duty;
-extern float Wp , Wq;
-extern float Phi, Theta;
 
 
 

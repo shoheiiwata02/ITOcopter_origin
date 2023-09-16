@@ -27,7 +27,7 @@ int main(void)
   //Initilize Control
   control_init();
   Kalman_init();
-  // initialize_Altitude();
+  initialize_Altitude();
 
   //RGB LED off
   rgbled_off();

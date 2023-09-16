@@ -18,6 +18,7 @@ void rgbled_normal(void)
   ledStrip.setPixelColor(2, WS2812::RGB(225,225,225));
   ledStrip.setPixelColor(3, WS2812::RGB(255,255,255));
   ledStrip.setPixelColor(4, WS2812::RGB(255,255,255));
+  
   ledStrip.setPixelColor(5, WS2812::RGB(0,255,0));
   ledStrip.setPixelColor(6, WS2812::RGB(0,255,0));
   ledStrip.setPixelColor(7, WS2812::RGB(0,255,0));
