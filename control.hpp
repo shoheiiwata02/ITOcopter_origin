@@ -12,7 +12,6 @@
 #include <math.h>
 #include "rgbled.hpp"
 #include "pid.hpp"
-//#include "failsafe.cpp"
 
 using Eigen::MatrixXd;
 using Eigen::MatrixXf;
@@ -25,7 +24,7 @@ using namespace Eigen;
 // #define ROCKING 1
 // #define AUTO 2
 // #define REDCIRCLE 3
-
+#define BUFFER_SIZE 16
 
 
 //グローバル関数の宣言
@@ -38,6 +37,18 @@ void variable_init(void);
 void log_output(void);
 void rgbled_nomal(void);
 void rgbled_off(void);
+
+//グローバル変数
+extern uint8_t LockMode;
+extern volatile uint8_t Logoutputflag;
+extern float ideal;
+extern float input;
+extern float lotated_distance;
+extern float z_acc;
+extern float func_time;
+extern float T_ref;
+extern uint64_t count_up;
+
 
 
 //グローバル変数

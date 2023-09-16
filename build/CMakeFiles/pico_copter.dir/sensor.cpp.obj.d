@@ -107,4 +107,26 @@ CMakeFiles/pico_copter.dir/sensor.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/tr1/modified_bessel_func.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/poly_laguerre.tcc \
- /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc
+ /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_platform.h \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_types.h \
+ /usr/include/newlib/c++/10.3.1/cstdlib \
+ /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+ /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+ /home/mahiro/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
+ /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h \
+ /usr/include/newlib/time.h /usr/include/newlib/machine/time.h \
+ /usr/include/newlib/unistd.h /usr/include/newlib/sys/unistd.h \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_api.h

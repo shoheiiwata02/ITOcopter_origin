@@ -223,10 +223,52 @@ CMakeFiles/pico_copter.dir/pid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pico_copter.dir/pid.cpp.s"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pid.cpp -o CMakeFiles/pico_copter.dir/pid.cpp.s
 
+CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj: CMakeFiles/pico_copter.dir/flags.make
+CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj: ../vl53l1_platform.c
+CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj -MF CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj.d -o CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj -c /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_platform.c
+
+CMakeFiles/pico_copter.dir/vl53l1_platform.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pico_copter.dir/vl53l1_platform.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_platform.c > CMakeFiles/pico_copter.dir/vl53l1_platform.c.i
+
+CMakeFiles/pico_copter.dir/vl53l1_platform.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pico_copter.dir/vl53l1_platform.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_platform.c -o CMakeFiles/pico_copter.dir/vl53l1_platform.c.s
+
+CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: CMakeFiles/pico_copter.dir/flags.make
+CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: ../VL53L1X_api.c
+CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj -MF CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj.d -o CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj -c /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_api.c
+
+CMakeFiles/pico_copter.dir/VL53L1X_api.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pico_copter.dir/VL53L1X_api.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_api.c > CMakeFiles/pico_copter.dir/VL53L1X_api.c.i
+
+CMakeFiles/pico_copter.dir/VL53L1X_api.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pico_copter.dir/VL53L1X_api.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_api.c -o CMakeFiles/pico_copter.dir/VL53L1X_api.c.s
+
+CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj: CMakeFiles/pico_copter.dir/flags.make
+CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj: ../VL53L1X_calibration.c
+CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj -MF CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj.d -o CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj -c /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_calibration.c
+
+CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_calibration.c > CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.i
+
+CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_calibration.c -o CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.s
+
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -240,7 +282,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i: cmake_force
@@ -254,7 +296,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platfor
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i: cmake_force
@@ -268,7 +310,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_cla
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
@@ -282,7 +324,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_syn
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
@@ -296,7 +338,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_clo
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
@@ -310,7 +352,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_gpi
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
@@ -323,7 +365,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.i: cmake_force
@@ -337,7 +379,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_irq
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
@@ -351,7 +393,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/sem.c.
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
@@ -365,7 +407,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/lock_c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
@@ -379,7 +421,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/mutex.
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
@@ -393,7 +435,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_sync/critic
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_time/time.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c.i: cmake_force
@@ -407,7 +449,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/time.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
@@ -421,7 +463,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_time/timeou
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
@@ -435,7 +477,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_tim
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
@@ -449,7 +491,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/dateti
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
@@ -463,7 +505,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/pheap.
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj: /home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.obj -c /home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
@@ -477,7 +519,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/common/pico_util/queue.
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
@@ -491,7 +533,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pll
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
@@ -505,7 +547,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_vre
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
@@ -519,7 +561,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_wat
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
@@ -533,7 +575,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_xos
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
@@ -547,7 +589,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_uar
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio/pio.c.i: cmake_force
@@ -561,7 +603,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pio
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.i: cmake_force
@@ -575,7 +617,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_i2c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
@@ -588,7 +630,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdlib/
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.i: cmake_force
@@ -602,7 +644,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_div
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -616,7 +658,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_runtime
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -629,7 +671,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_printf/
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.i: cmake_force
@@ -643,7 +685,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bit_ops
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -656,7 +698,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_bootrom
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.i: cmake_force
@@ -669,7 +711,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_divider
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.i: cmake_force
@@ -683,7 +725,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i: cmake_force
@@ -697,7 +739,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -710,7 +752,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.i: cmake_force
@@ -723,7 +765,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_double/
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.i: cmake_force
@@ -736,7 +778,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_int64_o
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.i: cmake_force
@@ -750,7 +792,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/f
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i: cmake_force
@@ -764,7 +806,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/f
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -777,7 +819,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/f
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.i: cmake_force
@@ -791,7 +833,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_float/f
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i: cmake_force
@@ -804,7 +846,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_malloc/
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.i: cmake_force
@@ -817,7 +859,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_mem_ops
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building ASM object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj   -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.i: cmake_force
@@ -831,7 +873,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standar
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
 	/usr/bin/arm-none-eabi-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i: cmake_force
@@ -845,7 +887,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standar
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i: cmake_force
@@ -859,7 +901,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_standar
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -873,7 +915,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio/s
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.i: cmake_force
@@ -887,7 +929,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_u
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.i: cmake_force
@@ -901,7 +943,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_u
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i: cmake_force
@@ -915,7 +957,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_u
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.i: cmake_force
@@ -929,7 +971,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_unique_
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i: cmake_force
@@ -943,7 +985,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_fla
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i: cmake_force
@@ -957,7 +999,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/ra
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i: cmake_force
@@ -971,7 +1013,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/portable/ra
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd.c.i: cmake_force
@@ -985,7 +1027,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c.i: cmake_force
@@ -999,7 +1041,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/device/usbd
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.i: cmake_force
@@ -1013,7 +1055,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/audio
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.i: cmake_force
@@ -1027,7 +1069,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_device.c.i: cmake_force
@@ -1041,7 +1083,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/d
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i: cmake_force
@@ -1055,7 +1097,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/dfu/d
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/hid_device.c.i: cmake_force
@@ -1069,7 +1111,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/hid/h
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c.i: cmake_force
@@ -1083,7 +1125,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/midi/
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/msc_device.c.i: cmake_force
@@ -1097,7 +1139,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/msc/m
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ecm_rndis_device.c.i: cmake_force
@@ -1111,7 +1153,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/e
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/ncm_device.c.i: cmake_force
@@ -1125,7 +1167,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/net/n
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i: cmake_force
@@ -1139,7 +1181,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/usbtm
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendor/vendor_device.c.i: cmake_force
@@ -1153,7 +1195,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/vendo
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video/video_device.c.i: cmake_force
@@ -1167,7 +1209,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/video
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.i: cmake_force
@@ -1181,7 +1223,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb.c.s: c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj -c /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.i: cmake_force
@@ -1195,7 +1237,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i: cmake_force
@@ -1209,7 +1251,7 @@ CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_fix/rp2
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj: CMakeFiles/pico_copter.dir/flags.make
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj: /home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj: CMakeFiles/pico_copter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj -MF CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj.d -o CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.obj -c /home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c
 
 CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_multicore/multicore.c.i: cmake_force
@@ -1233,6 +1275,9 @@ pico_copter_OBJECTS = \
 "CMakeFiles/pico_copter.dir/rgbled.cpp.obj" \
 "CMakeFiles/pico_copter.dir/i2c.cpp.obj" \
 "CMakeFiles/pico_copter.dir/pid.cpp.obj" \
+"CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj" \
+"CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj" \
+"CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj" \
 "CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj" \
 "CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj" \
 "CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" \
@@ -1320,6 +1365,9 @@ pico_copter.elf: CMakeFiles/pico_copter.dir/WS2812.cpp.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/rgbled.cpp.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/i2c.cpp.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/pid.cpp.obj
+pico_copter.elf: CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj
+pico_copter.elf: CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj
+pico_copter.elf: CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
 pico_copter.elf: CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -1395,7 +1443,7 @@ pico_copter.elf: CMakeFiles/pico_copter.dir/home/mahiro/pico/pico-sdk/src/rp2_co
 pico_copter.elf: CMakeFiles/pico_copter.dir/build.make
 pico_copter.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 pico_copter.elf: CMakeFiles/pico_copter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Linking CXX executable pico_copter.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Linking CXX executable pico_copter.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pico_copter.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/pico_copter.elf pico_copter.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/build/pico_copter.elf pico_copter.bin

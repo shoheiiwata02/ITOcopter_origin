@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj"
+  "CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj.d"
+  "CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj"
+  "CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj.d"
   "CMakeFiles/pico_copter.dir/WS2812.cpp.obj"
   "CMakeFiles/pico_copter.dir/WS2812.cpp.obj.d"
   "CMakeFiles/pico_copter.dir/control.cpp.obj"
@@ -154,6 +158,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pico_copter.dir/rgbled.cpp.obj.d"
   "CMakeFiles/pico_copter.dir/sensor.cpp.obj"
   "CMakeFiles/pico_copter.dir/sensor.cpp.obj.d"
+  "CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj"
+  "CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj.d"
   "pico_copter.elf"
   "pico_copter.pdb"
 )

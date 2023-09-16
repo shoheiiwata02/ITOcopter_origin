@@ -220,6 +220,54 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
+VL53L1X_api.obj: VL53L1X_api.c.obj
+.PHONY : VL53L1X_api.obj
+
+# target to build an object file
+VL53L1X_api.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.obj
+.PHONY : VL53L1X_api.c.obj
+
+VL53L1X_api.i: VL53L1X_api.c.i
+.PHONY : VL53L1X_api.i
+
+# target to preprocess a source file
+VL53L1X_api.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.i
+.PHONY : VL53L1X_api.c.i
+
+VL53L1X_api.s: VL53L1X_api.c.s
+.PHONY : VL53L1X_api.s
+
+# target to generate assembly for a file
+VL53L1X_api.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_api.c.s
+.PHONY : VL53L1X_api.c.s
+
+VL53L1X_calibration.obj: VL53L1X_calibration.c.obj
+.PHONY : VL53L1X_calibration.obj
+
+# target to build an object file
+VL53L1X_calibration.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.obj
+.PHONY : VL53L1X_calibration.c.obj
+
+VL53L1X_calibration.i: VL53L1X_calibration.c.i
+.PHONY : VL53L1X_calibration.i
+
+# target to preprocess a source file
+VL53L1X_calibration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.i
+.PHONY : VL53L1X_calibration.c.i
+
+VL53L1X_calibration.s: VL53L1X_calibration.c.s
+.PHONY : VL53L1X_calibration.s
+
+# target to generate assembly for a file
+VL53L1X_calibration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/VL53L1X_calibration.c.s
+.PHONY : VL53L1X_calibration.c.s
+
 WS2812.obj: WS2812.cpp.obj
 .PHONY : WS2812.obj
 
@@ -2036,6 +2084,30 @@ sensor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/sensor.cpp.s
 .PHONY : sensor.cpp.s
 
+vl53l1_platform.obj: vl53l1_platform.c.obj
+.PHONY : vl53l1_platform.obj
+
+# target to build an object file
+vl53l1_platform.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.obj
+.PHONY : vl53l1_platform.c.obj
+
+vl53l1_platform.i: vl53l1_platform.c.i
+.PHONY : vl53l1_platform.i
+
+# target to preprocess a source file
+vl53l1_platform.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.i
+.PHONY : vl53l1_platform.c.i
+
+vl53l1_platform.s: vl53l1_platform.c.s
+.PHONY : vl53l1_platform.s
+
+# target to generate assembly for a file
+vl53l1_platform.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/vl53l1_platform.c.s
+.PHONY : vl53l1_platform.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2052,6 +2124,12 @@ help:
 	@echo "... pico_copter_WS2812_pio_h"
 	@echo "... bs2_default"
 	@echo "... pico_copter"
+	@echo "... VL53L1X_api.obj"
+	@echo "... VL53L1X_api.i"
+	@echo "... VL53L1X_api.s"
+	@echo "... VL53L1X_calibration.obj"
+	@echo "... VL53L1X_calibration.i"
+	@echo "... VL53L1X_calibration.s"
 	@echo "... WS2812.obj"
 	@echo "... WS2812.i"
 	@echo "... WS2812.s"
@@ -2279,6 +2357,9 @@ help:
 	@echo "... sensor.obj"
 	@echo "... sensor.i"
 	@echo "... sensor.s"
+	@echo "... vl53l1_platform.obj"
+	@echo "... vl53l1_platform.i"
+	@echo "... vl53l1_platform.s"
 .PHONY : help
 
 

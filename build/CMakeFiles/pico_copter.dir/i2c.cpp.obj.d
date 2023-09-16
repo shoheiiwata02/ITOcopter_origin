@@ -125,6 +125,25 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/poly_laguerre.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_platform.h \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/vl53l1_types.h \
+ /usr/include/newlib/c++/10.3.1/cstdlib \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
+ /home/mahiro/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/mahiro/pico/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h \
+ /usr/include/newlib/time.h /usr/include/newlib/machine/time.h \
+ /usr/include/newlib/unistd.h /usr/include/newlib/sys/unistd.h \
+ /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/VL53L1X_api.h \
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/ekf.hpp \
  /usr/include/newlib/c++/10.3.1/iostream \
  /usr/include/newlib/c++/10.3.1/ostream \
@@ -174,7 +193,6 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/bits/functional_hash.h \
  /usr/include/newlib/c++/10.3.1/bits/string_view.tcc \
  /usr/include/newlib/c++/10.3.1/ext/string_conversions.h \
- /usr/include/newlib/c++/10.3.1/cstdlib \
  /usr/include/newlib/c++/10.3.1/cstdio \
  /usr/include/newlib/c++/10.3.1/cerrno /usr/include/newlib/errno.h \
  /usr/include/newlib/sys/errno.h \
@@ -442,7 +460,6 @@ CMakeFiles/pico_copter.dir/i2c.cpp.obj: \
  /home/mahiro/pico/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /home/mahiro/pico/eigen/Eigen/src/Eigenvalues/./RealQZ.h \
  /home/mahiro/pico/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
- /usr/include/newlib/unistd.h /usr/include/newlib/sys/unistd.h \
  /mnt/c/Users/mafy1/Desktop/project/new_ItoCopter/ITOcopter_origin/pwm.hpp \
  /home/mahiro/pico/pico-sdk/src/rp2_common/hardware_pwm/include/hardware/pwm.h \
  /home/mahiro/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/pwm.h \
