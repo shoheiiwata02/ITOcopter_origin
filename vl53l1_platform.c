@@ -468,7 +468,3 @@ VL53L1_Error VL53L1_WaitValueMaskEx(
 
 	return status;
 }
-
-
-
-

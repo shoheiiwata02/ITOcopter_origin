@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/shohei/Desktop/ITOcopter2
+CMAKE_SOURCE_DIR = /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/shohei/Desktop/ITOcopter2/build
+CMAKE_BINARY_DIR = /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/shohei/Desktop/ITOcopter2/build/CMakeFiles /mnt/c/Users/shohei/Desktop/ITOcopter2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/CMakeFiles /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/shohei/Desktop/ITOcopter2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -339,30 +339,6 @@ ekf.s: ekf.cpp.s
 ekf.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/ekf.cpp.s
 .PHONY : ekf.cpp.s
-
-failsafe.obj: failsafe.cpp.obj
-.PHONY : failsafe.obj
-
-# target to build an object file
-failsafe.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/failsafe.cpp.obj
-.PHONY : failsafe.cpp.obj
-
-failsafe.i: failsafe.cpp.i
-.PHONY : failsafe.i
-
-# target to preprocess a source file
-failsafe.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/failsafe.cpp.i
-.PHONY : failsafe.cpp.i
-
-failsafe.s: failsafe.cpp.s
-.PHONY : failsafe.s
-
-# target to generate assembly for a file
-failsafe.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pico_copter.dir/build.make CMakeFiles/pico_copter.dir/failsafe.cpp.s
-.PHONY : failsafe.cpp.s
 
 home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj: home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj
@@ -2163,9 +2139,6 @@ help:
 	@echo "... ekf.obj"
 	@echo "... ekf.i"
 	@echo "... ekf.s"
-	@echo "... failsafe.obj"
-	@echo "... failsafe.i"
-	@echo "... failsafe.s"
 	@echo "... home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.s"

@@ -15,9 +15,9 @@ CMakeFiles/pico_copter.dir/home/shohei/pico/pico-sdk/src/rp2_common/pico_multico
  /home/shohei/pico/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/version.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/version.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/config_autogen.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/config_autogen.h \
  /home/shohei/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \

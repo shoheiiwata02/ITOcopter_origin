@@ -1,6 +1,6 @@
 CMakeFiles/pico_copter.dir/pid.cpp.obj: \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/pid.cpp \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/pid.hpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/pid.cpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/pid.hpp \
  /usr/include/newlib/c++/10.3.1/cstdio \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
  /usr/include/newlib/c++/10.3.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \

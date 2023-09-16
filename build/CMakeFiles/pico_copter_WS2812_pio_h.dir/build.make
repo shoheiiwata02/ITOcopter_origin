@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/shohei/Desktop/ITOcopter2
+CMAKE_SOURCE_DIR = /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/shohei/Desktop/ITOcopter2/build
+CMAKE_BINARY_DIR = /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build
 
 # Utility rule file for pico_copter_WS2812_pio_h.
 
@@ -69,8 +69,8 @@ include CMakeFiles/pico_copter_WS2812_pio_h.dir/progress.make
 CMakeFiles/pico_copter_WS2812_pio_h: WS2812.pio.h
 
 WS2812.pio.h: ../WS2812.pio
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/shohei/Desktop/ITOcopter2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating WS2812.pio.h"
-	pioasm/pioasm -o c-sdk /mnt/c/Users/shohei/Desktop/ITOcopter2/WS2812.pio /mnt/c/Users/shohei/Desktop/ITOcopter2/build/WS2812.pio.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating WS2812.pio.h"
+	pioasm/pioasm -o c-sdk /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/WS2812.pio /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/WS2812.pio.h
 
 pico_copter_WS2812_pio_h: CMakeFiles/pico_copter_WS2812_pio_h
 pico_copter_WS2812_pio_h: WS2812.pio.h
@@ -86,6 +86,6 @@ CMakeFiles/pico_copter_WS2812_pio_h.dir/clean:
 .PHONY : CMakeFiles/pico_copter_WS2812_pio_h.dir/clean
 
 CMakeFiles/pico_copter_WS2812_pio_h.dir/depend:
-	cd /mnt/c/Users/shohei/Desktop/ITOcopter2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/shohei/Desktop/ITOcopter2 /mnt/c/Users/shohei/Desktop/ITOcopter2 /mnt/c/Users/shohei/Desktop/ITOcopter2/build /mnt/c/Users/shohei/Desktop/ITOcopter2/build /mnt/c/Users/shohei/Desktop/ITOcopter2/build/CMakeFiles/pico_copter_WS2812_pio_h.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/CMakeFiles/pico_copter_WS2812_pio_h.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pico_copter_WS2812_pio_h.dir/depend
 

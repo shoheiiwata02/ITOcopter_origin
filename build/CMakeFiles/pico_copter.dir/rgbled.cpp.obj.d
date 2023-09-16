@@ -1,7 +1,7 @@
 CMakeFiles/pico_copter.dir/rgbled.cpp.obj: \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/rgbled.cpp \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/rgbled.hpp \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/WS2812.hpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/rgbled.cpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/rgbled.hpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/WS2812.hpp \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
@@ -19,9 +19,9 @@ CMakeFiles/pico_copter.dir/rgbled.cpp.obj: \
  /home/shohei/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/version.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/version.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/config_autogen.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/config_autogen.h \
  /home/shohei/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \

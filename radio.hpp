@@ -29,15 +29,9 @@
 #define LOG 6
 #define SERVO 4
 #define REDCIRCLE 5
-// #define FAILSAFE 9
-// #define FAILSAFEON_OFF 6
 #define LINETRACE 7
 #define ROCKING 8
 
-#define FAILSAFE_RL 20
-#define FAILSAFE_FL 21
-#define FAILSAFE_FR 22
-#define FAILSAFE_RR 23
 
 #define UART_ID2 uart1
 #define BAUD_RATE2 115200

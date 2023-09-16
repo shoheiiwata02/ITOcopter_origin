@@ -1,6 +1,6 @@
 CMakeFiles/pico_copter.dir/radio.cpp.obj: \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/radio.cpp \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/radio.hpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/radio.cpp \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/radio.hpp \
  /usr/include/newlib/stdio.h /usr/include/newlib/_ansi.h \
  /usr/include/newlib/newlib.h /usr/include/newlib/_newlib_version.h \
  /usr/include/newlib/sys/config.h /usr/include/newlib/machine/ieeefp.h \
@@ -29,9 +29,9 @@ CMakeFiles/pico_copter.dir/radio.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/pstl/pstl_config.h \
  /usr/include/newlib/assert.h \
  /usr/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/version.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/version.h \
  /home/shohei/pico/pico-sdk/src/common/pico_base/include/pico/config.h \
- /mnt/c/Users/shohei/Desktop/ITOcopter2/build/generated/pico_base/pico/config_autogen.h \
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/build/generated/pico_base/pico/config_autogen.h \
  /home/shohei/pico/pico-sdk/src/boards/include/boards/pico.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/pico_platform/include/pico/platform.h \

@@ -9,8 +9,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/pico_copter.dir/control.cpp.obj.d"
   "CMakeFiles/pico_copter.dir/ekf.cpp.obj"
   "CMakeFiles/pico_copter.dir/ekf.cpp.obj.d"
-  "CMakeFiles/pico_copter.dir/failsafe.cpp.obj"
-  "CMakeFiles/pico_copter.dir/failsafe.cpp.obj.d"
   "CMakeFiles/pico_copter.dir/home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj"
   "CMakeFiles/pico_copter.dir/home/shohei/pico/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.obj.d"
   "CMakeFiles/pico_copter.dir/home/shohei/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj"
