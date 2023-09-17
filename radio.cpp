@@ -28,7 +28,7 @@ void radio_init(void){
     // 指定のGPIOをUARTのTX、RXピンに設定する
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
-    gpio_set_function(UART_TX_PIN2, GPIO_FUNC_UART);
+    gpio_set_function(UART_RX_PIN2, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN2, GPIO_FUNC_UART);
 
     //指定のUARTを指定の通信速度に設定する
