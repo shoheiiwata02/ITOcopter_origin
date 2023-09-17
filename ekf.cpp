@@ -110,7 +110,7 @@ float differential_v = 0;
 float eta = 0.125;
 
 //Kalmanfilter for Horizontal
-float h_horizontal = 0.2;
+float h_horizontal = 0.025;
 // float h_horizontal = 0.2;
 //推定,予測する状態
 float Xn_pre_1 = 0;
@@ -188,10 +188,10 @@ float u2 = -w0 * delta_phi * h_horizontal;
 float u3 = (delta_r * h_horizontal)/cos(theta0);
 //システムノイズ
 float q1 = 0.1;
-float q2 = 0.1;
+float q2 = 1;
 float q3 = 0.1;
 //観測の共分散
-float r1 = 0.01;
+float r1 = 0.0004;
 float r2 = 0.01;
 
 
