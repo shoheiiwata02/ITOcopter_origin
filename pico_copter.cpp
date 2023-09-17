@@ -5,6 +5,7 @@ uint8_t Arm_flag=0;
 uint8_t Red_flag = 0;
 semaphore_t sem;
 
+
 int main(void)
 {
   int start_wait=5;

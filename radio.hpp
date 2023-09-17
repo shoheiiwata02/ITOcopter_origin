@@ -26,21 +26,15 @@
 
 #define MODE_SW 10
 #define LANDING_SW 11
-#define LOG 6
+#define LOG 7
 #define SERVO 4
 #define REDCIRCLE 5
-// #define FAILSAFE 9
-// #define FAILSAFEON_OFF 6
 #define LINETRACE 7
 #define ROCKING 8
 
-#define FAILSAFE_RL 20
-#define FAILSAFE_FL 21
-#define FAILSAFE_FR 22
-#define FAILSAFE_RR 23
 
 #define UART_ID2 uart1
-#define BAUD_RATE2 115200
+#define BAUD_RATE2 9600
 #define DATA_BITS2 8
 #define STOP_BITS2 1
 #define PARITY2  UART_PARITY_NONE
