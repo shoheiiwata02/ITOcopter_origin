@@ -121,7 +121,7 @@ uint16_t LogdataCounter=0;
 uint8_t Logflag=0;
 volatile uint8_t Logoutputflag=0;
 float Log_time=0.0;
-const uint8_t DATANUM=5; //Log Data Number 38
+const uint8_t DATANUM=1; //Log Data Number 38
 const uint32_t LOGDATANUM=48000;
 float Logdata[LOGDATANUM]={0.0};
 
@@ -454,10 +454,10 @@ void control_init(void)
   // }
 
  //velocity control
- v_pid.set_parameter (0.05, 100, 0.001, 0.125, 0.025);
+ v_pid.set_parameter (0.5, 100, 0.009, 0.125, 0.025);
 
  //position control
- y_pid.set_parameter (1.3, 100, 0.001, 0.125, 0.025);
+ y_pid.set_parameter (1.3, 100, 0.009, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -1032,21 +1032,21 @@ float rocking_wings(float stick)
 // --------------------------------ライントレース--------------------------------------
 void linetrace(void)
 {
-  line_trace_flag = 1;
   //離陸
   // if(takeoff_counter == 0){
   //   send_data_via_uart("TOL_mode\n");
   //   takeoff_merker();
   // }
   //ライントレース & ホバリング
+  line_trace_flag = 1;
   if(line_trace_flag == 1){
-    send_data_via_uart("line_trace\n");
+    // send_data_via_uart("line_trace\n");
   }
-  if(auto_mode_count ==1){
-    auto_mode_count = 0;
-    ideal = Kalman_alt;
-    T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
-  }
+    if(auto_mode_count ==1){
+      auto_mode_count = 0;
+      ideal = Kalman_alt;
+      T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
+    }
   Hovering();
 
 
@@ -1097,24 +1097,24 @@ void linetrace(void)
 
   printf("gap_number:%9.6f\n ", gap_number);
 
-  if (gap_number != previous_gap_number) {
-    // gap_numberが変更された場合の処理
-    if (gap_number == 1){
-      Theta_ref = 0.1*(pi/180);
-    }
-    else if (gap_number == 2) 
-    {
-      Theta_ref = 0.5*(pi/180);
-    }
-    else if (gap_number >= 3)
-    {
-      Theta_ref  = 0.0*(pi/180);
-      send_data_via_uart("TOL_mode\n"); //カメラにモードを送る
-      //landing_merker();
-      Auto_landing();
-    }  
-    previous_gap_number = gap_number; // previous_gap_numberを更新
-  }
+  // if (gap_number != previous_gap_number) {
+  //   // gap_numberが変更された場合の処理
+  //   if (gap_number == 1){
+  //     Theta_ref = 0.1*(pi/180);
+  //   }
+  //   else if (gap_number == 2) 
+  //   {
+  //     Theta_ref = 0.5*(pi/180);
+  //   }
+  //   else if (gap_number >= 3)
+  //   {
+  //     Theta_ref  = 0.0*(pi/180);
+  //     send_data_via_uart("TOL_mode\n"); //カメラにモードを送る
+  //     //landing_merker();
+  //     Auto_landing();
+  //   }  
+  //   previous_gap_number = gap_number; // previous_gap_numberを更新
+  // }
 
   //}
   // //着陸
