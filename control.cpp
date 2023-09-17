@@ -119,7 +119,7 @@ uint16_t LogdataCounter=0;
 uint8_t Logflag=0;
 volatile uint8_t Logoutputflag=0;
 float Log_time=0.0;
-const uint8_t DATANUM=5; //Log Data Number 38
+const uint8_t DATANUM=1; //Log Data Number 38
 const uint32_t LOGDATANUM=48000;
 float Logdata[LOGDATANUM]={0.0};
 
@@ -442,10 +442,7 @@ void control_init(void)
   psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
 
  //velocity control
- v_pid.set_parameter (0.5, 100, 0.09, 0.125, 0.025);
 
- //position control
- y_pid.set_parameter (1.3, 100, 0.05, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -1023,13 +1020,13 @@ void linetrace(void)
   //ライントレース & ホバリング
   line_trace_flag = 1;
   if(line_trace_flag == 1){
-  //     send_data_via_uart("line_trace\n");
+
     if(auto_mode_count ==1){
       auto_mode_count = 0;
       ideal = Kalman_alt;
       T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
     }
-    Hovering();
+
 
   //前進（ピッチ角の制御） 
     // if (hove_time < 10){
@@ -1072,17 +1069,7 @@ void linetrace(void)
     trace_v_err = ( v_ref - Line_velocity);
     phi_ref = v_pid.update(trace_v_err);
 
-    //saturation Phi_ref
-    if ( phi_ref >= 60*pi/180 )
-    {
-      Phi_ref = 60*pi/180;
-    }
-    else if ( phi_ref <= -60*pi/180 )
-    {
-      Phi_ref = -60*pi/180;
-    } 
-  
-  }
+
   // //着陸
   // else if (landing_counter == 1){
   //   send_data_via_uart("TOL_mode\n");
