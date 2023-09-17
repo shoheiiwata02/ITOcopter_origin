@@ -98,8 +98,8 @@ float Phi,Theta,Psi;
 float Phi_ref=0.0,Theta_ref=0.0,Psi_ref=0.0;
 float Elevator_center=0.0, Aileron_center=0.0, Rudder_center=0.0;
 float Pref=0.0,Qref=0.0,Rref=0.0;
-const float Phi_trim   = -0.05;
-const float Theta_trim = 0.065;
+const float Phi_trim   = 0.0;
+const float Theta_trim = 0.0;
 const float Psi_trim   = 0.0;
 const double pi = 3.14159;
 float Line_trace_flag = 0;
@@ -121,7 +121,7 @@ uint16_t LogdataCounter=0;
 uint8_t Logflag=0;
 volatile uint8_t Logoutputflag=0;
 float Log_time=0.0;
-const uint8_t DATANUM=1; //Log Data Number 38
+const uint8_t DATANUM=5; //Log Data Number 38
 const uint32_t LOGDATANUM=48000;
 float Logdata[LOGDATANUM]={0.0};
 
@@ -454,10 +454,10 @@ void control_init(void)
   // }
 
  //velocity control
- v_pid.set_parameter (1.0, 0.001, 1, 0.125, 0.025);
+ v_pid.set_parameter (0.05, 100, 0.001, 0.125, 0.025);
 
  //position control
- y_pid.set_parameter (1.3, 0.0001, 0.05, 0.125, 0.025);
+ y_pid.set_parameter (1.3, 100, 0.001, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -564,47 +564,75 @@ void Hovering(void){
 
 //自動着陸
 void Auto_landing(void){
-  if (Kalman_alt > 250)
+  // if (Kalman_alt > 250)
+  if (mu_Yn_est(1,0) <= 120){
+    stop_flag = 1;
+  }
+  else if (mu_Yn_est(1,0) > 250)//250
   {
-    ideal = ideal - 0.45;//高度の目標値更新のコード
+    ideal = ideal - 20;//高度の目標値更新のコード
     if (ideal <= 0){
       ideal = 0;
     }
     input = alt_PID(ideal);
     T_ref = T_stick + (input);
   }
-  else if(Kalman_alt <= 250){
+  else if(mu_Yn_est(1,0) <= 250){
     T_ref = T_ref - 0.03;
   }
-  else{
-    stop_flag = 1;
-  }
+  // else{
+  //   stop_flag = 1;
+  // }
 }
 
 //自動離陸
 void Auto_takeoff(void){
 
-  if (Kalman_alt <= 250){
-    if (T_ref < 3.2){//3.4
-      T_stick = T_stick + 0.1;
-      T_ref = T_stick;
-    }
-    else {
-      T_stick = T_stick + 0.002;
-      T_ref = T_stick;
-    }
-  }
+  // if (Kalman_alt <= 250){
+  //   if (T_ref < 3.2){//3.4
+  //     T_stick = T_stick + 0.1;
+  //     T_ref = T_stick;
+  //   }
+  //   else {
+  //     T_stick = T_stick + 0.002;
+  //     T_ref = T_stick;
+  //   }
+  // }
 
-  if (Kalman_alt >= 450){//ここ変えてみる
+   if (T_ref < 4.4)//3.5
+  {
+    T_stick = T_stick + 0.07;
+    T_ref = T_stick;
+  }
+  else{
     ideal = 500;
-    // input = alt_PID(ideal);
-    // T_ref = T_stick + (input);
-    Hovering();
-    flying_mode = 2;
+    // Hovering();
+    // flying_mode = 2;
     line_trace_flag = 1;
     takeoff_counter = 1;
+
+    // if (hove_time < 5)
+    // {
+    //   input = alt_PID(ideal);
+    //   T_ref = T_stick + (input);
+    //   hove_time = hove_time + 0.025;
+    // }
+    // else{
+    //   line_trace_flag = 1;
+    //   takeoff_counter = 1;
+    // }
   }
 }
+
+  // if (Kalman_alt >= 450){//ここ変えてみる
+  //   ideal = 500;
+  //   // input = alt_PID(ideal);
+  //   // T_ref = T_stick + (input);
+  //   Hovering();
+  //   flying_mode = 2;
+  //   line_trace_flag = 1;
+  //   takeoff_counter = 1;
+  // }
 
 void takeoff_merker(void){
   //目標値との誤差
@@ -626,7 +654,6 @@ void landing_merker(void){
   Qref = theta_pid.update(TOL_y_err);
   Auto_landing();
 }
-
 
 void servo_control(void)
 {
@@ -897,11 +924,13 @@ void angle_control(void)
 
     if(Flight_mode == LINETRACE && i2c_connect == 1) {
       // auto_mode_count = 1;
+      psi_pid.set_parameter  ( 1, 100, 0.01, 0.125, 0.01);
       linetrace();
     }
-    // else{
-    //   auto_mode_count = 0;
-    // }
+    else{
+       psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
+      auto_mode_count = 1;
+    }
     }
     
     //PID Control
@@ -931,6 +960,14 @@ void angle_control(void)
       Pref = phi_pid.update(phi_err);
       Qref = theta_pid.update(theta_err);
       Rref = Psi_ref;//psi_pid.update(psi_err);
+      if(Flight_mode != LINETRACE)
+      {
+        Rref = Psi_ref;
+      }
+      else if(Flight_mode == LINETRACE)
+      {
+        Rref = psi_pid.update(psi_err);
+      }
     }
 
     //saturation Rref
@@ -1002,8 +1039,9 @@ void linetrace(void)
   //   takeoff_merker();
   // }
   //ライントレース & ホバリング
-  //if(line_trace_flag == 1){
-      //send_data_via_uart("line_trace\n");
+  if(line_trace_flag == 1){
+    send_data_via_uart("line_trace\n");
+  }
   if(auto_mode_count ==1){
     auto_mode_count = 0;
     ideal = Kalman_alt;
@@ -1029,8 +1067,8 @@ void linetrace(void)
 
   //Yaw loop
   //Y_con
-  // trace_y_err = ( y_ref - Line_range);
-  // psi_ref = y_pid.update(trace_y_err);
+  trace_y_err = ( y_ref - Line_range);
+  psi_ref = y_pid.update(trace_y_err);
     
   //saturation Psi_ref
   if ( psi_ref >= 40*pi/180 )
@@ -1044,8 +1082,8 @@ void linetrace(void)
 
   //Roll loop
   //V_con
-  // trace_v_err = ( v_ref - Line_velocity);
-  // phi_ref = v_pid.update(trace_v_err);
+  trace_v_err = ( v_ref - Line_velocity);
+  phi_ref = v_pid.update(trace_v_err);
 
   //saturation Phi_ref
   if ( phi_ref >= 60*pi/180 )
@@ -1158,6 +1196,7 @@ void logging(void)
   }
 }
 
+
 void log_output(void)
 {
   if(LogdataCounter==0)
@@ -1235,11 +1274,12 @@ void processReceiveData(){
     if (token != NULL){
       gap_number = atof(token);
     }
-    Kalman_holizontal(x_diff,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+    Kalman_holizontal(-x_diff,-angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
     Line_range = Xn_est_2; //横ずれ
     Line_velocity = Xn_est_1; //速度
-    // printf("x : %9.6f\n",x_diff);
-    // printf("angle : %9.6f\n",angle_diff);
+    printf("x : %9.6f\n",x_diff);
+    printf("angle : %9.6f\n",angle_diff);
+    printf("psi : %9.6f\n",Xn_est_3);
   }
 
   if (Flight_mode == REDCIRCLE){
