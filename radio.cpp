@@ -22,7 +22,7 @@ void radio_init(void){
     /// シリアル通信の設定
 
     // UARTを基本の通信速度で設定
-    uart_init(UART_ID, 2400);
+    uart_init(UART_ID, 100000);
     uart_init(UART_ID2,BAUD_RATE2);
 
     // 指定のGPIOをUARTのTX、RXピンに設定する

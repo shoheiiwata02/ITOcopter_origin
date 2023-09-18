@@ -47,6 +47,10 @@ float x_diff = 0;
 float angle_diff = 0;
 int previous_gap_number = 0;
 float line_number = 0;
+float x_diff_dash = 0;
+float TOL_x_diff_dash = 0;
+float TOL_y_diff_dash = 0;
+
 
 
 float red_circle = 0;
@@ -186,8 +190,11 @@ void led_control(void)
   else if (Arm_flag == 2 && Flight_mode == NORMAL) rgbled_normal();
   else if (Arm_flag ==2 && Flight_mode == ROCKING) rgbled_rocking();
   else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 0) rgbled_lightblue();
-  else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1) rgbled_orange();
-  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE && (int)(red_circle == 0)) rgbled_pink();
+  else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1) rgbled_pink();
+  else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1 && Phi_ref < 0 ) rgbled_pink_rightOrange();
+  // else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1 && Psi < 0) rgbled_blue_leftOrange();
+  // else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1 && Psi > 0) rgbled_blue_rightOrange();
+  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE && (int)(red_circle == 0)) rgbled_normal();
   else if (Arm_flag ==2 && Flight_mode == REDCIRCLE && (int)(red_circle == 1)) rgbled_red();
   else if (Arm_flag == 2 && Red_flag == 0 && Logflag == 1) rgbled_orange();
 
@@ -420,14 +427,12 @@ void loop_400Hz(void)
   D_time=E_time-S_time;
 }
 
-//新しい関数: UART送信~~openmv受信------------------------------------------------------------
-// void send_data_via_uart(const char* data) {
-//     while (*data != '\0') {
-//         uart_putc(UART_ID2, *data);
-//         data++;
-
-//     }
-// }
+void send_data_via_uart(const char* data) {
+    while (*data != '\0') {
+        uart_putc(UART_ID2, *data);
+        data++;
+    }
+}
 
 
 void control_init(void)
@@ -450,10 +455,11 @@ void control_init(void)
   // }
 
  //velocity control
- v_pid.set_parameter (0.5, 10, 0.009, 0.125, 0.025);
+ v_pid.set_parameter (0.05, 100, 0.09, 0.125, 0.025);
+ 
 
  //position control
- y_pid.set_parameter (1.0, 10, 0.009, 0.125, 0.025);
+ y_pid.set_parameter (1.3, 100, 0.09, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -601,7 +607,7 @@ void Auto_takeoff(void){
     T_ref = T_stick;
   }
   else{
-    ideal = 500;
+    ideal = 700;
     // Hovering();
     // flying_mode = 2;
     line_trace_flag = 1;
@@ -1034,6 +1040,8 @@ void linetrace(void)
   //   takeoff_merker();
   // }
   //ライントレース & ホバリング
+  takeoff_counter = 1;
+  landing_counter = 0;
   line_trace_flag = 1;
   if(line_trace_flag == 1){
     // send_data_via_uart("line_trace\n");
@@ -1076,6 +1084,7 @@ void linetrace(void)
       Psi_ref = -40*pi/180;
     }
 
+    // printf("phi_ref:%f", Phi_ref);
     //Roll loop
     //V_con
     trace_v_err = ( v_ref - Line_velocity);
@@ -1091,7 +1100,6 @@ void linetrace(void)
       Phi_ref = -60*pi/180;
     }  
 
-    // printf("line_number:%9.6f\n ", line_number);
 
   // if (gap_number != previous_gap_number) {
   //   // gap_numberが変更された場合の処理
@@ -1259,7 +1267,6 @@ void processReceiveData(){
   char* token;
 
 
-  // printf("KAWASAKI\n");
 
   if (Flight_mode == LINETRACE){
     token = strtok(clear_data,",");
@@ -1278,6 +1285,7 @@ void processReceiveData(){
     if (token != NULL){
       line_number = atof(token);
     }
+    x_diff_dash = ((2 * 500 * tan(35) * -x_diff) / 160) - (500 * tan(Phi));
     Kalman_holizontal(-x_diff,-angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
     Line_range = Xn_est_2; //横ずれ
     Line_velocity = Xn_est_1; //速度
@@ -1292,8 +1300,6 @@ void processReceiveData(){
     //   red_circle = atof(token);
     // }
     red_circle = atof(clear_data);
-    printf("red_circle: %9.6f\n", red_circle);
-    printf("KAWASAKI");
   }
 
   // if(takeoff_counter == 0 || landing_counter ==1){
@@ -1318,7 +1324,7 @@ void receiveData(char c){
   if (buffer_index < BUFFER_SIZE - 1){
     buffer[buffer_index++] = c;
   }
-  printf("%c", c);
+  // printf("%c", c);
   //終了条件のチェック
   // if (c == '\n'){
   if (c == ')'){
@@ -1439,19 +1445,22 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
     while (uart_is_readable(UART_ID2)){
       char c = uart_getc(UART_ID2);
       receiveData(c);
+
     }
 
     if(Flight_mode == LINETRACE){
       uart_putc(UART_ID2,'1');
+       if(takeoff_counter == 0 || landing_counter == 1 ){
+        uart_putc(UART_ID2,'3');
+      }
+      else{
+        uart_putc(UART_ID2,'1');
+      }
     }
     if(Flight_mode == REDCIRCLE){
       uart_putc(UART_ID2,'2');
     }
     
-    //着陸のFlightModeを決める
-    // if(Flight_mode == ){
-    // uart_putc(UART_ID2,'3');
-    // }
   }
   // 条件が満たされた場合にデータを送信
   // if (Flight_mode == REDCIRCLE)
