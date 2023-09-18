@@ -18,7 +18,7 @@ void rgbled_wait(void);
 void rgbled_rocking(void);
 void rgbled_lightblue(void);
 void rgbled_pink(void);
-void rgbled_failsafe(void);
+void rgbled_redcircle(void);
 
 
 #endif

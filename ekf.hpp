@@ -43,7 +43,7 @@ extern Matrix<float, 1,1> yn_mat;
 extern Matrix<float, 1 ,1> k_inv;
 extern Matrix<float, 1,1> mu_Yn_est_par;
 extern Matrix<float, 2,1> mu_Yn_est_par2;
-extern float Xn_est_1,Xn_est_2,Xn_est_3;
+extern float Xn_est_1,Xn_est_2,Xn_est_3,u;
 
 //Extended Kalman Filter
 uint8_t ekf( Matrix<float, 7, 1> &xe,
