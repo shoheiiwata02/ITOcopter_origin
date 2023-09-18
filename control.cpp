@@ -129,7 +129,7 @@ uint8_t Logflag=0;
 volatile uint8_t Logoutputflag=0;
 float Log_time=0.0;
 const uint8_t DATANUM=38; //Log Data Number 38
-const uint32_t LOGDATANUM=47880;
+const uint32_t LOGDATANUM=47890;
 float Logdata[LOGDATANUM]={0.0};
 
 //State Machine
@@ -457,11 +457,11 @@ void control_init(void)
   // }
 
  //velocity control
- v_pid.set_parameter (0.0001, 1000, 0.00001, 0.125, 0.025);
+ v_pid.set_parameter (0.0001, 100000, 0.00001, 0.125, 0.03);
 
 
  //position control
- y_pid.set_parameter (0.007, 1000, 0.00001, 0.125, 0.025);
+ y_pid.set_parameter (0.0075, 100000, 0.00001, 0.125, 0.03);
 }
 
 uint8_t lock_com(void)
@@ -939,6 +939,7 @@ void angle_control(void)
     Phi = atan2(e23, e33);
     Theta = atan2(-e13, sqrt(e23*e23+e33*e33));
     Psi = atan2(e12,e11);
+    Psi = Xn_est_3;
 
     //Get angle ref (manual flight) 
     if (1)
@@ -962,7 +963,8 @@ void angle_control(void)
 
     if(Flight_mode == LINETRACE && i2c_connect == 1) {
       // auto_mode_count = 1;
-      psi_pid.set_parameter  (4, 100, 0.01, 0.125, 0.01);
+      r_pid.set_parameter( 0.1, 1000, 0.01, 0.125, 0.0025);//(3.1, 1, 0.01)
+      psi_pid.set_parameter  (0.1, 100000, 0.01, 0.125, 0.01);
       linetrace();
     }
     else{
@@ -1214,7 +1216,7 @@ void logging(void)
       Logdata[LogdataCounter++]=Phi-Phi_bias;             //20
 
       Logdata[LogdataCounter++]=Theta-Theta_bias;         //21
-      Logdata[LogdataCounter++]=Psi-Psi_bias;             //22
+      Logdata[LogdataCounter++]=Psi;//-Psi_bias;             //22
       Logdata[LogdataCounter++]=Phi_ref;                  //23
       Logdata[LogdataCounter++]=Theta_ref;                //24
       Logdata[LogdataCounter++]=Psi_ref;                  //25
@@ -1232,7 +1234,7 @@ void logging(void)
 
       Logdata[LogdataCounter++]=Rbias;                    //36
       Logdata[LogdataCounter++]=T_ref;                    //37
-      Logdata[LogdataCounter++]=Acc_norm;                 //38
+      Logdata[LogdataCounter++]=Line_range;                 //38
 
     }
     else Logflag=2;
@@ -1267,14 +1269,14 @@ void log_output(void)
   if(LogdataCounter+DATANUM<LOGDATANUM)
   {
     //LockMode=0;
-    // printf("%10.2f ", Log_time);
+    printf("%10.2f ", Log_time);
     Log_time=Log_time + 0.01;
     for (uint8_t i=0;i<DATANUM;i++)
     {
-      // printf("%12.5f",Logdata[LogdataCounter+i]);
+      printf("%12.5f",Logdata[LogdataCounter+i]);
     }
     printf("\n");
-    // LogdataCounter=LogdataCounter + DATANUM;
+    LogdataCounter=LogdataCounter + DATANUM;
   }
   else 
   {
@@ -1333,7 +1335,7 @@ void processReceiveData(){
     }
     x_alpha = atan2(x_diff,118);
     x_diff_dash = 700 * tan(Phi - x_alpha);
-    Kalman_holizontal(x_diff_dash,angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
+    Kalman_holizontal(-x_diff_dash,-angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi));
     Line_range = Xn_est_2; //横ずれ
     Line_velocity = Xn_est_1; //速度
     // current_time = time_us_64();
