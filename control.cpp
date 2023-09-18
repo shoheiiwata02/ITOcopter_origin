@@ -46,6 +46,7 @@ uint8_t print_flag = 0;
 float x_diff = 0;
 float angle_diff = 0;
 int previous_gap_number = 0;
+float line_number = 0;
 
 
 float red_circle = 0;
@@ -184,16 +185,10 @@ void led_control(void)
 
   else if (Arm_flag == 2 && Flight_mode == NORMAL) rgbled_normal();
   else if (Arm_flag ==2 && Flight_mode == ROCKING) rgbled_rocking();
-  else if (Arm_flag ==2 && Flight_mode == LINETRACE){
-    rgbled_lightblue();
-    if(Line_range != 0){
-      rgbled_red();
-    }
-  } 
-  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE) {
-    rgbled_pink();
-    if (red_circle == 1) rgbled_red();
-  }
+  else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 0) rgbled_lightblue();
+  else if (Arm_flag ==2 && Flight_mode == LINETRACE && line_number == 1) rgbled_orange();
+  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE && (int)(red_circle == 0)) rgbled_pink();
+  else if (Arm_flag ==2 && Flight_mode == REDCIRCLE && (int)(red_circle == 1)) rgbled_red();
   else if (Arm_flag == 2 && Red_flag == 0 && Logflag == 1) rgbled_orange();
 
   else if (Arm_flag == 3)
@@ -426,12 +421,13 @@ void loop_400Hz(void)
 }
 
 //新しい関数: UART送信~~openmv受信------------------------------------------------------------
-void send_data_via_uart(const char* data) {
-    while (*data != '\0') {
-        uart_putc(UART_ID2, *data);
-        data++;
-    }
-}
+// void send_data_via_uart(const char* data) {
+//     while (*data != '\0') {
+//         uart_putc(UART_ID2, *data);
+//         data++;
+
+//     }
+// }
 
 
 void control_init(void)
@@ -443,8 +439,8 @@ void control_init(void)
   r_pid.set_parameter( 3.1, 1, 0.01, 0.125, 0.0025);//(3.1, 1, 0.01)
   //Angle control
 
-  phi_pid.set_parameter  ( 8.0, 10.0, 0.007, 0.125, 0.01);//6.0
-  theta_pid.set_parameter( 8.0, 10.0, 0.007, 0.125, 0.01);//6.0
+  phi_pid.set_parameter  ( 8.0, 20.0, 0.007, 0.125, 0.01);//6.0
+  theta_pid.set_parameter( 8.0, 20.0, 0.007, 0.125, 0.01);//6.0
   psi_pid.set_parameter  ( 0, 1000, 0.01, 0.125, 0.01);
   
   // else if(Flight_mode == SERVO){
@@ -454,10 +450,10 @@ void control_init(void)
   // }
 
  //velocity control
- v_pid.set_parameter (0.5, 100, 0.009, 0.125, 0.025);
+ v_pid.set_parameter (0.5, 10, 0.009, 0.125, 0.025);
 
  //position control
- y_pid.set_parameter (1.3, 100, 0.009, 0.125, 0.025);
+ y_pid.set_parameter (1.0, 10, 0.009, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -1041,61 +1037,61 @@ void linetrace(void)
   line_trace_flag = 1;
   if(line_trace_flag == 1){
     // send_data_via_uart("line_trace\n");
-  }
+  
     if(auto_mode_count ==1){
       auto_mode_count = 0;
       ideal = Kalman_alt;
       T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
     }
-  Hovering();
+    Hovering();
 
 
-  //前進（ピッチ角の制御） 
-  Theta_ref = -0.5*(pi/180);
-  
-  //目標値との誤差
-  float trace_phi_err;
-  float trace_psi_err;
-  float trace_v_err;
-  float trace_y_err;
-
-  //目標値
-  float phi_ref;
-  float psi_ref;
-  float v_ref = 0;
-  float y_ref = 0;
-
-  //Yaw loop
-  //Y_con
-  trace_y_err = ( y_ref - Line_range);
-  psi_ref = y_pid.update(trace_y_err);
+    //前進（ピッチ角の制御） 
+    Theta_ref = -0.5*(pi/180);
     
-  //saturation Psi_ref
-  if ( psi_ref >= 40*pi/180 )
-  {
-    Psi_ref = 40*pi/180;
-  }
-  else if ( psi_ref <= -40*pi/180 )
-  {
-    Psi_ref = -40*pi/180;
-  }
+    //目標値との誤差
+    float trace_phi_err;
+    float trace_psi_err;
+    float trace_v_err;
+    float trace_y_err;
 
-  //Roll loop
-  //V_con
-  trace_v_err = ( v_ref - Line_velocity);
-  phi_ref = v_pid.update(trace_v_err);
+    //目標値
+    float phi_ref;
+    float psi_ref;
+    float v_ref = 0;
+    float y_ref = 0;
 
-  //saturation Phi_ref
-  if ( phi_ref >= 60*pi/180 )
-  {
-    Phi_ref = 60*pi/180;
-  }
-  else if ( phi_ref <= -60*pi/180 )
-  {
-    Phi_ref = -60*pi/180;
-  }  
+    //Yaw loop
+    //Y_con
+    trace_y_err = ( y_ref - Line_range);
+    psi_ref = y_pid.update(trace_y_err);
+      
+    //saturation Psi_ref
+    if ( psi_ref >= 40*pi/180 )
+    {
+      Psi_ref = 40*pi/180;
+    }
+    else if ( psi_ref <= -40*pi/180 )
+    {
+      Psi_ref = -40*pi/180;
+    }
 
-  printf("gap_number:%9.6f\n ", gap_number);
+    //Roll loop
+    //V_con
+    trace_v_err = ( v_ref - Line_velocity);
+    phi_ref = v_pid.update(trace_v_err);
+
+    //saturation Phi_ref
+    if ( phi_ref >= 60*pi/180 )
+    {
+      Phi_ref = 60*pi/180;
+    }
+    else if ( phi_ref <= -60*pi/180 )
+    {
+      Phi_ref = -60*pi/180;
+    }  
+
+    // printf("line_number:%9.6f\n ", line_number);
 
   // if (gap_number != previous_gap_number) {
   //   // gap_numberが変更された場合の処理
@@ -1117,6 +1113,7 @@ void linetrace(void)
   // }
 
   //}
+  }
   // //着陸
   // else if (landing_counter == 1){
   //   send_data_via_uart("TOL_mode\n"); //カメラにモードを送る
@@ -1157,30 +1154,30 @@ void logging(void)
       // Logdata[LogdataCounter++]=My;                       //15
       // Logdata[LogdataCounter++]=Mz;                       //16
       // Logdata[LogdataCounter++]=Pref;                     //17
-      // Logdata[LogdataCounter++]=Qref;                     //18
-      // Logdata[LogdataCounter++]=Rref;                     //19
-      // Logdata[LogdataCounter++]=Phi-Phi_bias;             //20
+      Logdata[LogdataCounter++]=Qref;                     //18
+      Logdata[LogdataCounter++]=Rref;                     //19
+      Logdata[LogdataCounter++]=Phi-Phi_bias;             //20
 
-      // Logdata[LogdataCounter++]=Theta-Theta_bias;         //21
-      // Logdata[LogdataCounter++]=Psi-Psi_bias;             //22
-      // Logdata[LogdataCounter++]=Phi_ref;                  //23
-      // Logdata[LogdataCounter++]=Theta_ref;                //24
-      // Logdata[LogdataCounter++]=Psi_ref;                  //25
+      Logdata[LogdataCounter++]=Theta-Theta_bias;         //21
+      Logdata[LogdataCounter++]=Psi-Psi_bias;             //22
+      Logdata[LogdataCounter++]=Phi_ref;                  //23
+      Logdata[LogdataCounter++]=Theta_ref;                //24
+      Logdata[LogdataCounter++]=Psi_ref;                  //25
       // Logdata[LogdataCounter++]=P_com;                    //26
       // Logdata[LogdataCounter++]=Q_com;                    //27
       // Logdata[LogdataCounter++]=R_com;                    //28
       // Logdata[LogdataCounter++]=p_pid.m_integral;//m_filter_output;    //29
-      // Logdata[LogdataCounter++]=q_pid.m_integral;//m_filter_output;    //30
+      Logdata[LogdataCounter++]=q_pid.m_integral;//m_filter_output;    //30
 
-      // Logdata[LogdataCounter++]=r_pid.m_integral;//m_filter_output;    //31
-      // Logdata[LogdataCounter++]=phi_pid.m_integral;//m_filter_output;  //32
-      // Logdata[LogdataCounter++]=theta_pid.m_integral;//m_filter_output;//33
-      // Logdata[LogdataCounter++]=Pbias;                    //34
-      // Logdata[LogdataCounter++]=Qbias;                    //35
+      Logdata[LogdataCounter++]=r_pid.m_integral;//m_filter_output;    //31
+      Logdata[LogdataCounter++]=phi_pid.m_integral;//m_filter_output;  //32
+      Logdata[LogdataCounter++]=theta_pid.m_integral;//m_filter_output;//33
+      Logdata[LogdataCounter++]=Pbias;                    //34
+      Logdata[LogdataCounter++]=Qbias;                    //35
 
-      // Logdata[LogdataCounter++]=Rbias;                    //36
-      // Logdata[LogdataCounter++]=T_ref;                    //37
-      // Logdata[LogdataCounter++]=Acc_norm;                 //38
+      Logdata[LogdataCounter++]=Rbias;                    //36
+      Logdata[LogdataCounter++]=T_ref;                    //37
+      Logdata[LogdataCounter++]=Acc_norm;                 //38
 
    
     }
@@ -1216,14 +1213,14 @@ void log_output(void)
   if(LogdataCounter+DATANUM<LOGDATANUM)
   {
     //LockMode=0;
-    printf("%10.2f ", Log_time);
+    // printf("%10.2f ", Log_time);
     Log_time=Log_time + 0.01;
     for (uint8_t i=0;i<DATANUM;i++)
     {
-      printf("%12.5f",Logdata[LogdataCounter+i]);
+      // printf("%12.5f",Logdata[LogdataCounter+i]);
     }
     printf("\n");
-    LogdataCounter=LogdataCounter + DATANUM;
+    // LogdataCounter=LogdataCounter + DATANUM;
   }
   else 
   {
@@ -1261,6 +1258,9 @@ void processReceiveData(){
   clear_data[strlen(clear_data) -1 ] = '\0';//)をヌル文字に置き換え
   char* token;
 
+
+  // printf("KAWASAKI\n");
+
   if (Flight_mode == LINETRACE){
     token = strtok(clear_data,",");
     if (token != NULL){
@@ -1274,21 +1274,26 @@ void processReceiveData(){
     if (token != NULL){
       gap_number = atof(token);
     }
+    token = strtok(NULL,",");
+    if (token != NULL){
+      line_number = atof(token);
+    }
     Kalman_holizontal(-x_diff,-angle_diff,(Wp - Pbias),(Wr - Rbias),(Phi - Phi_bias));
     Line_range = Xn_est_2; //横ずれ
     Line_velocity = Xn_est_1; //速度
-    printf("x : %9.6f\n",x_diff);
-    printf("angle : %9.6f\n",angle_diff);
-    printf("psi : %9.6f\n",Xn_est_3);
+    //printf("x : %9.6f\n",x_diff);
+    // printf("angle : %9.6f\n",angle_diff);
+    // printf("psi : %9.6f\n",Xn_est_3);
   }
 
-  if (Flight_mode == REDCIRCLE){
+  else if (Flight_mode == REDCIRCLE){
     // token = strtok(clear_data,",");
     // if (token != NULL){
     //   red_circle = atof(token);
     // }
     red_circle = atof(clear_data);
-    // printf("red_circle: %f\n", red_circle);
+    printf("red_circle: %9.6f\n", red_circle);
+    printf("KAWASAKI");
   }
 
   // if(takeoff_counter == 0 || landing_counter ==1){
@@ -1313,6 +1318,7 @@ void receiveData(char c){
   if (buffer_index < BUFFER_SIZE - 1){
     buffer[buffer_index++] = c;
   }
+  printf("%c", c);
   //終了条件のチェック
   // if (c == '\n'){
   if (c == ')'){
@@ -1423,23 +1429,25 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
       if((Kalman_alt - last_Kalman_alt) > 500 || (Kalman_alt - last_Kalman_alt) < 500){
         Kalman_alt = last_Kalman_alt;
       }
-      printf("%9.6f \n",mu_Yn_est(1,0));
+      //printf("%9.6f \n",mu_Yn_est(1,0));
       // z_acc  = Az-9.80665;
       //input = Kalman_PID(lotated_distance,z_acc);
     }
   }
   //OpenMV通信用
-  if (Flight_mode == LINETRACE && i2c_connect == 1){
+  if ((Flight_mode == LINETRACE) || (Flight_mode == REDCIRCLE) && (i2c_connect == 1)){
     while (uart_is_readable(UART_ID2)){
-    char c = uart_getc(UART_ID2);
-    receiveData(c);
+      char c = uart_getc(UART_ID2);
+      receiveData(c);
     }
+
     if(Flight_mode == LINETRACE){
-    uart_putc(UART_ID2,'1');
+      uart_putc(UART_ID2,'1');
     }
     if(Flight_mode == REDCIRCLE){
-    uart_putc(UART_ID2,'2');
+      uart_putc(UART_ID2,'2');
     }
+    
     //着陸のFlightModeを決める
     // if(Flight_mode == ){
     // uart_putc(UART_ID2,'3');
