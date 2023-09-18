@@ -34,7 +34,7 @@
 
 
 #define UART_ID2 uart1
-#define BAUD_RATE2 9600
+#define BAUD_RATE2 19200
 #define DATA_BITS2 8
 #define STOP_BITS2 1
 #define PARITY2  UART_PARITY_NONE

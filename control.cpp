@@ -128,8 +128,8 @@ uint16_t LogdataCounter=0;
 uint8_t Logflag=0;
 volatile uint8_t Logoutputflag=0;
 float Log_time=0.0;
-const uint8_t DATANUM=1; //Log Data Number 38
-const uint32_t LOGDATANUM=48000;
+const uint8_t DATANUM=38; //Log Data Number 38
+const uint32_t LOGDATANUM=47880;
 float Logdata[LOGDATANUM]={0.0};
 
 //State Machine
@@ -461,7 +461,7 @@ void control_init(void)
 
 
  //position control
- y_pid.set_parameter (0.0075, 1000, 0.00001, 0.125, 0.025);
+ y_pid.set_parameter (0.007, 1000, 0.00001, 0.125, 0.025);
 }
 
 uint8_t lock_com(void)
@@ -962,7 +962,7 @@ void angle_control(void)
 
     if(Flight_mode == LINETRACE && i2c_connect == 1) {
       // auto_mode_count = 1;
-      psi_pid.set_parameter  ( 1, 100, 0.01, 0.125, 0.01);
+      psi_pid.set_parameter  (4, 100, 0.01, 0.125, 0.01);
       linetrace();
     }
     else{
@@ -1072,12 +1072,13 @@ void linetrace(void)
 {
   //離陸
   // if(takeoff_counter == 0){
-  //   send_data_via_uart("TOL_mode\n");
-  //   takeoff_merker();
+  //   // send_data_via_uart("TOL_mode\n");
+  //   // takeoff_merker();
+  //   Auto_takeoff();
   // }
   //ライントレース & ホバリング
-  takeoff_counter = 1;
-  landing_counter = 0;
+  // takeoff_counter = 1;
+  // landing_counter = 0;
   line_trace_flag = 1;
   if(line_trace_flag == 1){
     // send_data_via_uart("line_trace\n");
@@ -1088,10 +1089,20 @@ void linetrace(void)
       T_stick = 0.6 * BATTERY_VOLTAGE*(float)(Chdata[2]-CH3MIN)/(CH3MAX-CH3MIN);
     }
     Hovering();
+    // if (hove_time < 17){
+    //   hove_time += 0.025;
+    //   Hovering();
+    // }
+    // else{
+    //   //landing_counter = 1;
+    //   Theta_ref = -0.5*(pi/180);
+    //   //Auto_landing();
+    //   //landing_merker();
+    // }
 
 
     //前進（ピッチ角の制御） 
-    Theta_ref = -0.1*(pi/180);
+    Theta_ref = -0.3*(pi/180);
     
     //目標値との誤差
     float trace_phi_err;
@@ -1223,7 +1234,6 @@ void logging(void)
       Logdata[LogdataCounter++]=T_ref;                    //37
       Logdata[LogdataCounter++]=Acc_norm;                 //38
 
-   
     }
     else Logflag=2;
   }
@@ -1480,20 +1490,19 @@ const float zoom[3]={0.003077277151877191, 0.0031893151610213463, 0.003383279497
   }
   //OpenMV通信用
   if ((Flight_mode == LINETRACE) || (Flight_mode == REDCIRCLE) && (i2c_connect == 1)){
-    while (uart_is_readable(UART_ID2)){
+    if (uart_is_readable(UART_ID2)){
       char c = uart_getc(UART_ID2);
       receiveData(c);
-
     }
 
     if(Flight_mode == LINETRACE){
       uart_putc(UART_ID2,'1');
-       if(takeoff_counter == 0 || landing_counter == 1 ){
-        uart_putc(UART_ID2,'3');
-      }
-      else{
-        uart_putc(UART_ID2,'1');
-      }
+      //  if(takeoff_counter == 0 || landing_counter == 1 ){
+      //   uart_putc(UART_ID2,'3');
+      // }
+      // else{
+      //   uart_putc(UART_ID2,'1');
+      // } 
     }
     if(Flight_mode == REDCIRCLE){
       uart_putc(UART_ID2,'2');

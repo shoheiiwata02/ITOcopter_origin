@@ -22,8 +22,8 @@ void radio_init(void){
     /// シリアル通信の設定
 
     // UARTを基本の通信速度で設定
-    uart_init(UART_ID, 100000);
-    uart_init(UART_ID2,BAUD_RATE2);
+    uart_init(UART_ID, 2400);
+    uart_init(UART_ID2,2400);
 
     // 指定のGPIOをUARTのTX、RXピンに設定する
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
@@ -33,6 +33,7 @@ void radio_init(void){
 
     //指定のUARTを指定の通信速度に設定する
     int actual = uart_set_baudrate(UART_ID, BAUD_RATE);
+    int actual2 = uart_set_baudrate(UART_ID2, BAUD_RATE2);
 
     //UART flow control CTS/RTSを使用しない設定
     uart_set_hw_flow(UART_ID, false, false);
