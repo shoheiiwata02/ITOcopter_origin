@@ -119,28 +119,6 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/tr1/poly_hermite.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/poly_laguerre.tcc \
  /usr/include/newlib/c++/10.3.1/tr1/riemann_zeta.tcc \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/vl53l1_platform.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/vl53l1_types.h \
- /usr/include/newlib/c++/10.3.1/cstdlib \
- /home/shohei/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
- /home/shohei/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
- /home/shohei/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/tusb_option.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
- /home/shohei/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
- /home/shohei/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
- /home/shohei/pico/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h \
- /usr/include/newlib/time.h /usr/include/newlib/machine/time.h \
- /usr/include/newlib/unistd.h /usr/include/newlib/sys/unistd.h \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/VL53L1X_api.h \
  /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/ekf.hpp \
  /usr/include/newlib/c++/10.3.1/iostream \
  /usr/include/newlib/c++/10.3.1/ostream \
@@ -190,6 +168,7 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: \
  /usr/include/newlib/c++/10.3.1/bits/functional_hash.h \
  /usr/include/newlib/c++/10.3.1/bits/string_view.tcc \
  /usr/include/newlib/c++/10.3.1/ext/string_conversions.h \
+ /usr/include/newlib/c++/10.3.1/cstdlib \
  /usr/include/newlib/c++/10.3.1/cstdio \
  /usr/include/newlib/c++/10.3.1/cerrno /usr/include/newlib/errno.h \
  /usr/include/newlib/sys/errno.h \
@@ -443,6 +422,7 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: \
  /home/shohei/pico/eigen/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
  /home/shohei/pico/eigen/Eigen/src/Eigenvalues/./RealQZ.h \
  /home/shohei/pico/eigen/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
+ /usr/include/newlib/unistd.h /usr/include/newlib/sys/unistd.h \
  /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/radio.hpp \
  /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/control.hpp \
  /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/rgbled.hpp \
@@ -452,4 +432,7 @@ CMakeFiles/pico_copter.dir/pwm.cpp.obj: \
  /home/shohei/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/pio.h \
  /home/shohei/pico/pico-sdk/src/rp2_common/hardware_pio/include/hardware/pio_instructions.h \
  /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/pid.hpp \
- /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/i2c.hpp
+ /mnt/c/Users/shohei/Desktop/laboratory/ITOcopter_origin/i2c.hpp \
+ /home/shohei/pico/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
+ /home/shohei/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
+ /home/shohei/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h

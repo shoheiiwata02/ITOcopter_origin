@@ -41,11 +41,11 @@ void rgbled_normal(void)
 
 void rgbled_redcircle(void)
 {
-  ledStrip.setPixelColor(0, WS2812::RGB(0,0,225));
-  ledStrip.setPixelColor(1, WS2812::RGB(0,0,225));
-  ledStrip.setPixelColor(2, WS2812::RGB(0,0,225));
-  ledStrip.setPixelColor(3, WS2812::RGB(0,0,225));
-  ledStrip.setPixelColor(4, WS2812::RGB(0,0,225));
+  ledStrip.setPixelColor(0, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(1, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(2, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(3, WS2812::RGB(253,126,0));
+  ledStrip.setPixelColor(4, WS2812::RGB(253,126,0));
   
   ledStrip.setPixelColor(5, WS2812::RGB(0,255,0));
   ledStrip.setPixelColor(6, WS2812::RGB(0,255,0));
@@ -303,28 +303,28 @@ void rgbled_rocking(void)
   if (cnt == 60) cnt = 0;
 }
 
-void rgbled_failsafe(void)
-{
-  static uint8_t state_fail = 0;
-  static uint8_t failsafecounter = 0;
-  static uint8_t failsafe_time = 0;
+// void rgbled_failsafe(void)
+// {
+//   static uint8_t state_fail = 0;
+//   static uint8_t failsafecounter = 0;
+//   static uint8_t failsafe_time = 0;
 
-  if (failsafe_time < 8){
-    rgbled_orange();
-    failsafe_time++;
-  }
-  else{
-      if (state_fail == 0)
-      {
-        state_fail = 1;
-        rgbled_orange();
-      }
-      else{
-        state_fail = 0;
-        rgbled_off();
-      }
-    }
-}
+//   if (failsafe_time < 8){
+//     rgbled_orange();
+//     failsafe_time++;
+//   }
+//   else{
+//       if (state_fail == 0)
+//       {
+//         state_fail = 1;
+//         rgbled_orange();
+//       }
+//       else{
+//         state_fail = 0;
+//         rgbled_off();
+//       }
+//     }
+// }
 
 
 void rgbled_off(void)
